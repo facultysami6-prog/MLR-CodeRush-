@@ -1,0 +1,140 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Tomatoes",
+      "category": "Vegetables",
+      "season": "Summer",
+      "markets": ["Fresh Market", "Green Market"],
+      "description": "Juicy and versatile tomatoes perfect for salads, sauces and everyday cooking.",
+      "image": "/images/tomato 2.png"
+    },
+    {
+      "id": 2,
+      "name": "Broccoli",
+      "category": "Vegetables",
+      "season": "Winter - Spring",
+      "markets": ["Green Market", "Farmers Market"],
+      "description": "Fresh green broccoli with a mild and earthy flavor.",
+      "image": "/images/broccoli 3.png"
+    },
+    {
+      "id": 3,
+      "name": "Avocado",
+      "category": "Fruits",
+      "season": "Spring - Summer",
+      "markets": ["Fresh Market", "Organic Market"],
+      "description": "Creamy avocado commonly used in salads, spreads and breakfast dishes.",
+      "image": "/images/avacado 2.png"
+    },
+    {
+      "id": 4,
+      "name": "Apples",
+      "category": "Fruits",
+      "season": "Autumn - Winter",
+      "markets": ["Fresh Market", "Fruit Market"],
+      "description": "Crisp seasonal apples available in sweet and tart varieties.",
+      "image": "/images/apple.webp"
+    },
+    {
+      "id": 5,
+      "name": "Basil",
+      "category": "Herbs",
+      "season": "Summer",
+      "markets": ["Green Market", "Herb Market"],
+      "description": "Fragrant herb commonly paired with tomatoes, pasta and sauces.",
+      "image": "/images/basil bg.png"
+    },
+    {
+      "id": 6,
+      "name": "Mint",
+      "category": "Herbs",
+      "season": "Spring - Summer",
+      "markets": ["Green Market", "Herb Market"],
+      "description": "Fresh aromatic herb used in drinks, salads and sauces.",
+      "image": "/images/mint bg.png"
+    },
+    {
+      "id": 7,
+      "name": "Fresh Milk",
+      "category": "Dairy",
+      "season": "Year-round",
+      "markets": ["Dairy Market", "Farm Market"],
+      "description": "Fresh dairy product commonly sold chilled by local producers.",
+      "image": "/images/milk bg.png"
+    },
+    {
+      "id": 8,
+      "name": "Farm Cheese",
+      "category": "Dairy",
+      "season": "Year-round",
+      "markets": ["Dairy Market", "Farm Market"],
+      "description": "Locally produced cheese with a mild and rich flavor.",
+      "image": "/images/cheese bg.png"
+    },
+    {
+      "id": 9,
+      "name": "Potatoes",
+      "category": "Vegetables",
+      "season": "Autumn - Winter",
+      "markets": ["Fresh Market", "Farmers Market"],
+      "description": "Versatile farm-fresh potatoes suitable for baking, frying and cooking.",
+      "image": "/images/potatoes.jpg"
+    },
+    {
+      "id": 10,
+      "name": "Carrots",
+      "category": "Vegetables",
+      "season": "Winter - Spring",
+      "markets": ["Green Market", "Farmers Market"],
+      "description": "Crunchy and naturally sweet carrots ideal for salads, soups and cooking.",
+      "image": "/images/carrot.png"
+    },
+    {
+      "id": 11,
+      "name": "Spinach",
+      "category": "Vegetables",
+      "season": "Winter - Spring",
+      "markets": ["Green Market", "Organic Market"],
+      "description": "Fresh leafy spinach with a delicate flavor, perfect for healthy meals.",
+      "image": "/images/spinach.jpg"
+    },
+    {
+      "id": 12,
+      "name": "Cucumbers",
+      "category": "Vegetables",
+      "season": "Spring - Summer",
+      "markets": ["Fresh Market", "Green Market"],
+      "description": "Cool and refreshing cucumbers commonly used in salads and fresh dishes.",
+      "image": "/images/Cucumbers.jpg"
+    },
+    {
+      "id": 13,
+      "name": "Oranges",
+      "category": "Fruits",
+      "season": "Winter - Spring",
+      "markets": ["Fruit Market", "Fresh Market"],
+      "description": "Juicy and refreshing oranges with a naturally sweet and citrusy flavor.",
+      "image": "/images/Oranges.jpg"
+    },
+    {
+      "id": 14,
+      "name": "Bananas",
+      "category": "Fruits",
+      "season": "Year-round",
+      "markets": ["Fresh Market", "Fruit Market"],
+      "description": "Naturally sweet bananas that are perfect for snacks, smoothies and desserts.",
+      "image": "/images/banana.png"
+    },
+    {
+      "id": 15,
+      "name": "Mangoes",
+      "category": "Fruits",
+      "season": "Summer",
+      "markets": ["Fruit Market", "Fresh Market"],
+      "description": "Sweet and juicy seasonal mangoes with a rich tropical flavor.",
+      "image": "/images/mango.png"
+    }
+   
+  ]
+}

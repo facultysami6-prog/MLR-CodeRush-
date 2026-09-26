@@ -1,0 +1,22 @@
+/* Shared photo-background layer. Any element given bgProps() gets: photo -> colour overlay -> content. */
+[data-bg] { position: relative; isolation: isolate; overflow: hidden; }
+[data-bg]::before,
+[data-bg]::after { content: ''; position: absolute; pointer-events: none; }
+[data-bg]::before {
+  z-index: -2; inset: -6%;
+  background: var(--bg-img) var(--bg-pos, center) / cover no-repeat;
+  animation: bg-drift 28s ease-in-out infinite alternate;
+  will-change: transform;
+}
+[data-bg='dark']::after {
+  z-index: -1; inset: 0;
+  background:
+    radial-gradient(circle at 18% 25%, rgba(255,255,255,.07) 1.5px, transparent 1.6px) 0 0 / 24px 24px,
+    linear-gradient(135deg, rgba(13,61,40,var(--bg-a, .8)), rgba(23,107,69,calc(var(--bg-a, .8) - .28)));
+}
+[data-bg='light']::after {
+  z-index: -1; inset: 0;
+  background: linear-gradient(160deg, rgba(255,255,255,var(--bg-a, .86)), rgba(238,247,236,calc(var(--bg-a, .86) - .08)));
+}
+[data-bg][data-drift='off']::before { inset: 0; animation: none; }
+@keyframes bg-drift { from { transform: scale(1) translate3d(0, 0, 0); } to { transform: scale(1.08) translate3d(-1.5%, -1%, 0); } }

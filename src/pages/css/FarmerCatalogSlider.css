@@ -1,0 +1,1540 @@
+/* =========================================================
+   FARMER CATALOG SLIDER
+========================================================= */
+
+.farmer-catalog-section {
+  --catalog-cream: #f7f3e9;
+  --catalog-forest: #0b2e23;
+  --catalog-green: #176845;
+  --catalog-mint: #8fd3aa;
+  --catalog-light-green: #4caf60;
+  --catalog-orange: #f28c28;
+  --catalog-gold: #c9a96a;
+
+  position: relative;
+
+  width: 100%;
+
+  min-height: 650px;
+
+  padding: 55px 20px 35px;
+
+  overflow: hidden;
+
+  box-sizing: border-box;
+
+  background:
+    radial-gradient(
+      circle at 50% 35%,
+      rgba(23, 104, 69, 0.12),
+      transparent 42%
+    ),
+    #f3f8f3;
+}
+
+
+/* =========================================================
+   BACKGROUND DECORATION
+========================================================= */
+
+.catalog-bg-orb {
+  position: absolute;
+
+  border-radius: 50%;
+
+  pointer-events: none;
+
+  filter: blur(1px);
+
+  opacity: 0.5;
+}
+
+.catalog-bg-orb-one {
+  width: 300px;
+  height: 300px;
+
+  top: -160px;
+  left: -100px;
+
+  border: 2px solid rgba(76, 175, 96, 0.13);
+
+  animation:
+    catalogFloatOne 9s ease-in-out infinite;
+}
+
+.catalog-bg-orb-two {
+  width: 350px;
+  height: 350px;
+
+  right: -160px;
+  bottom: -200px;
+
+  border: 2px solid rgba(242, 140, 40, 0.11);
+
+  animation:
+    catalogFloatTwo 11s ease-in-out infinite;
+}
+
+.catalog-bg-line {
+  position: absolute;
+
+  width: 260px;
+  height: 1px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(23, 104, 69, 0.13),
+      transparent
+    );
+
+  pointer-events: none;
+}
+
+.catalog-bg-line-one {
+  top: 25%;
+  left: -60px;
+
+  transform: rotate(-25deg);
+}
+
+.catalog-bg-line-two {
+  right: -70px;
+  bottom: 25%;
+
+  transform: rotate(25deg);
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.catalog-slider-header {
+  position: relative;
+
+  z-index: 10;
+
+  text-align: center;
+
+  margin-bottom: 22px;
+}
+
+.catalog-eyebrow {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 11px;
+
+  margin-bottom: 7px;
+
+  color: var(--catalog-light-green);
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  letter-spacing: 2px;
+
+  animation:
+    catalogHeaderFade 0.7s ease both;
+}
+
+.catalog-eyebrow-line {
+  width: 32px;
+  height: 1px;
+
+  background: var(--catalog-orange);
+
+  opacity: 0.65;
+}
+
+.catalog-main-title {
+  margin: 0;
+
+  color: var(--catalog-green);
+
+  font-family:
+    "Segoe UI",
+    Arial,
+    sans-serif;
+
+  font-size: clamp(30px, 4vw, 43px);
+
+  font-weight: 800;
+
+  line-height: 1;
+
+  letter-spacing: -1.5px;
+
+  animation:
+    catalogTitleReveal 0.8s cubic-bezier(.16, 1, .3, 1) both;
+}
+
+.catalog-main-title em {
+  color: var(--catalog-orange);
+
+  font-family:
+    "Cormorant Garamond",
+    Georgia,
+    serif;
+
+  font-size: 1.15em;
+
+  font-weight: 600;
+
+  letter-spacing: -1px;
+}
+
+.catalog-header-description {
+  max-width: 520px;
+
+  margin: 10px auto 0;
+
+  color: rgba(11, 46, 35, 0.58);
+
+  font-size: 11px;
+
+  line-height: 1.6;
+
+  animation:
+    catalogHeaderFade 0.9s ease 0.12s both;
+}
+
+
+/* =========================================================
+   COVERFLOW VIEWPORT
+========================================================= */
+
+.catalog-coverflow-viewport {
+  position: relative;
+
+  width: 100%;
+
+  height: 485px;
+
+  perspective: 1500px;
+
+  overflow: hidden;
+
+  touch-action: pan-y;
+}
+
+
+/* =========================================================
+   CARD STAGE
+========================================================= */
+
+.catalog-card-stage {
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+
+  transform-style: preserve-3d;
+}
+
+
+/* =========================================================
+   PRODUCT CARD
+========================================================= */
+
+.catalog-product-card {
+  position: absolute;
+
+  top: 5px;
+  left: 50%;
+
+  width: 295px;
+  height: 425px;
+
+  overflow: hidden;
+
+  border: 1px solid rgba(255, 255, 255, 0.32);
+
+  border-radius: 27px;
+
+  background: var(--catalog-forest);
+
+  cursor: pointer;
+
+  transform-style: preserve-3d;
+
+  box-shadow:
+    0 30px 70px rgba(11, 46, 35, 0.20);
+
+  transition:
+    transform 0.85s cubic-bezier(.22, 1, .36, 1),
+    opacity 0.55s ease,
+    filter 0.55s ease,
+    box-shadow 0.5s ease;
+
+  will-change:
+    transform,
+    opacity,
+    filter;
+}
+
+
+/* =========================================================
+   CENTER
+========================================================= */
+
+.catalog-card-center {
+  z-index: 20;
+
+  opacity: 1;
+
+  transform:
+    translateX(-50%)
+    translateZ(120px)
+    scale(1);
+
+  filter: none;
+
+  box-shadow:
+    0 42px 90px rgba(11, 46, 35, 0.32),
+    0 0 0 1px rgba(143, 211, 170, 0.12);
+}
+
+
+/* =========================================================
+   LEFT ONE
+========================================================= */
+
+.catalog-card-left-one {
+  z-index: 14;
+
+  opacity: 0.68;
+
+  transform:
+    translateX(calc(-50% - 285px))
+    translateZ(-70px)
+    rotateY(17deg)
+    scale(0.86);
+
+  filter:
+    brightness(0.72)
+    saturate(0.78);
+}
+
+
+/* =========================================================
+   RIGHT ONE
+========================================================= */
+
+.catalog-card-right-one {
+  z-index: 14;
+
+  opacity: 0.68;
+
+  transform:
+    translateX(calc(-50% + 285px))
+    translateZ(-70px)
+    rotateY(-17deg)
+    scale(0.86);
+
+  filter:
+    brightness(0.72)
+    saturate(0.78);
+}
+
+
+/* =========================================================
+   LEFT TWO
+========================================================= */
+
+.catalog-card-left-two {
+  z-index: 7;
+
+  opacity: 0.25;
+
+  transform:
+    translateX(calc(-50% - 500px))
+    translateZ(-180px)
+    rotateY(25deg)
+    scale(0.70);
+
+  filter:
+    brightness(0.50)
+    saturate(0.50);
+}
+
+
+/* =========================================================
+   RIGHT TWO
+========================================================= */
+
+.catalog-card-right-two {
+  z-index: 7;
+
+  opacity: 0.25;
+
+  transform:
+    translateX(calc(-50% + 500px))
+    translateZ(-180px)
+    rotateY(-25deg)
+    scale(0.70);
+
+  filter:
+    brightness(0.50)
+    saturate(0.50);
+}
+
+
+/* =========================================================
+   HIDDEN
+========================================================= */
+
+.catalog-card-hidden {
+  z-index: 1;
+
+  opacity: 0;
+
+  pointer-events: none;
+
+  transform:
+    translateX(-50%)
+    translateZ(-300px)
+    scale(0.55);
+}
+
+
+/* =========================================================
+   CARD HOVER
+========================================================= */
+
+.catalog-card-center:hover {
+  box-shadow:
+    0 52px 105px rgba(11, 46, 35, 0.40),
+    0 0 0 1px rgba(143, 211, 170, 0.16);
+}
+
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
+.catalog-card-media {
+  position: absolute;
+
+  inset: 0;
+
+  overflow: hidden;
+}
+
+.catalog-card-image {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transform: scale(1.015);
+
+  transition:
+    transform 1.15s cubic-bezier(.16, 1, .3, 1),
+    filter 0.6s ease;
+}
+
+.catalog-card-center:hover .catalog-card-image {
+  transform: scale(1.085);
+
+  filter:
+    saturate(1.06)
+    contrast(1.02);
+}
+
+
+/* =========================================================
+   IMAGE OVERLAY
+========================================================= */
+
+.catalog-card-image-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 2;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(4, 20, 15, 0.05) 0%,
+      rgba(4, 20, 15, 0.08) 28%,
+      rgba(4, 20, 15, 0.42) 54%,
+      rgba(4, 20, 15, 0.96) 100%
+    );
+
+  transition:
+    background 0.55s ease;
+}
+
+.catalog-card-center:hover
+.catalog-card-image-overlay {
+  background:
+    linear-gradient(
+      180deg,
+      rgba(4, 20, 15, 0.06) 0%,
+      rgba(4, 20, 15, 0.18) 25%,
+      rgba(4, 20, 15, 0.50) 52%,
+      rgba(4, 20, 15, 0.98) 100%
+    );
+}
+
+
+/* =========================================================
+   TOP GLOW
+========================================================= */
+
+.catalog-card-top-glow {
+  position: absolute;
+
+  z-index: 3;
+
+  top: -80px;
+  left: 50%;
+
+  width: 220px;
+  height: 180px;
+
+  transform: translateX(-50%);
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(143, 211, 170, 0.22),
+      transparent 70%
+    );
+
+  pointer-events: none;
+
+  opacity: 0.7;
+}
+
+
+/* =========================================================
+   GLASS SHEEN
+========================================================= */
+
+.catalog-card-sheen {
+  position: absolute;
+
+  z-index: 4;
+
+  inset: 0;
+
+  pointer-events: none;
+
+  background:
+    linear-gradient(
+      125deg,
+      rgba(255, 255, 255, 0.12),
+      transparent 25%
+    );
+
+  opacity: 0.7;
+
+  transition:
+    opacity 0.45s ease;
+}
+
+.catalog-card-center:hover
+~ .catalog-card-sheen {
+  opacity: 1;
+}
+
+
+/* =========================================================
+   CATEGORY BADGE
+========================================================= */
+
+.catalog-category-badge {
+  position: absolute;
+
+  z-index: 8;
+
+  top: 17px;
+  left: 17px;
+
+  max-width: 145px;
+
+  padding: 7px 11px;
+
+  border: 1px solid rgba(255, 255, 255, 0.25);
+
+  border-radius: 999px;
+
+  background:
+    rgba(10, 36, 28, 0.48);
+
+  backdrop-filter: blur(12px);
+
+  color: #fff;
+
+  font-size: 8px;
+
+  font-weight: 800;
+
+  letter-spacing: 1px;
+
+  text-transform: uppercase;
+
+  white-space: nowrap;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease;
+}
+
+.catalog-card-center:hover
+.catalog-category-badge {
+  transform: translateY(-3px);
+
+  background:
+    rgba(23, 104, 69, 0.72);
+}
+
+
+/* =========================================================
+   DISCOUNT
+========================================================= */
+
+.catalog-discount-badge {
+  position: absolute;
+
+  z-index: 8;
+
+  top: 61px;
+  left: 17px;
+
+  padding: 6px 9px;
+
+  border-radius: 7px;
+
+  background: var(--catalog-orange);
+
+  color: #fff;
+
+  font-size: 8px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.4px;
+
+  box-shadow:
+    0 6px 18px rgba(242, 140, 40, 0.25);
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease;
+}
+
+.catalog-card-center:hover
+.catalog-discount-badge {
+  transform: translateY(-3px);
+
+  background: var(--catalog-green);
+}
+
+
+/* =========================================================
+   CARD NUMBER
+========================================================= */
+
+.catalog-card-number {
+  position: absolute;
+
+  z-index: 7;
+
+  top: 20px;
+  right: 20px;
+
+  color: rgba(255, 255, 255, 0.72);
+
+  font-size: 9px;
+
+  font-weight: 800;
+
+  letter-spacing: 1.5px;
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.catalog-card-content {
+  position: absolute;
+
+  z-index: 10;
+
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  padding: 22px 22px 20px;
+
+  color: #fff;
+}
+
+
+/* =========================================================
+   RATING
+========================================================= */
+
+.catalog-rating-row {
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  margin-bottom: 7px;
+}
+
+.catalog-stars {
+  display: flex;
+
+  align-items: center;
+
+  gap: 1px;
+
+  color: #ffd56a;
+}
+
+.catalog-star.filled {
+  color: #ffd56a;
+}
+
+.catalog-star.half {
+  color: #ffd56a;
+}
+
+.catalog-star.empty {
+  color: rgba(255, 255, 255, 0.32);
+}
+
+.catalog-rating-number {
+  color: rgba(255, 255, 255, 0.70);
+
+  font-size: 9px;
+
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   PRODUCT TITLE
+========================================================= */
+
+.catalog-product-title {
+  max-width: 245px;
+
+  margin: 0;
+
+  color: var(--catalog-cream);
+
+  font-family:
+    "Cormorant Garamond",
+    Georgia,
+    serif;
+
+  font-size: 31px;
+
+  font-weight: 600;
+
+  line-height: 0.96;
+
+  letter-spacing: -1px;
+
+  text-shadow:
+    0 3px 12px rgba(0, 0, 0, 0.35);
+}
+
+
+/* =========================================================
+   FARMER INFO
+========================================================= */
+
+.catalog-farmer-row {
+  display: flex;
+
+  align-items: center;
+
+  gap: 5px;
+
+  margin-top: 9px;
+
+  max-width: 100%;
+
+  color: rgba(247, 243, 233, 0.62);
+
+  font-size: 8px;
+
+  line-height: 1.2;
+}
+
+.catalog-farm-name {
+  color: rgba(247, 243, 233, 0.90);
+
+  font-weight: 700;
+
+  white-space: nowrap;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+}
+
+.catalog-separator {
+  color: var(--catalog-orange);
+
+  font-weight: 800;
+}
+
+.catalog-location {
+  min-width: 0;
+
+  white-space: nowrap;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+}
+
+
+/* =========================================================
+   PRICE
+========================================================= */
+
+.catalog-price-row {
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  margin-top: 13px;
+
+  padding-top: 12px;
+
+  border-top:
+    1px solid rgba(247, 243, 233, 0.13);
+}
+
+.catalog-price {
+  display: flex;
+
+  align-items: baseline;
+
+  gap: 4px;
+}
+
+.catalog-price-current {
+  color: var(--catalog-mint);
+
+  font-size: 17px;
+
+  font-weight: 800;
+}
+
+.catalog-price-unit {
+  color: rgba(247, 243, 233, 0.52);
+
+  font-size: 8px;
+
+  font-weight: 700;
+}
+
+.catalog-price-old {
+  color: rgba(247, 243, 233, 0.42);
+
+  font-size: 9px;
+
+  text-decoration: line-through;
+}
+
+
+/* =========================================================
+   VIEW BUTTON
+========================================================= */
+
+.catalog-view-button {
+  width: 100%;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 7px;
+
+  margin-top: 12px;
+
+  padding: 10px 14px;
+
+  border: none;
+
+  border-radius: 999px;
+
+  background: var(--catalog-cream);
+
+  color: var(--catalog-green);
+
+  font-size: 9px;
+
+  font-weight: 900;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 7px 18px rgba(0, 0, 0, 0.15);
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.catalog-view-button:hover {
+  transform: translateY(-2px);
+
+  background: var(--catalog-orange);
+
+  color: #fff;
+
+  box-shadow:
+    0 10px 22px rgba(242, 140, 40, 0.25);
+}
+
+.catalog-view-button:active {
+  transform: scale(0.97);
+}
+
+
+/* =========================================================
+   ARROWS
+========================================================= */
+
+.catalog-arrow {
+  position: absolute;
+
+  z-index: 50;
+
+  top: 50%;
+
+  width: 43px;
+  height: 43px;
+
+  display: grid;
+
+  place-items: center;
+
+  padding: 0;
+
+  border:
+    1px solid rgba(23, 104, 69, 0.16);
+
+  border-radius: 50%;
+
+  background:
+    rgba(255, 255, 255, 0.88);
+
+  backdrop-filter: blur(10px);
+
+  color: var(--catalog-green);
+
+  cursor: pointer;
+
+  box-shadow:
+    0 9px 25px rgba(23, 104, 69, 0.15);
+
+  transform: translateY(-50%);
+
+  transition:
+    transform 0.3s cubic-bezier(.34, 1.56, .64, 1),
+    background 0.3s ease,
+    color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.catalog-arrow:hover {
+  transform:
+    translateY(-50%)
+    scale(1.1);
+
+  background: var(--catalog-green);
+
+  color: #fff;
+
+  box-shadow:
+    0 13px 28px rgba(23, 104, 69, 0.23);
+}
+
+.catalog-arrow:active {
+  transform:
+    translateY(-50%)
+    scale(0.94);
+}
+
+.catalog-arrow-left {
+  left: max(12px, calc(50% - 510px));
+}
+
+.catalog-arrow-right {
+  right: max(12px, calc(50% - 510px));
+}
+
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+.catalog-navigation {
+  position: relative;
+
+  z-index: 30;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 17px;
+
+  margin-top: 5px;
+}
+
+.catalog-dots {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 7px;
+}
+
+.catalog-dot {
+  width: 7px;
+  height: 7px;
+
+  padding: 0;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background: rgba(23, 104, 69, 0.20);
+
+  cursor: pointer;
+
+  transition:
+    width 0.3s ease,
+    background 0.3s ease,
+    transform 0.3s ease;
+}
+
+.catalog-dot:hover {
+  transform: scale(1.2);
+
+  background: var(--catalog-light-green);
+}
+
+.catalog-dot.active {
+  width: 25px;
+
+  border-radius: 999px;
+
+  background: var(--catalog-orange);
+}
+
+.catalog-slide-counter {
+  color: rgba(23, 104, 69, 0.48);
+
+  font-size: 8px;
+
+  font-weight: 800;
+
+  letter-spacing: 1px;
+}
+
+.catalog-slide-counter span {
+  margin: 0 4px;
+
+  color: rgba(23, 104, 69, 0.20);
+}
+
+
+/* =========================================================
+   LOADING
+========================================================= */
+
+.catalog-slider-loading {
+  min-height: 300px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  background: #f3f8f3;
+
+  color: var(--catalog-green);
+
+  font-size: 14px;
+
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   ANIMATIONS
+========================================================= */
+
+@keyframes catalogFloatOne {
+
+  0%,
+  100% {
+    transform:
+      rotate(35deg)
+      translate(0, 0);
+  }
+
+  50% {
+    transform:
+      rotate(35deg)
+      translate(15px, 12px);
+  }
+}
+
+@keyframes catalogFloatTwo {
+
+  0%,
+  100% {
+    transform:
+      rotate(-30deg)
+      translate(0, 0);
+  }
+
+  50% {
+    transform:
+      rotate(-30deg)
+      translate(-15px, -10px);
+  }
+}
+
+@keyframes catalogHeaderFade {
+
+  from {
+    opacity: 0;
+
+    transform:
+      translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateY(0);
+  }
+}
+
+@keyframes catalogTitleReveal {
+
+  from {
+    opacity: 0;
+
+    transform:
+      translateY(18px)
+      scale(0.97);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateY(0)
+      scale(1);
+  }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+  .farmer-catalog-section {
+    min-height: 620px;
+
+    padding-top: 48px;
+  }
+
+  .catalog-coverflow-viewport {
+    height: 465px;
+  }
+
+  .catalog-product-card {
+    width: 280px;
+    height: 410px;
+  }
+
+  .catalog-card-left-one {
+    transform:
+      translateX(calc(-50% - 245px))
+      translateZ(-80px)
+      rotateY(15deg)
+      scale(0.80);
+  }
+
+  .catalog-card-right-one {
+    transform:
+      translateX(calc(-50% + 245px))
+      translateZ(-80px)
+      rotateY(-15deg)
+      scale(0.80);
+  }
+
+  .catalog-card-left-two,
+  .catalog-card-right-two {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .catalog-arrow-left {
+    left: 20px;
+  }
+
+  .catalog-arrow-right {
+    right: 20px;
+  }
+}
+
+
+/* =========================================================
+   TABLET / SMALL
+========================================================= */
+
+@media (max-width: 760px) {
+
+  .farmer-catalog-section {
+    min-height: 590px;
+
+    padding:
+      42px
+      10px
+      30px;
+  }
+
+  .catalog-header-description {
+    max-width: 390px;
+
+    font-size: 10px;
+  }
+
+  .catalog-coverflow-viewport {
+    height: 455px;
+  }
+
+  .catalog-product-card {
+    width: 270px;
+    height: 400px;
+  }
+
+  .catalog-card-left-one {
+    opacity: 0.35;
+
+    transform:
+      translateX(calc(-50% - 205px))
+      translateZ(-100px)
+      rotateY(13deg)
+      scale(0.76);
+  }
+
+  .catalog-card-right-one {
+    opacity: 0.35;
+
+    transform:
+      translateX(calc(-50% + 205px))
+      translateZ(-100px)
+      rotateY(-13deg)
+      scale(0.76);
+  }
+
+  .catalog-arrow {
+    width: 38px;
+    height: 38px;
+  }
+
+  .catalog-arrow-left {
+    left: 8px;
+  }
+
+  .catalog-arrow-right {
+    right: 8px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .farmer-catalog-section {
+    min-height: 555px;
+
+    padding:
+      35px
+      0
+      25px;
+  }
+
+  .catalog-slider-header {
+    margin-bottom: 10px;
+  }
+
+  .catalog-eyebrow {
+    gap: 7px;
+
+    font-size: 8px;
+
+    letter-spacing: 1.4px;
+  }
+
+  .catalog-eyebrow-line {
+    width: 22px;
+  }
+
+  .catalog-main-title {
+    font-size: 30px;
+  }
+
+  .catalog-header-description {
+    padding:
+      0 35px;
+
+    font-size: 9px;
+
+    line-height: 1.55;
+  }
+
+  .catalog-coverflow-viewport {
+    height: 430px;
+  }
+
+  .catalog-product-card {
+    top: 5px;
+
+    width:
+      min(
+        285px,
+        calc(100vw - 60px)
+      );
+
+    height: 390px;
+
+    border-radius: 24px;
+  }
+
+  .catalog-card-center {
+    transform:
+      translateX(-50%)
+      translateZ(50px)
+      scale(1);
+  }
+
+  .catalog-card-left-one {
+    opacity: 0.20;
+
+    transform:
+      translateX(calc(-50% - 155px))
+      translateZ(-100px)
+      rotateY(8deg)
+      scale(0.70);
+  }
+
+  .catalog-card-right-one {
+    opacity: 0.20;
+
+    transform:
+      translateX(calc(-50% + 155px))
+      translateZ(-100px)
+      rotateY(-8deg)
+      scale(0.70);
+  }
+
+  .catalog-card-left-two,
+  .catalog-card-right-two {
+    opacity: 0;
+
+    pointer-events: none;
+  }
+
+  .catalog-card-content {
+    padding:
+      19px
+      19px
+      18px;
+  }
+
+  .catalog-product-title {
+    font-size: 28px;
+
+    max-width: 230px;
+  }
+
+  .catalog-farmer-row {
+    font-size: 7.5px;
+  }
+
+  .catalog-price-current {
+    font-size: 16px;
+  }
+
+  .catalog-view-button {
+    padding: 9px 12px;
+
+    font-size: 8.5px;
+  }
+
+  .catalog-category-badge {
+    top: 14px;
+    left: 14px;
+  }
+
+  .catalog-discount-badge {
+    top: 57px;
+    left: 14px;
+  }
+
+  .catalog-card-number {
+    top: 18px;
+    right: 17px;
+  }
+
+  .catalog-arrow {
+    width: 35px;
+    height: 35px;
+  }
+
+  .catalog-arrow-left {
+    left: 7px;
+  }
+
+  .catalog-arrow-right {
+    right: 7px;
+  }
+
+  .catalog-navigation {
+    gap: 12px;
+
+    margin-top: 2px;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 390px) {
+
+  .farmer-catalog-section {
+    padding-top: 30px;
+  }
+
+  .catalog-main-title {
+    font-size: 27px;
+  }
+
+  .catalog-header-description {
+    padding: 0 28px;
+  }
+
+  .catalog-coverflow-viewport {
+    height: 415px;
+  }
+
+  .catalog-product-card {
+    width:
+      calc(100vw - 48px);
+
+    height: 375px;
+
+    border-radius: 22px;
+  }
+
+  .catalog-card-content {
+    padding:
+      17px
+      17px
+      16px;
+  }
+
+  .catalog-product-title {
+    font-size: 25px;
+  }
+
+  .catalog-farmer-row {
+    margin-top: 7px;
+  }
+
+  .catalog-price-row {
+    margin-top: 10px;
+
+    padding-top: 10px;
+  }
+
+  .catalog-view-button {
+    margin-top: 9px;
+
+    padding: 8px 10px;
+  }
+
+  .catalog-arrow {
+    width: 32px;
+    height: 32px;
+  }
+
+  .catalog-arrow-left {
+    left: 5px;
+  }
+
+  .catalog-arrow-right {
+    right: 5px;
+  }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .catalog-product-card,
+  .catalog-card-image,
+  .catalog-arrow,
+  .catalog-dot,
+  .catalog-main-title,
+  .catalog-eyebrow,
+  .catalog-header-description {
+    animation: none !important;
+
+    transition: none !important;
+  }
+}

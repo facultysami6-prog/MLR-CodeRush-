@@ -1,0 +1,38 @@
+{
+  "welcomeMessage": "Hello! I am FreshFind AI Assistant 🌿. How can I help you discover local markets or seasonal produce today?",
+  "presetPrompts": [
+    "Which markets are open today?",
+    "Where can I find organic fruits?",
+    "How do I save bookmarks?",
+    "What produce is in season now?",
+    "How can I contact FreshFind support?"
+  ],
+  "faqDatabase": [
+    {
+      "keywords": ["open", "today", "schedule", "hours", "timing", "when"],
+      "answer": "Currently, Green Valley Farmers Market, Downtown Organic Produce Hub, West End Orchards, and Highland Artisan Farmstead are OPEN today! Check out the 'Find a Market' search bar to filter by specific operating days.",
+      "actionLink": "#markets"
+    },
+    {
+      "keywords": ["fruit", "fruits", "berries", "apples", "organic"],
+      "answer": "We have 100% certified organic fruits available at West End Community Orchards and Green Valley Market! Popular picks include Crisp Red Apples, Wild Strawberries, and Hass Avocados.",
+      "actionLink": "#produce"
+    },
+    {
+      "keywords": ["bookmark", "favorite", "save", "list", "export"],
+      "answer": "You can bookmark any market or produce item by clicking the ❤️ Heart icon! Click the 'Favorites' button at the top header to view and export your saved items with notes.",
+      "actionLink": "#bookmarks"
+    },
+    {
+      "keywords": ["season", "seasonal", "harvest", "picks"],
+      "answer": "Autumn & Summer picks right now include Crisp Red Apples, Heirloom Carrots, Alpine Strawberries, and Cold-Pressed Green Detox Juices!",
+      "actionLink": "#produce"
+    },
+    {
+      "keywords": ["contact", "phone", "email", "support", "location"],
+      "answer": "You can reach our team at support@freshfind.org or call +1 (555) 019-2834. Check the Contact section at the bottom of the page for live map & feedback forms!",
+      "actionLink": "#contact"
+    }
+  ],
+  "fallbackMessage": "I'm sorry, I didn't quite catch that. Try asking about open markets, organic fruits, seasonal picks, or saving bookmarks! You can also select one of the quick question chips below."
+}

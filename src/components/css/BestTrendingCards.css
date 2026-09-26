@@ -1,0 +1,679 @@
+/* BEST TRENDING SECTION */
+.best-trending-section {
+  position: relative;
+  padding: 26px 0 42px;
+  background: #ffffff;
+  overflow: hidden;
+  
+}
+
+.trending-arch-bg {
+ 
+  position: absolute;
+  top: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  height: 535px;
+  background-image:url(/bgimages2.png);
+  background-size: cover;
+  border-radius: 54px;
+  z-index: 0;
+}
+
+.trending-container {
+  position: relative;
+  z-index: 2;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 18px;
+  padding-top: 2%;
+}
+
+.carousel-wrapper-relative {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.trending-cards-grid-large {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  width: 100%;
+  align-items: stretch;
+}
+
+.promo-card-large {
+  border-radius: 28px;
+  padding: 18px 18px 0;
+  color: white;
+  position: relative;
+  overflow: hidden;
+  min-height: 290px;
+  display: flex;
+  align-items: flex-end;
+  box-shadow: 0 18px 28px rgba(35, 81, 42, 0.08);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.promo-card-large:hover {
+  transform: translateY(-8px) scale(1.01);
+  box-shadow: 0 26px 40px rgba(22, 101, 52, 0.15);
+}
+
+.promo-card-teal { background: linear-gradient(135deg, #64d3d7 0%, #61c4d2 100%); }
+.promo-card-orange { background: linear-gradient(135deg, #f7a63d 0%, #f28a1f 100%); }
+.promo-card-lime { background: linear-gradient(135deg, #b9d954 0%, #a9d23a 100%); }
+
+.promo-card-content {
+  z-index: 2;
+  width: 100%;
+  min-height: 160px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 18px 18px 20px 18px;
+}
+
+.promo-card-chip {
+  display: inline-flex;
+  align-self: flex-start;
+  background: rgba(255, 255, 255, 0.18);
+  color: white;
+  font-size: 0.72rem;
+  font-weight: 800;
+  padding: 8px 12px;
+  border-radius: 999px;
+  margin-bottom: 16px;
+}
+
+.promo-card-title-large {
+  font-size: clamp(1.28rem, 1.9vw, 2.2rem);
+  font-weight: 900;
+  line-height: 1.08;
+  margin-bottom: 18px;
+  letter-spacing: -0.04em;
+  color: #ffffff;
+  text-shadow: 0 3px 10px rgba(24, 52, 20, 0.10);
+}
+
+.btn-promo-shop-large {
+  background: rgba(255, 255, 255, 0.96);
+  color: var(--text-dark);
+  font-weight: 900;
+  font-size: 0.8rem;
+  padding: 12px 20px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+  align-self: flex-start;
+  transition: all 0.25s ease;
+}
+
+.btn-promo-shop-large:hover {
+  background: #ffffff;
+  transform: translateX(4px);
+}
+
+.shop-arrow {
+  font-size: 1.1rem;
+  line-height: 1;
+}
+
+
+/* CIRCULAR FEATURE HUB MATCHING MODEL IMAGE 1 (EXACT ORGANI DESIGN) */
+.model-feature-wrapper {
+  padding: 90px 6%;
+  background: #ffffff;
+}
+
+.model-feature-grid {
+  display: grid;
+  grid-template-columns: 1fr 440px 1fr;
+  align-items: center;
+  gap: 50px;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.feature-hub-ring-container {
+  position: relative;
+  width: 440px;
+  height: 440px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #176B45 0%, #7fad39 100%);
+  padding: 10px;
+  box-shadow: 0 20px 45px rgba(23, 107, 69, 0.22);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  animation: floatUpDown 4s ease-in-out infinite;
+}
+
+@keyframes floatUpDown {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-16px); }
+  100% { transform: translateY(0px); }
+}
+
+.feature-hub-inner-circle {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 6px solid #ffffff;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.feature-hub-inner-circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 4 SURROUNDING MINI FLOATING CIRCLE NODES ATTACHED TO THE OUTER GREEN RING */
+.mini-node {
+  position: absolute;
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 4px solid #7fad39;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.mini-node:hover {
+  transform: scale(1.15);
+  border-color: #176B45;
+}
+
+.mini-node img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* POSITIONING 4 MINI NODES AROUND THE RING (MATCHING MODEL IMAGE 1) */
+.node-top-left {
+  top: 15px;
+  left: 15px;
+}
+
+.node-bottom-left {
+  bottom: 15px;
+  left: 15px;
+}
+
+.node-top-right {
+  top: 15px;
+  right: 15px;
+}
+
+.node-bottom-right {
+  bottom: 15px;
+  right: 15px;
+}
+
+.feature-text-block h4 {
+  font-size: 0.95rem;
+  font-weight: 900;
+  color: var(--text-dark);
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.feature-text-block p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* SALE & COUNTDOWN SECTION */
+.sale-section-clean {
+  padding: 85px 6%;
+  background: #ffffff;
+  border-top: 1px solid var(--border-light);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.sale-grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  align-items: center;
+  gap: 50px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.sale-basket-img-box {
+  width: 100%;
+  max-width: 480px;
+  height: 360px;
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  margin: 0 auto;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.sale-basket-img-box:hover {
+  transform: translateY(-8px) scale(1.01);
+  box-shadow: 0 28px 50px rgba(23, 107, 69, 0.2);
+}
+
+.sale-basket-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.sale-basket-img-box:hover img {
+  transform: scale(1.06);
+}
+
+.timer-boxes-row {
+  display: flex;
+  gap: 14px;
+  margin: 20px 0;
+}
+
+.timer-box {
+  background: #f8faf8;
+  border: 1px solid var(--border-light);
+  border-radius: 18px;
+  padding: 14px 20px;
+  text-align: center;
+  min-width: 75px;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.timer-box:hover {
+  transform: translateY(-4px);
+  border-color: rgba(127, 173, 57, 0.45);
+  box-shadow: 0 12px 24px rgba(127, 173, 57, 0.12);
+}
+
+.timer-num {
+  font-size: 1.6rem;
+  font-weight: 900;
+  color: var(--text-dark);
+}
+
+.timer-lbl {
+  font-size: 0.7rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 1100px) {
+  .trending-cards-grid-large {
+    grid-template-columns: 1fr 1fr;
+  }
+  .model-feature-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .feature-text-block.text-right {
+    text-align: center;
+  }
+}
+
+@media (max-width: 900px) {
+  .hero-content-grid, .sale-grid-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .trending-cards-grid-large {
+    grid-template-columns: 1fr;
+  }
+  .hero-desc-text { margin: 0 auto 30px auto; }
+  .hero-title-text { font-size: 2.6rem; }
+  .amoeba-video-frame-large { width: 340px; height: 340px; }
+  .feature-hub-ring-container { width: 340px; height: 340px; }
+}
+
+/* =========================================
+   CONTINUOUS EARTH-SUN ORBITING BASKET ANIMATION
+========================================= */
+.promo-card-large {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  padding: 24px !important;
+  min-height: 310px !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+.promo-card-content {
+  flex: 1 !important;
+  z-index: 2 !important;
+  padding: 0 !important;
+  max-width: 58% !important;
+}
+
+.promo-card-visual {
+  position: relative;
+  width: 140px;
+  height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  flex-shrink: 0;
+  margin-left: 10px;
+}
+
+.orbit-sun-glow {
+  position: absolute;
+  inset: -12px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.45) 0%, rgba(255, 255, 255, 0) 70%);
+  animation: basketFloatingPulse 3s ease-in-out infinite;
+}
+
+/* .orbit-track-ring {
+  position: absolute;
+  width: 135px;
+  height: 135px;
+  border: 2px dashed rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
+  animation: earthSunOrbit 10s linear infinite;
+} */
+
+.orbit-planet-dot {
+  position: absolute;
+  top: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 13px;
+  height: 13px;
+  background: #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 0 12px #ffffff, 0 0 20px rgba(255, 255, 255, 0.9);
+}
+
+.orbit-planet-dot-2 {
+  position: absolute;
+  bottom: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 9px;
+  height: 9px;
+  background: #fbbf24;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #fbbf24;
+}
+
+/* .orbit-basket-wrapper {
+  position: relative;
+  width: 105px;
+  height: 105px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.28), 0 0 0 4px rgba(255, 255, 255, 0.4);
+  animation: earthSunOrbit 14s linear infinite;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} */
+
+.orbit-basket-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.promo-card-large:hover .orbit-basket-wrapper {
+  animation-duration: 5s;
+}
+
+/* =========================================
+   FIXED ORBIT ROTATION
+   Image + Ring stay in the same position
+========================================= */
+
+.promo-card-visual {
+  position: relative;
+  width: 150px;
+  height: 150px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+  z-index: 2;
+}
+
+
+/* =========================================
+   GLOW
+========================================= */
+
+.orbit-sun-glow {
+  position: absolute;
+
+  width: 150px;
+  height: 150px;
+
+  border-radius: 50%;
+
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.45) 0%,
+    rgba(255, 255, 255, 0) 70%
+  );
+
+  animation: basketFloatingPulse 3s ease-in-out infinite;
+}
+
+
+/* =========================================
+   ROTATING RING
+========================================= */
+
+.orbit-track-ring {
+  position: absolute;
+
+  width: 135px;
+  height: 135px;
+
+  border: 2px dashed rgba(255, 255, 255, 0.75);
+
+  border-radius: 50%;
+
+  /* Ring rotates around its own center */
+  animation: orbitRingRotate 8s linear infinite;
+}
+
+
+/* Small white planet */
+.orbit-planet-dot {
+  position: absolute;
+
+  top: -7px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  width: 13px;
+  height: 13px;
+
+  background: #ffffff;
+
+  border-radius: 50%;
+
+  box-shadow:
+    0 0 10px #ffffff,
+    0 0 20px rgba(255, 255, 255, 0.9);
+}
+
+
+/* Small yellow planet */
+.orbit-planet-dot-2 {
+  position: absolute;
+
+  bottom: -6px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  width: 9px;
+  height: 9px;
+
+  background: #fbbf24;
+
+  border-radius: 50%;
+
+  box-shadow: 0 0 10px #fbbf24;
+}
+
+
+/* =========================================
+   FIXED BASKET IMAGE
+========================================= */
+
+.orbit-basket-wrapper {
+  position: absolute;
+
+  width: 105px;
+  height: 105px;
+
+  left: 50%;
+  top: 50%;
+
+  transform: translate(-50%, -50%);
+
+  border-radius: 50%;
+
+  overflow: hidden;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 12px 28px rgba(0, 0, 0, 0.28),
+    0 0 0 4px rgba(255, 255, 255, 0.4);
+
+  /*
+    Image stays in the same location.
+    Only the image itself rotates.
+  */
+  animation: basketRotate 12s linear infinite;
+}
+
+
+/* =========================================
+   BASKET IMAGE
+========================================= */
+
+.orbit-basket-img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  display: block;
+}
+
+
+/* =========================================
+   RING ROTATION
+========================================= */
+
+@keyframes orbitRingRotate {
+
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+
+}
+
+
+/* =========================================
+   BASKET ROTATION
+========================================= */
+
+@keyframes basketRotate {
+
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+
+}
+
+
+/* =========================================
+   GLOW PULSE
+========================================= */
+
+@keyframes basketFloatingPulse {
+
+  0% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.08);
+  }
+
+  100% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+
+}
+
+
+/* =========================================
+   HOVER = FASTER ROTATION
+========================================= */
+
+.promo-card-large:hover .orbit-track-ring {
+  animation-duration: 4s;
+}
+
+.promo-card-large:hover .orbit-basket-wrapper {
+  animation-duration: 6s;
+}

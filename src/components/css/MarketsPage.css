@@ -1,0 +1,402 @@
+/* ============================================================
+   MARKETS PAGE — Quick Find Search Bar, Market Directory Cards,
+   Produce Guide Cards. Shared by QuickFindSearchBar,
+   FeaturedMarketsSection and ProduceGuideSection.
+   ============================================================ */
+
+/* ---------- Shared section shell ---------- */
+.page-section,
+.page-section-alt {
+  padding: 70px 6%;
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
+.page-section-alt {
+  background: var(--bg-soft, #fbfdfb);
+}
+
+.tabs-row-center {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 40px;
+}
+
+.tab-pill-btn {
+  border: 1px solid var(--border-light, #eaecf0);
+  background: #ffffff;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 10px 22px;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.tab-pill-btn:hover {
+  border-color: var(--vibrant-green, #7fad39);
+  color: var(--primary-green, #176B45);
+}
+
+.tab-pill-btn.active-tab {
+  background: var(--primary-green, #176B45);
+  border-color: var(--primary-green, #176B45);
+  color: #ffffff;
+}
+
+/* ---------- Quick Find Search Bar ---------- */
+.quick-find-wrapper {
+  padding: 40px 6% 0;
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
+.quick-find-box {
+  background: #ffffff;
+  border: 1px solid var(--border-light, #eaecf0);
+  border-radius: var(--radius-lg, 28px);
+  box-shadow: var(--shadow-md);
+  padding: 28px 30px;
+}
+
+.quick-find-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.quick-find-head h3 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--text-dark);
+}
+
+.quick-find-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  align-items: stretch;
+}
+
+.input-with-icon {
+  position: relative;
+  flex: 2 1 260px;
+  display: flex;
+  align-items: center;
+}
+
+.input-with-icon svg {
+  position: absolute;
+  left: 16px;
+  color: var(--text-muted);
+  pointer-events: none;
+}
+
+.form-field-pill {
+  width: 100%;
+  height: 48px;
+  padding: 0 16px 0 44px;
+  border: 1px solid var(--border-light, #eaecf0);
+  border-radius: 9999px;
+  font-size: 0.9rem;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.form-field-pill:focus {
+  border-color: var(--vibrant-green, #7fad39);
+}
+
+.select-pill {
+  height: 48px;
+  min-width: 160px;
+  flex: 1 1 160px;
+  padding: 0 16px;
+  border: 1px solid var(--border-light, #eaecf0);
+  border-radius: 9999px;
+  background: #ffffff;
+  font-size: 0.85rem;
+  color: var(--text-dark);
+  cursor: pointer;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.select-pill:focus {
+  border-color: var(--vibrant-green, #7fad39);
+}
+
+.btn-filter-find {
+  height: 48px;
+  padding: 0 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: none;
+  border-radius: 9999px;
+  background: var(--accent-orange, #F28C28);
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.9rem;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.btn-filter-find:hover {
+  background: #e67e18;
+  transform: translateY(-1px);
+}
+
+/* ---------- Market Directory Cards Grid ---------- */
+.market-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 28px;
+}
+
+.market-item-card {
+  background: #ffffff;
+  border: 1px solid var(--border-light, #eaecf0);
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.market-item-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+}
+
+.market-card-img {
+  position: relative;
+  height: 190px;
+}
+
+.market-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.badge-open-now,
+.badge-closed-now {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  padding: 5px 14px;
+  border-radius: 9999px;
+  font-size: 0.7rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.badge-open-now {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.badge-closed-now {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.heart-bookmark-btn {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.92);
+  color: var(--text-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease;
+}
+
+.heart-bookmark-btn:hover {
+  transform: scale(1.1);
+}
+
+.heart-bookmark-btn.active-fav {
+  background: #ffffff;
+}
+
+.market-card-content {
+  padding: 20px 22px 24px;
+}
+
+.market-area-label {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--vibrant-green, #7fad39);
+  margin-bottom: 6px;
+}
+
+.market-name-title {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--text-dark);
+  margin-bottom: 10px;
+}
+
+.market-detail-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  margin-bottom: 6px;
+}
+
+.market-snippet-desc {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin: 12px 0;
+  line-height: 1.6;
+}
+
+.produce-tags-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.tag-pill {
+  background: var(--bg-soft, #fbfdfb);
+  border: 1px solid var(--border-light, #eaecf0);
+  color: var(--text-dark);
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 9999px;
+}
+
+.market-card-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 14px;
+  border-top: 1px solid var(--border-light, #eaecf0);
+}
+
+.rating-box {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.btn-detail-modal {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border: none;
+  background: var(--primary-green, #176B45);
+  color: #ffffff;
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 8px 16px;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.btn-detail-modal:hover {
+  background: var(--light-green-hover, #4CAF50);
+}
+
+/* ---------- Produce Guide Cards ---------- */
+.produce-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 24px;
+}
+
+.produce-item-card {
+  background: #ffffff;
+  border: 1px solid var(--border-light, #eaecf0);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.produce-item-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+}
+
+.produce-img-wrap {
+  position: relative;
+  height: 160px;
+}
+
+.produce-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.produce-card-body {
+  padding: 16px 18px 20px;
+}
+
+.produce-badge-tag {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--vibrant-green, #7fad39);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  margin-bottom: 6px;
+}
+
+.produce-item-title {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--text-dark);
+  margin-bottom: 4px;
+}
+
+.produce-price-tag {
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--accent-orange, #F28C28);
+  margin-bottom: 8px;
+}
+
+.produce-item-desc {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  line-height: 1.55;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 640px) {
+  .quick-find-box { padding: 22px 18px; }
+  .select-pill, .btn-filter-find { flex: 1 1 100%; }
+}

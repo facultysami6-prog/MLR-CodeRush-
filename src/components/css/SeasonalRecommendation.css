@@ -1,0 +1,1216 @@
+
+/* =========================================
+   SEASONAL RECOMMENDATION SECTION
+========================================= */
+
+.seasonal-recommendation-section {
+  --seasonal-green: #176b45;
+  --seasonal-green-dark: #0b462c;
+  --seasonal-text: #0f172a;
+  --seasonal-muted: #64748b;
+  --seasonal-border: #e2e8f0;
+
+  width: 100%;
+  padding: 0 0 80px;
+  background: #f8fafc;
+  font-family: "Segoe UI", system-ui, sans-serif;
+}
+
+.seasonal-recommendation-section *,
+.seasonal-recommendation-section *::before,
+.seasonal-recommendation-section *::after {
+  box-sizing: border-box;
+}
+
+.seasonal-recommendation-section button,
+.seasonal-recommendation-section input {
+  font: inherit;
+}
+
+/* =========================================
+   HERO VIDEO BANNER
+========================================= */
+
+.seasonal-hero-banner {
+  position: relative;
+  min-height: 480px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  text-align: center;
+  color: white;
+  background: #1e293b url("/seasonal-hero-bg.jpg")
+    center / cover no-repeat;
+}
+
+.seasonal-hero-video {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.05);
+}
+
+.seasonal-hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(
+    to bottom,
+    rgba(15, 23, 42, 0.7),
+    rgba(15, 23, 42, 0.5),
+    rgba(15, 23, 42, 0.85)
+  );
+}
+
+.seasonal-hero-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 70px 20px 95px;
+}
+
+.seasonal-hero-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 18px;
+  padding: 7px 16px;
+  border-radius: 999px;
+  background: rgba(5, 150, 105, 0.9);
+  color: white;
+  font-size: 12px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(8px);
+}
+
+.seasonal-hero-badge svg {
+  animation: seasonalPulse 2s ease-in-out infinite;
+}
+
+@keyframes seasonalPulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.6;
+    transform: scale(1.15);
+  }
+}
+
+.seasonal-hero-title {
+  margin: 0 0 14px;
+  color: #ffffff;
+  font-size: clamp(36px, 5vw, 60px);
+  font-weight: 900;
+  line-height: 1.12;
+  letter-spacing: -1.5px;
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.seasonal-hero-subtitle {
+  max-width: 680px;
+  margin: 0 auto 32px;
+  color: #fde68a;
+  font-family: 'poppins', sans-serif;
+  font-size: clamp(18px, 2.2vw, 24px);
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+/* =========================================
+   SEASON FILTER TABS
+========================================= */
+
+.seasonal-tabs-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+.season-tab-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 11px 18px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.92);
+  color: #334155;
+  font-size: 13px;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.season-tab-btn:hover {
+  background: white;
+  transform: translateY(-3px);
+}
+
+.season-tab-btn.active {
+  background: var(--seasonal-green);
+  color: white;
+  border-color: var(--seasonal-green);
+  box-shadow: 0 6px 18px rgba(23, 107, 69, 0.4);
+}
+
+.season-tab-btn.active:hover {
+  background: var(--seasonal-green-dark);
+}
+
+.season-tab-btn:focus-visible,
+.category-filter-btn:focus-visible,
+.details-link-btn:focus-visible,
+.bookmark-btn:focus-visible,
+.reset-filters-btn:focus-visible,
+.seasonal-modal button:focus-visible {
+  outline: 3px solid #fbbf24;
+  outline-offset: 3px;
+}
+
+/* =========================================
+   BOTTOM WAVE
+========================================= */
+
+.seasonal-wave-mask {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 3;
+  display: block;
+  width: 100%;
+  height: 64px;
+  fill: #f8fafc;
+  pointer-events: none;
+}
+
+/* =========================================
+   MAIN CONTENT
+========================================= */
+
+.seasonal-main-content {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 32px 24px 0;
+}
+
+/* =========================================
+   FILTER TOOLBAR
+========================================= */
+
+.seasonal-controls-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 40px;
+  padding: 24px;
+  background: #ffffff;
+  border: 1px solid var(--seasonal-border);
+  border-radius: 24px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+}
+
+.category-filter-group {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.category-filter-label {
+  margin-right: 8px;
+  color: #94a3b8;
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.category-filter-btn {
+  padding: 10px 16px;
+  border: 0;
+  border-radius: 12px;
+  background: #f1f5f9;
+  color: #475569;
+  font-size: 13px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.category-filter-btn:hover {
+  background: #e2e8f0;
+  color: #0f172a;
+}
+
+.category-filter-btn.active {
+  background: var(--seasonal-green);
+  color: white;
+  box-shadow: 0 5px 12px rgba(23, 107, 69, 0.2);
+}
+
+/* =========================================
+   SEARCH
+========================================= */
+
+.seasonal-search-input-wrapper {
+  position: relative;
+  width: 288px;
+  max-width: 100%;
+}
+
+.seasonal-search-icon {
+  position: absolute;
+  top: 50%;
+  left: 14px;
+  z-index: 1;
+  color: #94a3b8;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.seasonal-search-input {
+  width: 100%;
+  padding: 12px 16px 12px 42px;
+  border: 1px solid #cbd5e1;
+  border-radius: 16px;
+  background: #f8fafc;
+  color: var(--seasonal-text);
+  font-size: 13px;
+  font-weight: 500;
+  outline: none;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.seasonal-search-input::placeholder {
+  color: #94a3b8;
+}
+
+.seasonal-search-input:focus {
+  border-color: #10b981;
+  background: white;
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.15);
+}
+
+/* =========================================
+   SECTION HEADING
+========================================= */
+
+.seasonal-section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.seasonal-section-heading h2 {
+  margin: 0;
+  color: var(--seasonal-text);
+  font-size: 26px;
+  font-weight: 900;
+  letter-spacing: -0.6px;
+  line-height: 1.25;
+}
+
+.seasonal-section-heading p {
+  margin: 5px 0 0;
+  color: var(--seasonal-muted);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* =========================================
+   PRODUCE GRID
+========================================= */
+
+.seasonal-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.produce-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  overflow: hidden;
+  background: white;
+  border: 1px solid var(--seasonal-border);
+  border-radius: 24px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.produce-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 32px rgba(23, 107, 69, 0.12);
+}
+
+/* =========================================
+   CARD IMAGE
+========================================= */
+
+.produce-card-img-box {
+  position: relative;
+  width: 100%;
+  height: 208px;
+  overflow: hidden;
+  background: #f1f5f9;
+}
+
+.produce-card-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.produce-card:hover .produce-card-img {
+  transform: scale(1.08);
+}
+
+/* =========================================
+   BADGES
+========================================= */
+
+.season-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  z-index: 1;
+  padding: 5px 12px;
+  border-radius: 999px;
+  color: white;
+  font-size: 11px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.season-badge.Spring {
+  background: #ec4899;
+}
+
+.season-badge.Summer {
+  background: #f59e0b;
+}
+
+.season-badge.Autumn {
+  background: #ea580c;
+}
+
+.season-badge.Winter {
+  background: #0284c7;
+}
+
+.category-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 1;
+  padding: 5px 10px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.92);
+  color: #1e293b;
+  font-size: 11px;
+  font-weight: 800;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(5px);
+}
+
+/* =========================================
+   CARD CONTENT
+========================================= */
+
+.produce-card-body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.produce-card-title {
+  margin: 0 0 6px;
+  color: var(--seasonal-text);
+  font-size: 18px;
+  font-weight: 900;
+  line-height: 1.3;
+  transition: color 0.25s ease;
+}
+
+.produce-card:hover .produce-card-title {
+  color: var(--seasonal-green);
+}
+
+.produce-card-desc {
+  display: -webkit-box;
+  overflow: hidden;
+  margin: 0;
+  color: var(--seasonal-muted);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.6;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+}
+
+/* =========================================
+   CARD FOOTER
+========================================= */
+
+.produce-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 18px;
+  padding-top: 14px;
+  border-top: 1px solid #f1f5f9;
+}
+
+.details-link-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 0;
+  border: none;
+  background: transparent;
+  color: var(--seasonal-green);
+  font-size: 12px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.details-link-btn:hover {
+  color: var(--seasonal-green-dark);
+  text-decoration: underline;
+}
+
+.bookmark-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
+  border: none;
+  border-radius: 50%;
+  background: transparent;
+  color: #94a3b8;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.bookmark-btn:hover {
+  background: #fff1f2;
+  color: #ef4444;
+  transform: scale(1.08);
+}
+
+.bookmark-btn.bookmarked {
+  color: #ef4444;
+}
+
+/* =========================================
+   EMPTY SEARCH RESULTS
+========================================= */
+
+.seasonal-empty-state {
+  padding: 64px 24px;
+  border: 1px solid var(--seasonal-border);
+  border-radius: 24px;
+  background: white;
+  text-align: center;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+}
+
+.empty-search-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 16px;
+  border-radius: 50%;
+  background: #f1f5f9;
+  color: #94a3b8;
+}
+
+.seasonal-empty-state h3 {
+  margin: 0 0 8px;
+  color: #1e293b;
+  font-size: 20px;
+  font-weight: 900;
+}
+
+.seasonal-empty-state p {
+  max-width: 400px;
+  margin: 0 auto;
+  color: var(--seasonal-muted);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.reset-filters-btn {
+  margin-top: 20px;
+  padding: 12px 22px;
+  border: none;
+  border-radius: 12px;
+  background: var(--seasonal-green);
+  color: white;
+  font-size: 13px;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 5px 14px rgba(23, 107, 69, 0.2);
+  transition: background 0.2s ease;
+}
+
+.reset-filters-btn:hover {
+  background: var(--seasonal-green-dark);
+}
+
+/* =========================================
+   QUICK DETAILS MODAL
+========================================= */
+
+.seasonal-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  overflow-y: auto;
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(5px);
+}
+
+.seasonal-modal {
+  position: relative;
+  width: 100%;
+  max-width: 512px;
+  max-height: calc(100vh - 32px);
+  overflow-y: auto;
+  border-radius: 24px;
+  background: white;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.25);
+  animation: seasonalModalAppear 0.25s ease-out;
+}
+
+@keyframes seasonalModalAppear {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.seasonal-modal-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.45);
+  color: white;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.seasonal-modal-close:hover {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+/* MODAL IMAGE */
+
+.seasonal-modal-image-box {
+  position: relative;
+  height: 256px;
+  overflow: hidden;
+  background: #f1f5f9;
+}
+
+.seasonal-modal-image-box img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.seasonal-modal-image-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.75),
+    transparent 75%
+  );
+}
+
+.seasonal-modal-image-text {
+  position: absolute;
+  bottom: 18px;
+  left: 24px;
+  right: 24px;
+  color: white;
+}
+
+.seasonal-modal-image-text span {
+  display: inline-block;
+  padding: 5px 12px;
+  border-radius: 999px;
+  background: #059669;
+  color: white;
+  font-size: 11px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.seasonal-modal-image-text h3 {
+  margin: 8px 0 0;
+  color: white;
+  font-size: 26px;
+  font-weight: 900;
+}
+
+/* MODAL BODY */
+
+.seasonal-modal-body {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 24px;
+}
+
+.seasonal-modal-description h4 {
+  margin: 0 0 6px;
+  color: #94a3b8;
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.seasonal-modal-description p {
+  margin: 0;
+  color: #334155;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.7;
+}
+
+/* MODAL INFORMATION BOXES */
+
+.seasonal-modal-info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.seasonal-info-box {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 16px;
+  border: 1px solid;
+  border-radius: 16px;
+}
+
+.seasonal-info-box span {
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.seasonal-info-box strong {
+  font-size: 14px;
+  font-weight: 900;
+}
+
+.seasonal-info-box.category {
+  border-color: #d1fae5;
+  background: #ecfdf5;
+}
+
+.seasonal-info-box.category span {
+  color: #065f46;
+}
+
+.seasonal-info-box.category strong {
+  color: #064e3b;
+}
+
+.seasonal-info-box.harvest {
+  border-color: #fef3c7;
+  background: #fffbeb;
+}
+
+.seasonal-info-box.harvest span {
+  color: #92400e;
+}
+
+.seasonal-info-box.harvest strong {
+  color: #78350f;
+}
+
+/* MODAL CLOSE BUTTON */
+
+.seasonal-modal-done {
+  width: 100%;
+  padding: 15px 20px;
+  border: none;
+  border-radius: 16px;
+  background: #0f172a;
+  color: white;
+  font-size: 14px;
+  font-weight: 900;
+  cursor: pointer;
+  box-shadow: 0 5px 14px rgba(0, 0, 0, 0.12);
+  transition: background 0.2s ease;
+}
+
+.seasonal-modal-done:hover {
+  background: #1e293b;
+}
+
+/* =========================================
+   RESPONSIVE: TABLET
+========================================= */
+
+@media (max-width: 1100px) {
+  .seasonal-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .seasonal-controls-box {
+    align-items: stretch;
+  }
+}
+
+@media (max-width: 900px) {
+  .seasonal-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .seasonal-search-input-wrapper {
+    width: 100%;
+  }
+}
+
+/* =========================================
+   RESPONSIVE: MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+  .seasonal-recommendation-section {
+    padding-bottom: 48px;
+  }
+
+  .seasonal-hero-banner {
+    min-height: 440px;
+  }
+
+  .seasonal-hero-content {
+    padding: 64px 16px 90px;
+  }
+
+  .seasonal-hero-title {
+    font-size: 36px;
+    letter-spacing: -0.8px;
+  }
+
+  .seasonal-hero-subtitle {
+    font-size: 18px;
+  }
+
+  .seasonal-tabs-row {
+    gap: 8px;
+  }
+
+  .season-tab-btn {
+    padding: 9px 12px;
+    font-size: 11px;
+  }
+
+  .season-tab-btn svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  .seasonal-wave-mask {
+    height: 40px;
+  }
+
+  .seasonal-main-content {
+    padding: 24px 16px 0;
+  }
+
+  .seasonal-controls-box {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 18px;
+    padding: 18px;
+    margin-bottom: 28px;
+  }
+
+  .category-filter-group {
+    gap: 8px;
+  }
+
+  .category-filter-label {
+    width: 100%;
+    margin-bottom: 4px;
+  }
+
+  .category-filter-btn {
+    padding: 9px 12px;
+    font-size: 12px;
+  }
+
+  .seasonal-section-heading h2 {
+    font-size: 22px;
+  }
+
+  .seasonal-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .produce-card-img-box {
+    height: 220px;
+  }
+
+  .seasonal-modal-image-box {
+    height: 220px;
+  }
+
+  .seasonal-modal-body {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 380px) {
+  .seasonal-modal-info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .seasonal-hero-title {
+    font-size: 30px;
+  }
+}
+
+/* =========================================
+   REDUCED MOTION
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .seasonal-recommendation-section *,
+  .seasonal-recommendation-section *::before,
+  .seasonal-recommendation-section *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+
+
+
+/* =========================================
+   FULL IMAGE PRODUCE CARDS
+========================================= */
+
+.produce-card {
+  position: relative;
+  height: 360px;
+  min-width: 0;
+  overflow: hidden;
+  border: none;
+  border-radius: 24px;
+  background: #176b45;
+  cursor: pointer;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.08);
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.produce-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(23, 107, 69, 0.25);
+}
+
+/* FULL IMAGE */
+
+.produce-card-full-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition:
+    transform 0.6s ease,
+    filter 0.4s ease;
+}
+
+.produce-card:hover .produce-card-full-img {
+  transform: scale(1.08);
+}
+
+/* =========================================
+   GREEN OVERLAY
+========================================= */
+
+.produce-card-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 18px;
+
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(23, 107, 69, 0.15),
+      rgba(23, 107, 69, 0.92)
+    );
+
+  opacity: 0;
+  transition:
+    opacity 0.4s ease,
+    background 0.4s ease;
+}
+
+.produce-card:hover .produce-card-overlay {
+  opacity: 1;
+
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(23, 107, 69, 0.35),
+      rgba(23, 107, 69, 0.96)
+    );
+}
+
+/* =========================================
+   BADGES
+========================================= */
+
+.produce-card-overlay .season-badge {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+
+  padding: 6px 12px;
+
+  border-radius: 999px;
+
+  background: rgba(255, 255, 255, 0.95);
+  color: #176b45;
+
+  font-size: 11px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+
+  box-shadow: 0 5px 14px rgba(0, 0, 0, 0.15);
+}
+
+.produce-card-overlay .category-badge {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+
+  padding: 6px 11px;
+
+  border-radius: 999px;
+
+  background: rgba(255, 255, 255, 0.92);
+  color: #176b45;
+
+  font-size: 11px;
+  font-weight: 800;
+
+  backdrop-filter: blur(5px);
+}
+
+/* =========================================
+   HOVER DETAILS
+========================================= */
+
+.produce-hover-content {
+  margin-top: auto;
+
+  color: white;
+
+  transform: translateY(25px);
+  opacity: 0;
+
+  transition:
+    transform 0.45s ease,
+    opacity 0.4s ease;
+}
+
+.produce-card:hover .produce-hover-content {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.produce-hover-content h3 {
+  margin: 0 0 8px;
+
+  color: white;
+
+  font-size: 25px;
+  font-weight: 900;
+  line-height: 1.2;
+}
+
+.produce-hover-content p {
+  margin: 0 0 18px;
+
+  color: rgba(255, 255, 255, 0.9);
+
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.6;
+
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  overflow: hidden;
+}
+
+/* =========================================
+   DETAILS BUTTON
+========================================= */
+
+.produce-hover-content .details-link-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+
+  padding: 10px 16px;
+
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 12px;
+
+  background: rgba(255, 255, 255, 0.15);
+
+  color: white;
+
+  font-size: 12px;
+  font-weight: 800;
+
+  cursor: pointer;
+
+  backdrop-filter: blur(8px);
+
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease;
+}
+
+.produce-hover-content .details-link-btn:hover {
+  background: white;
+  color: #176b45;
+  transform: translateY(-2px);
+}
+
+/* =========================================
+   BOOKMARK
+========================================= */
+
+.produce-hover-content .bookmark-btn {
+  position: absolute;
+  right: 18px;
+  bottom: 18px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 38px;
+  height: 38px;
+
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.15);
+
+  color: white;
+
+  cursor: pointer;
+
+  backdrop-filter: blur(8px);
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.produce-hover-content .bookmark-btn:hover {
+  background: white;
+  color: #ef4444;
+  transform: scale(1.1);
+}
+
+.produce-hover-content .bookmark-btn.bookmarked {
+  background: white;
+  color: #ef4444;
+}

@@ -1,0 +1,230 @@
+[
+  {
+    "name": "Apricots",
+    "season": "Spring",
+    "category": "Fruit",
+    "description": "Small, soft orange fruits with a sweet and slightly tangy flavor.",
+    "image": "/seasonal/Apricots-spring.jpg"
+  },
+  {
+    "name": "Cherries",
+    "season": "Spring",
+    "category": "Fruit",
+    "description": "Small, juicy fruits with a sweet-tart flavor, commonly enjoyed fresh.",
+    "image": "/seasonal/Cherries-spring.jpg"
+  },
+  {
+    "name": "Chives",
+    "season": "Spring",
+    "category": "Herb",
+    "description": "Mild onion-flavored green herb commonly used as a garnish and seasoning.",
+    "image": "/seasonal/Chives-spring.jpg"
+  },
+  {
+    "name": "Cilantro",
+    "season": "Spring",
+    "category": "Herb",
+    "description": "Fresh green herb with a distinctive citrusy flavor, often used in salads and cooking.",
+    "image": "/seasonal/Cilantro-spring.jpg"
+  },
+  {
+    "name": "Fava Beans",
+    "season": "Spring",
+    "category": "Vegetable",
+    "description": "Large green beans with a creamy texture and earthy flavor.",
+    "image": "/seasonal/Fava Beans-spring.jpg"
+  },
+  {
+    "name": "Pears",
+    "season": "Spring",
+    "category": "Fruit",
+    "description": "Juicy, sweet fruit with a soft texture and mild flavor.",
+    "image": "/seasonal/Pears-spring.jpg"
+  },
+  {
+    "name": "Rhubarb",
+    "season": "Spring",
+    "category": "Vegetable",
+    "description": "Tart, crisp stalks commonly cooked with fruits or used in desserts.",
+    "image": "/seasonal/Rhubarb-spring.jpg"
+  },
+  {
+    "name": "Spring Onions",
+    "season": "Spring",
+    "category": "Vegetable",
+    "description": "Mild onion with long green leaves, often used fresh in salads and savory dishes.",
+    "image": "/seasonal/Spring Onions.jpg"
+  },
+  {
+    "name": "Strawberries",
+    "season": "Spring",
+    "category": "Fruit",
+    "description": "Bright red, juicy berries with a sweet and slightly tart flavor.",
+    "image": "/seasonal/Strawberries-spring.jpg"
+  },
+
+  {
+    "name": "Basil",
+    "season": "Summer",
+    "category": "Herb",
+    "description": "Fragrant green herb with a fresh, slightly sweet flavor, popular in sauces and salads.",
+    "image": "/seasonal/Basil-summer.jpg"
+  },
+  {
+    "name": "Mint",
+    "season": "Summer",
+    "category": "Herb",
+    "description": "Cool, refreshing herb commonly used in drinks, salads, sauces, and desserts.",
+    "image": "/seasonal/Mint-summer.jpg"
+  },
+  {
+    "name": "Okra",
+    "season": "Summer",
+    "category": "Vegetable",
+    "description": "Green, ridged vegetable with a mild flavor and distinctive tender texture when cooked.",
+    "image": "/seasonal/Okra-summer.jpg"
+  },
+  {
+    "name": "Mangoes",
+    "season": "Summer",
+    "category": "Fruit",
+    "description": "Juicy tropical fruit with a sweet, rich flavor and bright orange-yellow flesh.",
+    "image": "/seasonal/Summer-Mangoes.jpg"
+  },
+  {
+    "name": "Sweet Corn",
+    "season": "Summer",
+    "category": "Vegetable",
+    "description": "Tender yellow or white kernels with a naturally sweet flavor.",
+    "image": "/seasonal/Sweet Corn-Summer.jpg"
+  },
+  {
+    "name": "Tarragon",
+    "season": "Summer",
+    "category": "Herb",
+    "description": "Aromatic herb with a mild anise-like flavor, often used in sauces and dressings.",
+    "image": "/seasonal/Tarragon-summer.jpg"
+  },
+  {
+    "name": "Tomatoes",
+    "season": "Summer",
+    "category": "Vegetable",
+    "description": "Juicy produce with a mildly sweet and tangy flavor, widely used fresh or cooked.",
+    "image": "/seasonal/Tomatoes-summer.jpg"
+  },
+  {
+    "name": "Watermelon",
+    "season": "Summer",
+    "category": "Fruit",
+    "description": "Large, refreshing fruit with crisp, juicy flesh and a naturally sweet flavor.",
+    "image": "/seasonal/Watermelon-summer.jpg"
+  },
+
+  {
+    "name": "Carrots",
+    "season": "Autumn",
+    "category": "Vegetable",
+    "description": "Crunchy root vegetables with a naturally sweet flavor and bright orange color.",
+    "image": "/seasonal/Carrots-autumn.jpg"
+  },
+  {
+    "name": "Cranberries",
+    "season": "Autumn",
+    "category": "Fruit",
+    "description": "Small, bright red berries with a sharp, tart flavor.",
+    "image": "/seasonal/Cranberries-autumn.jpg"
+  },
+  {
+    "name": "Figs",
+    "season": "Autumn",
+    "category": "Fruit",
+    "description": "Soft, naturally sweet fruits with delicate skin and a rich, jam-like interior.",
+    "image": "/seasonal/Figs-autumn.jpg"
+  },
+  {
+    "name": "Oregano",
+    "season": "Autumn",
+    "category": "Herb",
+    "description": "Aromatic herb with an earthy, slightly peppery flavor, commonly used in savory dishes.",
+    "image": "/seasonal/Oregano-autumn.jpg"
+  },
+  {
+    "name": "Sweet Potatoes",
+    "season": "Autumn",
+    "category": "Vegetable",
+    "description": "Naturally sweet root vegetables with a soft texture when cooked.",
+    "image": "/seasonal/Sweet Potatoes-autumn.jpg"
+  },
+  {
+    "name": "Thyme",
+    "season": "Autumn",
+    "category": "Herb",
+    "description": "Small-leaved aromatic herb with an earthy and slightly minty flavor.",
+    "image": "/seasonal/Thyme-autumn.jpg"
+  },
+  {
+    "name": "Pumpkins",
+    "season": "Autumn",
+    "category": "Vegetable",
+    "description": "Large orange squash with a mild, slightly sweet flavor, commonly used in soups and baked dishes.",
+    "image": "/seasonal/Pumpkins-autumn.jpg"
+  },
+
+  {
+    "name": "Brussels Sprouts",
+    "season": "Winter",
+    "category": "Vegetable",
+    "description": "Small green vegetables resembling miniature cabbages, with a mild earthy flavor.",
+    "image": "/seasonal/Brussels Sprouts-winter.jpg"
+  },
+  {
+    "name": "Kiwi Fruit",
+    "season": "Winter",
+    "category": "Fruit",
+    "description": "Small fruit with fuzzy brown skin and bright green, tangy-sweet flesh.",
+    "image": "/seasonal/Kiwifruit-winter.jpg"
+  },
+  {
+    "name": "Leeks",
+    "season": "Winter",
+    "category": "Vegetable",
+    "description": "Mild onion-like vegetable with long white and green stalks, commonly used in soups and savory dishes.",
+    "image": "/seasonal/Leeks-winter.jpg"
+  },
+  {
+    "name": "Mandarins",
+    "season": "Winter",
+    "category": "Fruit",
+    "description": "Small, easy-to-peel citrus fruits with juicy, sweet-tangy segments.",
+    "image": "/seasonal/Mandarins-winter.jpg"
+  },
+  {
+    "name": "Pomegranates",
+    "season": "Winter",
+    "category": "Fruit",
+    "description": "Round fruits filled with juicy ruby-red seeds and a sweet-tart flavor.",
+    "image": "/seasonal/Pomegranates-winter.jpg"
+  },
+  {
+    "name": "Radishes",
+    "season": "Winter",
+    "category": "Vegetable",
+    "description": "Crisp root vegetables with a fresh, peppery flavor.",
+    "image": "/seasonal/Radishes-winter.jpg"
+  },
+  {
+    "name": "Rosemary",
+    "season": "Winter",
+    "category": "Herb",
+    "description": "Fragrant needle-like herb with a strong woody, pine-like aroma and flavor.",
+    "image": "/seasonal/Rosemary-winter.jpg"
+  },
+  {
+    "name": "Turnips",
+    "season": "Winter",
+    "category": "Vegetable",
+    "description": "Round root vegetables with crisp flesh and a mildly earthy, peppery flavor.",
+    "image": "/seasonal/Turnips-winter.jpg"
+  }
+]
+    
