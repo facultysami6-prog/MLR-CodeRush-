@@ -1,0 +1,463 @@
+/* =========================================================
+   ORGANIC FARM SECTION
+   ========================================================= */
+
+.organic-section * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.organic-section {
+    position: relative;
+    width: 100%;
+    min-height: 700px;
+    background: var(--cream);
+    overflow: hidden;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* =========================================================
+   COLORS
+   ========================================================= */
+
+.organic-section {
+    --green: #8fbd55;
+    --green-dark: #557f2d;
+
+    --orange: #f28a22;
+    --orange-dark: #df7614;
+
+    --coral: #ee8069;
+
+    --earth: #c9b99c;
+
+    --cream: #f8f7f3;
+
+    --text: #62675e;
+}
+
+/* =========================================================
+   MAIN CONTENT
+   ========================================================= */
+
+.organic-section .content {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    min-height: 700px;
+    margin: 0 auto;
+}
+
+/* =========================================================
+   HEADING
+   ========================================================= */
+
+.organic-section .heading {
+    position: relative;
+    z-index: 30;
+    width: 560px;
+    margin: 0 auto;
+    padding-top: 48px;
+    text-align: center;
+}
+
+.organic-section .heading h1 {
+    margin: 0;
+    font-size: 50px;
+    line-height: 1;
+    font-weight: bolder;
+    color: #03791d;
+    white-space: nowrap;
+}
+
+.organic-section .heading h1 span {
+    font-weight: 300;
+}
+
+.organic-section .heading h1 strong {
+    color: var(--orange);
+    font-weight: 700;
+}
+
+/* HEADING UNDERLINE */
+
+.organic-section .heading-line {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    margin-top: 8px;
+}
+
+.organic-section .heading-line span {
+    width: 28px;
+    height: 1px;
+    background: #bdbbb5;
+}
+
+.organic-section .heading-line small {
+    font-size: 16px;
+    letter-spacing: 3px;
+    color: #4ca450;
+    white-space: nowrap;
+}
+
+/* INTRO TEXT */
+
+.organic-section .heading p {
+    width: 510px;
+    margin: 17px auto 0;
+    color: #0a0a0a;
+    font-size: 10px;
+    line-height: 1.75;
+    font-weight: 400;
+    opacity: 1;
+}
+
+/* =========================================================
+   FEATURE AREA
+   ========================================================= */
+
+.organic-section .features {
+    position: relative;
+    z-index: 20;
+    width: 760px;
+    height: 230px;
+    margin: 38px auto 0;
+    display: block;
+}
+
+.organic-section .features > .feature {
+    position: absolute;
+    display: block;
+    width: 150px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Outer left */
+.organic-section .features > .feature:nth-child(1) {
+    left: 0;
+    top: 72px;
+    animation: outerLeftFloat 5s ease-in-out infinite;
+}
+
+/* Inner left */
+.organic-section .features > .feature:nth-child(2) {
+    left: 203px;
+    top: 0;
+    animation: innerLeftFloat 4.6s ease-in-out infinite;
+}
+
+/* Inner right */
+.organic-section .features > .feature:nth-child(3) {
+    left: 407px;
+    top: 0;
+    animation: innerRightFloat 4.8s ease-in-out infinite;
+}
+
+/* Outer right */
+.organic-section .features > .feature:nth-child(4) {
+    left: 610px;
+    top: 72px;
+    animation: outerRightFloat 5s ease-in-out infinite;
+}
+
+/* FLOATING ANIMATIONS */
+
+@keyframes outerLeftFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-7px); }
+}
+
+@keyframes innerLeftFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+}
+
+@keyframes innerRightFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+}
+
+@keyframes outerRightFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-7px); }
+}
+
+/* =========================================================
+   CIRCLES
+   ========================================================= */
+
+.organic-section .icon-circle {
+    position: relative;
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 13px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid rgba(255,255,255,.95);
+    box-shadow:
+        0 0 0 2px rgba(255,255,255,.65),
+        0 7px 18px rgba(60,70,40,.11),
+        inset 0 0 0 1px rgba(255,255,255,.45);
+    transition: transform .35s ease, box-shadow .35s ease;
+}
+
+.organic-section .icon-circle::before {
+    content: "";
+    position: absolute;
+    inset: 6px;
+    border-radius: 50%;
+    border: 1px dashed rgba(255,255,255,.9);
+    animation: ringRotate 14s linear infinite;
+}
+
+@keyframes ringRotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.organic-section .icon-circle i {
+    position: relative;
+    z-index: 5;
+    color: #fff;
+    font-size: 20px;
+    transition: transform .35s ease;
+}
+
+/* CIRCLE COLORS */
+
+.organic-section .green { background: var(--green); }
+.organic-section .yellow { background: var(--orange); }
+.organic-section .peach { background: var(--coral); }
+.organic-section .beige { background: var(--earth); }
+
+/* Orange circle extra glow */
+.organic-section .features > .feature:nth-child(2) .icon-circle {
+    box-shadow:
+        0 0 0 2px rgba(255,255,255,.75),
+        0 9px 24px rgba(242,138,34,.23),
+        inset 0 0 0 1px rgba(255,255,255,.55);
+}
+
+/* HOVER */
+
+.organic-section .feature:hover .icon-circle {
+    transform: translateY(-5px) scale(1.08);
+    box-shadow:
+        0 12px 25px rgba(60,70,40,.16),
+        0 0 0 3px rgba(255,255,255,.7);
+}
+
+.organic-section .feature:hover .icon-circle i {
+    transform: scale(1.12) rotate(-5deg);
+}
+
+/* =========================================================
+   FEATURE TEXT
+   ========================================================= */
+
+.organic-section .feature h3 {
+    margin: 0 0 9px;
+    color: #62675e;
+    font-size: 15px;
+    line-height: 1.5;
+    font-weight: 400;
+}
+
+.organic-section .feature h3 strong {
+    color: var(--green-dark);
+    font-weight: 700;
+}
+
+/* Orange feature title */
+.organic-section .features > .feature:nth-child(2) h3 strong {
+    color: var(--orange-dark);
+}
+
+.organic-section .feature p {
+    width: 145px;
+    margin: 0 auto 11px;
+    color: #4c742b;
+    font-size: 10px;
+    line-height: 1.7;
+    font-weight: 400;
+}
+
+/* =========================================================
+   FRUIT
+   ========================================================= */
+
+.organic-section .fruit-area {
+    position: absolute;
+    z-index: 8;
+    left: 50%;
+    top: 330px;
+    width: 420px;
+    height: 300px;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    pointer-events: none;
+}
+
+.organic-section .fruit-image {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 360px;
+    height: auto;
+    transform: translateX(-50%);
+    object-fit: contain;
+    filter: drop-shadow(0 8px 7px rgba(0,0,0,.11));
+    animation: fruitFloat 5s ease-in-out infinite;
+}
+
+@keyframes fruitFloat {
+    0%, 100% { transform: translateX(-50%) translateY(0); }
+    50% { transform: translateX(-50%) translateY(-7px); }
+}
+
+/* =========================================================
+   DECORATIVE LEAVES
+   ========================================================= */
+
+.organic-section .leaf-cluster {
+    position: absolute;
+    z-index: 3;
+    width: 100px;
+    height: 100px;
+}
+
+.organic-section .leaf-left {
+    left: -25px;
+    top: 35px;
+    transform: rotate(-5deg);
+}
+
+.organic-section .leaf-right {
+    right: -25px;
+    top: 165px;
+    transform: rotate(180deg);
+}
+
+.organic-section .stem {
+    position: absolute;
+    left: 2px;
+    top: 47px;
+    width: 70px;
+    height: 3px;
+    border-radius: 50%;
+    background: #79ad19;
+    transform: rotate(38deg);
+}
+
+.organic-section .leaf {
+    position: absolute;
+    width: 48px;
+    height: 20px;
+    border-radius: 100% 0 100% 0;
+    background: linear-gradient(135deg, #9bc42c, #4e9b14);
+    box-shadow: inset -2px -2px 4px rgba(0,0,0,.08);
+}
+
+.organic-section .leaf::after {
+    content: "";
+    position: absolute;
+    left: 4px;
+    top: 9px;
+    width: 40px;
+    height: 1px;
+    background: rgba(255,255,255,.45);
+}
+
+.organic-section .leaf-1 { left: 7px; top: 12px; transform: rotate(-25deg); }
+.organic-section .leaf-2 { left: 20px; top: 29px; transform: rotate(8deg) scale(.9); }
+.organic-section .leaf-3 { left: 3px; top: 48px; transform: rotate(-43deg) scale(.75); }
+.organic-section .leaf-4 { left: 38px; top: 48px; transform: rotate(25deg) scale(.65); }
+
+/* =========================================================
+   SCROLL BUTTON
+   ========================================================= */
+
+.organic-section .scroll-button {
+    position: fixed;
+    right: 10px;
+    bottom: 65px;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    border: 1px solid #ddd;
+    background: transparent;
+    color: #bbb;
+    font-size: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 50;
+}
+
+.organic-section .scroll-button:hover {
+    color: #777;
+    border-color: #aaa;
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 850px) {
+    .organic-section .features { width: 700px; }
+    .organic-section .features > .feature:nth-child(1) { left: 0; }
+    .organic-section .features > .feature:nth-child(2) { left: 183px; }
+    .organic-section .features > .feature:nth-child(3) { left: 367px; }
+    .organic-section .features > .feature:nth-child(4) { left: 550px; }
+}
+
+@media (max-width: 700px) {
+    .organic-section, .organic-section .content { min-height: 1050px; }
+
+    .organic-section .heading { width: 90%; }
+    .organic-section .heading h1 { font-size: 17px; }
+    .organic-section .heading p { width: 90%; font-size: 8px; }
+
+    .organic-section .features {
+        width: 340px;
+        height: 500px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px 10px;
+        margin-top: 35px;
+    }
+
+    .organic-section .features > .feature:nth-child(1),
+    .organic-section .features > .feature:nth-child(2),
+    .organic-section .features > .feature:nth-child(3),
+    .organic-section .features > .feature:nth-child(4) {
+        position: relative;
+        left: auto;
+        top: auto;
+        width: 150px;
+        animation: none;
+    }
+
+    .organic-section .fruit-area { top: 590px; width: 350px; height: 280px; }
+    .organic-section .fruit-image { width: 310px; }
+}
+
+@media (max-width: 480px) {
+    .organic-section .heading h1 { font-size: 15px; }
+    .organic-section .features { width: 320px; gap: 30px 0; }
+    .organic-section .fruit-area { top: 610px; }
+    .organic-section .fruit-image { width: 300px; }
+    .organic-section .leaf-cluster { opacity: .7; }
+}

@@ -96,9 +96,7 @@ const Footer = () => {
           <div>
             © {new Date().getFullYear()} FreshFind Platform. Created by Ayesha, Aasia, Anqa, Asma, Kinza &amp; Huzaifa. All rights reserved.
           </div>
-          <div>
-            🌿 100% Certified Organic Theme &bull; Powered by React.js, GSAP &amp; AOS
-          </div>
+          
         </div>
       </div>
     </footer>

@@ -1,5 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import '././css/AboutUs.css';
+import './css/OrganicFarmSection.css';
+
 import { Reveal, Counter, useParallax } from '../components/Motion';
 import OrganicFarmSection from "../components/OrganicFarmSection";
 // Team Photos
