@@ -1360,7 +1360,18 @@
   /* =========================================================
      RESPONSIVE
      ========================================================= */
-  
+
+  @media (max-width: 1080px) {
+    .ffm-finder-shell {
+      grid-template-columns: 1fr;
+    }
+
+    .ffm-filter-panel {
+      position: static;
+      top: auto;
+    }
+  }
+
   @media (max-width: 1120px) {
     .ffm-results-grid {
       grid-template-columns: 1fr;
@@ -1402,7 +1413,25 @@
   
   
   @media (max-width: 620px) {
-  
+
+    .ffm-container {
+      width: calc(100% - 24px);
+    }
+
+    .ffm-filter-panel {
+      padding: 18px;
+    }
+
+    .ffm-results-head {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 12px;
+    }
+
+    .ffm-results-mark {
+      align-self: flex-start;
+    }
+
     .ffm-results-grid {
       grid-template-columns: 1fr;
       gap: 16px;
@@ -1575,6 +1604,17 @@
   
       top: 10px;
       right: 10px;
+    }
+  }
+
+  @media (max-width: 380px) {
+    .ffm-segment button {
+      font-size: .7rem;
+      padding: 0 4px;
+    }
+
+    .ffm-date-grid {
+      grid-template-columns: 1fr;
     }
   }
 
