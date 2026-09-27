@@ -1,30 +1,42 @@
-
 import React, { useEffect, useRef, useState } from "react";
+import { useSearchParams } from "react-router-dom";
 import productData from "../data/products.json";
 import "./product.css";
 
 const Products = () => {
   const cardRefs = useRef([]);
 
-  const [selectedCategory, setSelectedCategory] = useState("All");
   const [searchTerm, setSearchTerm] = useState("");
+  const [searchParams, setSearchParams] = useSearchParams();
 
   const colors = ["orange", "cyan", "pink", "orange"];
 
   const categories = [
     "All",
-    ...new Set(
-      productData.products.map((product) => product.category)
-    ),
+    ...new Set(productData.products.map((product) => product.category)),
   ];
+  const requestedCategory = searchParams.get("category");
+  const selectedCategory =
+    categories.find(
+      (category) => category.toLowerCase() === requestedCategory?.toLowerCase(),
+    ) || "All";
+
+  const selectCategory = (category) => {
+    const nextParams = new URLSearchParams(searchParams);
+    if (category === "All") {
+      nextParams.delete("category");
+    } else {
+      nextParams.set("category", category);
+    }
+    setSearchParams(nextParams, { replace: true });
+  };
 
   const filteredProducts = productData.products.filter((product) => {
     const search = searchTerm.toLowerCase().trim();
 
     const matchesCategory =
       selectedCategory === "All" ||
-      product.category?.toLowerCase() ===
-        selectedCategory.toLowerCase();
+      product.category?.toLowerCase() === selectedCategory.toLowerCase();
 
     const searchableText = [
       product.name,
@@ -38,8 +50,7 @@ const Products = () => {
       .join(" ")
       .toLowerCase();
 
-    const matchesSearch =
-      search === "" || searchableText.includes(search);
+    const matchesSearch = search === "" || searchableText.includes(search);
 
     return matchesCategory && matchesSearch;
   });
@@ -57,7 +68,7 @@ const Products = () => {
       },
       {
         threshold: 0.2,
-      }
+      },
     );
 
     cardRefs.current.forEach((card) => {
@@ -78,20 +89,18 @@ const Products = () => {
   return (
     <section className="products-section">
       <div className="products-wrapper">
-
         <div className="products-header">
           <h2>Fresh Products Catalogue</h2>
 
           <p>
-            Browse our products and discover their description,
-            typical season, and available markets.
+            Browse our products and discover their description, typical season,
+            and available markets.
           </p>
         </div>
 
         {/* SEARCH + CATEGORY FILTERS */}
 
         <div className="search-filter-row">
-
           <div className="category-filters">
             {categories.map((category) => (
               <button
@@ -100,7 +109,7 @@ const Products = () => {
                 className={`filter-button ${
                   selectedCategory === category ? "active" : ""
                 }`}
-                onClick={() => setSelectedCategory(category)}
+                onClick={() => selectCategory(category)}
               >
                 {category}
               </button>
@@ -127,16 +136,12 @@ const Products = () => {
               </button>
             )}
           </div>
-
         </div>
 
         {searchTerm && (
           <div className="search-result-count">
             {filteredProducts.length}{" "}
-            {filteredProducts.length === 1
-              ? "product"
-              : "products"}{" "}
-            found
+            {filteredProducts.length === 1 ? "product" : "products"} found
           </div>
         )}
 
@@ -147,24 +152,16 @@ const Products = () => {
               ref={(element) => {
                 cardRefs.current[index] = element;
               }}
-              className={`product-card ${
-                colors[index % colors.length]
-              }`}
+              className={`product-card ${colors[index % colors.length]}`}
             >
-
               <div className="first-content">
-
                 <div className="product-image-wrapper">
-                  <img
-                    src={product.image}
-                    alt={product.name}
-                  />
+                  <img src={product.image} alt={product.name} />
                 </div>
 
                 <div className="front-overlay"></div>
 
                 <div className="front-content">
-
                   <div className="front-top">
                     <span className="product-category-label">
                       {product.category}
@@ -176,102 +173,62 @@ const Products = () => {
                   </div>
 
                   <div className="front-bottom">
-                    <span className="season-label">
-                      {product.season}
-                    </span>
+                    <span className="season-label">{product.season}</span>
 
                     <h3>{product.name}</h3>
 
-                    <span className="hover-text">
-                      Hover to explore
-                    </span>
+                    <span className="hover-text">Hover to explore</span>
                   </div>
-
                 </div>
-
               </div>
 
               <div className="second-content">
-
                 <div className="back-content">
-
                   <div className="back-header">
-                    <span className="back-category">
-                      {product.category}
-                    </span>
+                    <span className="back-category">{product.category}</span>
 
-                    <span className="back-season">
-                      {product.season}
-                    </span>
+                    <span className="back-season">{product.season}</span>
                   </div>
 
                   <h3>{product.name}</h3>
 
-                  <p className="product-description">
-                    {product.description}
-                  </p>
+                  <p className="product-description">{product.description}</p>
 
                   <div className="back-details">
-
                     <div className="detail-item">
-                      <span className="detail-label">
-                        Typical Season
-                      </span>
+                      <span className="detail-label">Typical Season</span>
 
-                      <span className="detail-value">
-                        {product.season}
-                      </span>
+                      <span className="detail-value">{product.season}</span>
                     </div>
 
                     <div className="detail-item">
-                      <span className="detail-label">
-                        Available Markets
-                      </span>
+                      <span className="detail-label">Available Markets</span>
 
                       <div className="market-list">
-                        {product.markets?.map(
-                          (market, marketIndex) => (
-                            <span
-                              key={marketIndex}
-                              className="market-tag"
-                            >
-                              {market}
-                            </span>
-                          )
-                        )}
+                        {product.markets?.map((market, marketIndex) => (
+                          <span key={marketIndex} className="market-tag">
+                            {market}
+                          </span>
+                        ))}
                       </div>
                     </div>
-
                   </div>
 
                   <div className="back-bottom">
-
                     <div className="product-dots">
-                      {product.markets?.map(
-                        (market, marketIndex) => (
-                          <span
-                            key={marketIndex}
-                            className={`dot ${
-                              marketIndex === 0
-                                ? "active"
-                                : ""
-                            }`}
-                            title={market}
-                          />
-                        )
-                      )}
+                      {product.markets?.map((market, marketIndex) => (
+                        <span
+                          key={marketIndex}
+                          className={`dot ${marketIndex === 0 ? "active" : ""}`}
+                          title={market}
+                        />
+                      ))}
                     </div>
 
-                    <span className="details-text">
-                      Product Details
-                    </span>
-
+                    <span className="details-text">Product Details</span>
                   </div>
-
                 </div>
-
               </div>
-
             </div>
           ))}
         </div>
@@ -281,16 +238,14 @@ const Products = () => {
             <h3>No products found</h3>
 
             <p>
-              Try searching with another product name,
-              description, season, market, or category.
+              Try searching with another product name, description, season,
+              market, or category.
             </p>
           </div>
         )}
-
       </div>
     </section>
   );
 };
 
 export default Products;
-
