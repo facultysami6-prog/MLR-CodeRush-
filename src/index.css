@@ -181,8 +181,8 @@ html {
 }
 
 .logo-brand-img {
-  height: 150px;
-  margin-top: 10px;
+  height: 56px;
+  margin-top: 0;
   width: auto;
   object-fit: contain;
   transition: transform 0.25s ease;
@@ -241,11 +241,9 @@ html {
 .nav-button {
   min-width: 155px;
   height: 46px;
-  padding: 0 22px;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 12px;
   border-radius: 30px;
   background: var(--accent-orange, #F28C28);
   color: white;
@@ -289,47 +287,48 @@ html {
 .nav-button-icon-only {
   position: relative;
 
-  /* Background remove */
   background: transparent !important;
-
-  /* No border */
   border: none !important;
 
-  /* Size */
   min-width: 0;
-  width: 46px;
-  height: 46px;
+  width: auto;
+  height: auto;
   padding: 0;
 
-  border-radius: 50%;
+  border-radius: 0;
   flex-shrink: 0;
 
-  /* Orange icon */
   color: var(--accent-orange);
   fill: var(--accent-orange);
   stroke: var(--accent-orange);
 
-  /* Remove orange button shadow */
   box-shadow: none !important;
 
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 
   transition:
     color 0.25s ease,
-    background 0.25s ease,
     transform 0.25s ease;
 }
 
 /* Bookmark hover */
+/* Bookmark hover — icon color change only, no background pill, at any screen size */
 .nav-button-icon-only:hover {
-  background: rgba(242, 140, 40, 0.10) !important;
+  background: none !important;
   color: #e67e18;
 
   transform: translateY(-2px);
 
-  box-shadow: 0 6px 16px rgba(242, 140, 40, 0.15) !important;
+  box-shadow: none !important;
+}
+
+.nav-button-icon-only:focus,
+.nav-button-icon-only:active {
+  background: none !important;
+  box-shadow: none !important;
 }
 
 /* Click effect */
@@ -411,31 +410,54 @@ html {
   text-decoration: none;
   cursor: pointer;
   white-space: nowrap;
-  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease, color 0.25s ease;
+  transition:
+    transform 0.22s cubic-bezier(0.2, 0.8, 0.2, 1),
+    box-shadow 0.22s ease,
+    background-color 0.22s ease,
+    border-color 0.22s ease,
+    color 0.22s ease;
 }
 
 .login-btn {
-  background: transparent;
-  color: var(--primary-green);
-  border: 1.5px solid var(--primary-green);
+  background: #7fad39 !important;
+  color: #ffffff !important;
+  border: 1.5px solid #7fad39 !important;
+  box-shadow: 0 5px 14px rgba(127, 173, 57, 0.22);
+  margin-left: 10%;
 }
 
 .login-btn:hover {
-  background: rgba(23, 107, 69, 0.08);
-  transform: translateY(-2px);
+  background: #6f9e30 !important;
+  border-color: #6f9e30 !important;
+  color: #ffffff !important;
+  transform: translateY(-3px);
+  box-shadow: 0 9px 20px rgba(127, 173, 57, 0.32);
 }
 
 .signup-btn {
-  background: var(--primary-green);
+  background: var(--accent-orange, #f28c28);
   color: #ffffff;
-  border: 1.5px solid var(--primary-green);
-  box-shadow: 0 6px 16px rgba(23, 107, 69, 0.2);
+  border: 1.5px solid var(--accent-orange, #f28c28);
+  box-shadow: 0 5px 14px rgba(242, 140, 40, 0.22);
 }
 
 .signup-btn:hover {
-  background: #125536;
-  transform: translateY(-2px);
-  box-shadow: 0 9px 20px rgba(23, 107, 69, 0.28);
+  background: #dc7616;
+  border-color: #dc7616;
+  transform: translateY(-3px);
+  box-shadow: 0 9px 20px rgba(242, 140, 40, 0.32);
+}
+
+.login-btn:active,
+.signup-btn:active {
+  transform: translateY(0) scale(0.97);
+  box-shadow: 0 2px 6px rgba(23, 107, 69, 0.12);
+}
+
+.login-btn:focus-visible,
+.signup-btn:focus-visible {
+  outline: 3px solid var(--accent-orange, #f28c28);
+  outline-offset: 3px;
 }
 
 /* Hamburger toggle button — hidden on desktop, shown once the sidebar breakpoint kicks in */
@@ -577,7 +599,7 @@ html {
   width: 100%;
 }
 
-@media (max-width: 1050px) {
+@media (max-width: 1300px) {
   .greennest-navbar {
     padding: 0 24px 0 32px;
   }
@@ -594,7 +616,7 @@ html {
     font-size: 19px;
   }
   .nav-button {
-    min-width: 135px;
+    min-width: 0;
     height: 44px;
     font-size: 13px;
   }
@@ -1872,12 +1894,12 @@ html {
   }
 
   .logo-brand-img {
-    height: 115px;
-    margin-top: 6px;
+    height: 52px;
+    margin-top: 0;
   }
 
   .nav-links {
-    gap: 20px;
+    gap: 12px;
   }
 
   .nav-links a {
@@ -1928,12 +1950,12 @@ html {
   }
 
   .logo-brand-img {
-    height: 105px;
-    margin-top: 5px;
+    height: 48px;
+    margin-top: 0;
   }
 
   .nav-links {
-    gap: 15px;
+    gap: 12px;
   }
 
   .nav-links a {
@@ -1961,6 +1983,46 @@ html {
 
   .nav-button .arrow {
     font-size: 16px;
+  }
+}
+
+@media (max-width: 1050px) and (min-width: 1001px) {
+  .auth-buttons {
+    gap: 6px;
+  }
+
+  .login-btn,
+  .signup-btn {
+    padding: 0 12px;
+  }
+}
+
+@media (max-width: 1000px) and (min-width: 801px) {
+  .greennest-navbar {
+    height: 68px;
+    padding: 0 16px;
+  }
+
+  .logo {
+    min-width: 0;
+  }
+
+  .logo-brand-img {
+    height: 48px;
+    margin-top: 0;
+  }
+
+  .nav-links,
+  .auth-buttons {
+    display: none;
+  }
+
+  .nav-right-group {
+    gap: 10px;
+  }
+
+  .sidebar-toggle-btn {
+    display: flex;
   }
 }
 
@@ -1998,9 +2060,9 @@ html {
   }
 
   .logo-brand-img {
-    height: 105px;
+    height: 50px;
     width: auto;
-    margin-top: 4px;
+    margin-top: 0;
   }
 
   /* Hide desktop links */
@@ -2102,8 +2164,8 @@ html {
   }
 
   .logo-brand-img {
-    height: 98px;
-    margin-top: 3px;
+    height: 48px;
+    margin-top: 0;
   }
 
   .nav-right-group {
@@ -2145,7 +2207,7 @@ html {
   }
 
   .logo-brand-img {
-    height: 92px;
+    height: 46px;
   }
 
   .nav-button {
@@ -2184,8 +2246,8 @@ html {
   }
 
   .logo-brand-img {
-    height: 85px;
-    margin-top: 2px;
+    height: 44px;
+    margin-top: 0;
   }
 
   .nav-right-group {
@@ -2253,7 +2315,7 @@ html {
   }
 
   .logo-brand-img {
-    height: 78px;
+    height: 42px;
   }
 
   .nav-right-group {
@@ -2389,4 +2451,40 @@ html {
     max-height: 95vh;
     border-radius: 18px;
   }
+}
+@media (max-width: 800px) {
+  .nav-button-icon-only {
+    width: 42px;
+    height: 42px;
+    padding: 0;
+    color: var(--accent-orange);
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-button-icon-only {
+    width: 37px;
+    height: 37px;
+    min-width: 37px;
+    padding: 0;
+  }
+}
+@media (max-width: 800px) {
+  .nav-button-icon-only {
+    padding: 0;
+    color: var(--accent-orange);
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-button-icon-only {
+    padding: 0;
+  }
+}
+.bookmark-icon-shell {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 0;
 }

@@ -170,21 +170,24 @@ export default function WavyHeaderNav({
         <div className="nav-right-group">
 
           {/* BOOKMARK BUTTON */}
-          <button
-            type="button"
-            onClick={onOpenBookmarks}
-            className="nav-button nav-button-icon-only cursor-pointer"
-            aria-label="Open Bookmarks Drawer"
-            title="Open Bookmarks Drawer"
-          >
-            <Icon name="bookmark" size={30} />
+          {/* BOOKMARK BUTTON */}
+<button
+  type="button"
+  onClick={onOpenBookmarks}
+  className="nav-button nav-button-icon-only cursor-pointer"
+  aria-label="Open Bookmarks Drawer"
+  title="Open Bookmarks Drawer"
+>
+  <span className="bookmark-icon-shell">
+    <Icon name="bookmark" size={30} />
 
-            {bookmarkCount > 0 && (
-              <span className="bookmark-count-badge">
-                {bookmarkCount}
-              </span>
-            )}
-          </button>
+    {bookmarkCount > 0 && (
+      <span className="bookmark-count-badge">
+        {bookmarkCount}
+      </span>
+    )}
+  </span>
+</button>
 
           {/* HAMBURGER */}
           <button
