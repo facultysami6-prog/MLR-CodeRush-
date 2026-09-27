@@ -149,16 +149,20 @@ useEffect(() => {
 
       {/* 2. HERO SECTION FROM FRESHFIND-MAIN WITH 2-3 LINES DESCRIPTION */}
       <FindMarketHero
-  eyebrow="About FreshFind"
-  label="Local food, local people"
-  title="Closer to your"
-  highlight="community."
-  description="FreshFind connects people with local growers, farmers markets and the food that makes every neighbourhood special."
-  buttonText="Learn more"
-  scrollTarget="about"
-/>
+        eyebrow="About FreshFind"
+        label="Local food, local people"
+        title="Closer to your"
+        highlight="community."
+        description="FreshFind connects people with local growers, farmers markets and the food that makes every neighbourhood special."
+        buttonText="Learn more"
+        scrollTarget="about"
+        trustTitle="100% Local & Community First"
+        trustSubtitle="Supporting regional organic growers"
+      />
 
-<OrganicFarmSection />
+      <div id="about" style={{ scrollMarginTop: '90px' }}>
+        <OrganicFarmSection />
+      </div>
 
     
 

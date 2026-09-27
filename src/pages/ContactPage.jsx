@@ -125,15 +125,17 @@ export default function ContactPage() {
   return (
     <div className="contact-page-shell">
       <FindMarketHero
-  eyebrow="FreshFind Contact"
-  label="We're here to help"
-  title="Let's stay"
-  highlight="connected."
-  description="Have a question, suggestion or feedback? Get in touch with the FreshFind team and we'll be happy to help."
-  buttonText="Contact us"
-  scrollTarget="contact"
-/>
-      <main id="main" className="contact">
+        eyebrow="FreshFind Contact"
+        label="We're here to help"
+        title="Let's stay"
+        highlight="connected."
+        description="Have a question, suggestion or feedback? Get in touch with the FreshFind team and we'll be happy to help."
+        buttonText="Contact us"
+        scrollTarget="contact"
+        trustTitle="Friendly Support Team"
+        trustSubtitle="Prompt responses within 24 hours"
+      />
+      <main id="contact" className="contact" style={{ scrollMarginTop: '90px' }}>
       {/* INFO CARDS */}
       <div className="container">
         <ul className="info" aria-label="Contact details">

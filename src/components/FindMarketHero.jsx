@@ -26,12 +26,24 @@ export default function FindMarketHero({
   );
 
   const handleExplore = () => {
-    const target = document.getElementById(scrollTarget);
+    let target = null;
+    if (scrollTarget) {
+      target = document.getElementById(scrollTarget);
+    }
 
     if (target) {
-      target.scrollIntoView({
+      const navOffset = 90;
+      const elementPosition = target.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - navOffset;
+
+      window.scrollTo({
+        top: offsetPosition,
         behavior: 'smooth',
-        block: 'start',
+      });
+    } else {
+      window.scrollBy({
+        top: window.innerHeight * 0.75,
+        behavior: 'smooth',
       });
     }
   };
