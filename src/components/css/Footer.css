@@ -1,7 +1,4 @@
-/* =========================================================
-   UNIQUE ORGANIC FOOTER COMPONENT
-   Fully Responsive, Modern, & Accessible Design
-   ========================================================= */
+
 
 .unique-organic-footer {
   background: linear-gradient(180deg, #0A291B 0%, #05160E 100%);
@@ -13,7 +10,7 @@
   margin-top: clamp(30px, 5vw, 60px);
 }
 
-/* Fallback / shared container for footer */
+
 .footer-container,
 .site-container {
   width: 100%;
@@ -35,10 +32,6 @@
   user-select: none;
   z-index: 1;
 }
-
-/* =========================================================
-   MAIN FOOTER GRID
-   ========================================================= */
 .footer-grid-4col {
   display: grid;
   grid-template-columns: 1.8fr 2fr 1.6fr;
@@ -46,7 +39,7 @@
   align-items: start;
 }
 
-/* COLUMN 1: BRAND */
+
 .footer-col-brand {
   display: flex;
   flex-direction: column;
@@ -82,7 +75,6 @@
   max-width: 380px;
 }
 
-/* SOCIAL ROW */
 .footer-social-row {
   display: flex;
   align-items: center;
@@ -120,9 +112,7 @@
   line-height: 1;
 }
 
-/* =========================================================
-   MIDDLE LINKS GROUP (EXPLORE & CATEGORIES)
-   ========================================================= */
+
 .footer-links-group {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -192,9 +182,6 @@
   color: #F28C28;
 }
 
-/* =========================================================
-   COLUMN 4: NEWSLETTER
-   ========================================================= */
 .footer-col-newsletter {
   display: flex;
   flex-direction: column;
@@ -270,9 +257,7 @@
   box-shadow: 0 8px 18px -6px rgba(127, 173, 57, 0.4);
 }
 
-/* =========================================================
-   BOTTOM BAR (COPYRIGHT)
-   ========================================================= */
+
 .footer-bottom-bar {
   border-top: 1px solid rgba(255, 255, 255, 0.08);
   padding: 22px 0 28px;
@@ -290,11 +275,7 @@
   line-height: 1.6;
 }
 
-/* =========================================================
-   RESPONSIVE MEDIA QUERIES FOR FOOTER
-   ========================================================= */
 
-/* Tablets & Small Laptops (1024px and below) */
 @media (max-width: 1024px) {
   .footer-grid-4col {
     grid-template-columns: 1fr 1fr;
@@ -317,7 +298,7 @@
   }
 }
 
-/* Mobile Screens (640px and below) */
+
 @media (max-width: 640px) {
   .footer-grid-4col {
     grid-template-columns: 1fr;
@@ -380,7 +361,7 @@
   }
 }
 
-/* Small Mobile Screens (480px and below) */
+
 @media (max-width: 480px) {
   .footer-input-group {
     flex-direction: column;
@@ -406,9 +387,7 @@
   }
 }
 
-/* =========================================================
-   REFERENCE 3-CIRCLES WIDGET BANNER (USED IN ABOUT US)
-   ========================================================= */
+
 .ref-circles-banner-section {
   position: relative;
   padding: clamp(45px, 6vw, 75px) 0;

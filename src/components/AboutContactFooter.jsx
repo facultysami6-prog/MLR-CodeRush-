@@ -16,7 +16,7 @@ export default function AboutContactFooter() {
 
   return (
     <>
-      {/* ABOUT US SECTION */}
+
       <section className="page-section" id="about">
         <div className="max-w-4xl mx-auto text-center space-y-4">
           <span className="section-tagline">Our Platform Mission</span>
@@ -46,7 +46,7 @@ export default function AboutContactFooter() {
         </div>
       </section>
 
-      {/* CONTACT US SECTION */}
+
       <section className="page-section-alt" id="contact">
         <div className="section-head-title">
           <span className="section-tagline">Get In Touch</span>
@@ -54,7 +54,7 @@ export default function AboutContactFooter() {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 max-w-6xl mx-auto">
-          {/* Contact Details & Map */}
+   
           <div className="space-y-6">
             <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-4">
               <h3 className="font-extrabold text-slate-800 text-lg">FreshFind Community Office</h3>
@@ -76,7 +76,7 @@ export default function AboutContactFooter() {
               </div>
             </div>
 
-            {/* Embedded Live Google Map */}
+     
             <div className="w-full h-72 rounded-2xl overflow-hidden border border-slate-300 shadow-sm bg-white">
               <iframe
                 title="FreshFind Headquarters Google Map"
@@ -90,8 +90,7 @@ export default function AboutContactFooter() {
             </div>
           </div>
 
-          {/* Feedback Contact Form */}
-          <div className="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm">
+       <div className="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm">
             <h3 className="font-extrabold text-slate-800 text-xl mb-2">Send Us a Message</h3>
             <p className="text-xs text-slate-500 mb-6">Have questions or want to suggest a local market? Reach out to our community team.</p>
 
@@ -147,7 +146,7 @@ export default function AboutContactFooter() {
         </div>
       </section>
 
-      {/* MAIN FOOTER */}
+   
       <footer className="organi-footer">
         <div className="footer-grid-row">
           <div className="space-y-4">

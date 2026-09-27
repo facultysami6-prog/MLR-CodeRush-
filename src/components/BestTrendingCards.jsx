@@ -57,7 +57,7 @@ export default function BestTrendingCards() {
                   </button>
                 </div>
 
-                {/* Continuous Earth-Sun Orbiting Vegetable Basket Visual */}
+         
                 <div className="promo-card-visual">
                   <div className="orbit-sun-glow"></div>
                   <div className="orbit-track-ring">

@@ -1,4 +1,4 @@
-// Original vector artwork. To use a real photograph instead, pass `photo="/your-image.jpg"` to <HeroArt />.
+
 
 export function Tomato({ size = 90 }) {
   return (
@@ -43,8 +43,7 @@ export function Pumpkin({ size = 80 }) {
   );
 }
 
-// Original vector artwork for the testimonial card: a tote bag of market vegetables.
-// To use a real photograph instead, set QUOTE_PHOTO in ContactPage.jsx.
+
 export function QuoteArt() {
   return (
     <svg viewBox="0 0 520 520" className="quote__art" aria-hidden="true" focusable="false">
@@ -62,44 +61,44 @@ export function QuoteArt() {
         <pattern id="qa-dots" width="9" height="9" patternUnits="userSpaceOnUse"><circle cx="2.5" cy="2.5" r="2" fill="#a6dc9c" opacity=".45" /><circle cx="7" cy="7" r="1.8" fill="#0d3d28" opacity=".4" /></pattern>
       </defs>
 
-      {/* romaine, behind the bag */}
+
       <path d="M318 330C286 220 318 96 392 34c56 60 80 170 40 300z" fill="url(#qa-rom)" />
       <path d="M384 336C374 232 424 132 506 108c22 92-6 178-58 236z" fill="url(#qa-rom2)" />
       <path d="M356 320C346 230 366 150 396 84M430 330C434 250 458 190 490 138" stroke="#d6f0d0" strokeOpacity=".5" strokeWidth="3" strokeLinecap="round" fill="none" />
 
-      {/* cucumber */}
+
       <g transform="rotate(-30 250 270)">
         <rect x="214" y="150" width="72" height="240" rx="36" fill="url(#qa-cuc)" />
         <path d="M232 170v200M250 160v220M268 170v200" stroke="#d6f0d0" strokeOpacity=".35" strokeWidth="2.5" strokeLinecap="round" />
       </g>
 
-      {/* tomato */}
+
       <circle cx="252" cy="108" r="54" fill="url(#qa-tom)" />
       <path d="M252 62l10 18 20-8-8 20 20 6-18 12M252 62l-10 18-20-8 8 20-20 6 18 12" fill="#3f9a4d" stroke="#176b45" strokeWidth="2" strokeLinejoin="round" />
       <ellipse cx="228" cy="100" rx="8" ry="15" fill="#fff" opacity=".22" transform="rotate(20 228 100)" />
 
-      {/* carrots */}
+
       <g stroke="#c4610f" strokeWidth="2" strokeLinecap="round">
         <path d="M30 292L170 228c18-6 30 14 14 28L44 320z" fill="url(#qa-car)" />
         <path d="M70 296l14-6M110 278l10-5M144 262l8-4M52 318l10-4" fill="none" />
       </g>
       <path d="M176 236c14-16 26-30 46-34-6 20-18 32-36 46z" fill="#4caf50" stroke="#176b45" strokeWidth="1.6" strokeLinejoin="round" />
 
-      {/* tote bag */}
+
       <path d="M262 360C242 300 238 248 246 214" stroke="#a3b190" strokeWidth="18" strokeLinecap="round" fill="none" />
       <path d="M246 250C330 232 430 200 520 158V520H278C270 440 258 350 246 250z" fill="url(#qa-bag)" />
       <path d="M300 258C340 250 400 232 470 208V520H340C330 440 312 350 300 258z" fill="#fff" opacity=".12" />
       <path d="M270 300C300 340 330 430 336 520M368 236C384 340 396 430 402 520" stroke="#7c8b6c" strokeOpacity=".35" strokeWidth="3" fill="none" />
 
-      {/* avocado */}
+
       <ellipse cx="352" cy="440" rx="54" ry="48" fill="url(#qa-avo)" />
       <ellipse cx="334" cy="424" rx="10" ry="16" fill="#fff" opacity=".16" transform="rotate(25 334 424)" />
 
-      {/* lemon */}
+
       <ellipse cx="222" cy="322" rx="54" ry="50" fill="url(#qa-lem)" />
       <ellipse cx="204" cy="304" rx="10" ry="16" fill="#fff" opacity=".28" transform="rotate(25 204 304)" />
 
-      {/* broccoli */}
+
       <path d="M96 520C98 480 110 456 126 432h36c-2 30 4 62 12 88z" fill="url(#qa-stem)" />
       <g fill="url(#qa-head)">
         <circle cx="66" cy="410" r="52" /><circle cx="134" cy="376" r="60" /><circle cx="200" cy="416" r="50" />

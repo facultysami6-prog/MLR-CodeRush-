@@ -55,7 +55,7 @@ export default function HeroSlider({ onExploreClick }) {
 
   const [activeIndex, setActiveIndex] = useState(0);
 
-  // Auto rotate every 6s
+
   useEffect(() => {
     const timer = setInterval(() => {
       setActiveIndex(prev => (prev + 1) % heroItems.length);
@@ -76,7 +76,6 @@ export default function HeroSlider({ onExploreClick }) {
   return (
     <section className="organi-hero-section" id="home">
       <div className="organi-hero-container">
-        {/* Left Hero Content */}
         <div className="hero-text-content">
           <span className="hero-pill-badge">{current.badge}</span>
 
@@ -98,7 +97,7 @@ export default function HeroSlider({ onExploreClick }) {
           </button>
         </div>
 
-        {/* Center Floating Graphic */}
+  
         <div className="hero-center-graphic">
           <img
             key={current.id}
@@ -109,7 +108,7 @@ export default function HeroSlider({ onExploreClick }) {
           />
         </div>
 
-        {/* Right Vertical Interactive Thumbnail Slider */}
+      
         <div className="hero-vertical-slider">
           <button className="slider-arrow-btn" onClick={handlePrev} title="Previous Item">
             <ChevronUp size={20} />

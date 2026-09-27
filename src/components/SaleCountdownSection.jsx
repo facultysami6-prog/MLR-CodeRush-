@@ -54,33 +54,33 @@ export default function SaleCountdownSection() {
     <section className="section-image">
       <div className="sale-grid-container">
 
-        {/* Left Side */}
+       
         <div >
-          {/* Image yahan baad mein add kar sakte ho */}
+       
         </div>
 
-        {/* Right Side */}
+
         <div className='sectionstart'>
 
-          {/* Badge */}
+  
           <span className="badge bg-success fw-bold px-3 py-2 mb-3">
             NEW ORGANIC FOODS
           </span>
 <br /><br />
-          {/* Heading */}
+   
           <h2 className="display-5 fw-bold text-dark lh-sm mb-4">
             Sale <span className="text-success">68% Off</span>
             <br />
             All Fruit Products
           </h2>
 
-          {/* Description */}
+
           <p className="text-secondary small lh-base mb-4" style={{ maxWidth: '540px' }}>
             Get seasonal organic harvest baskets delivered directly from
             verified neighborhood farmers markets near you.
           </p>
 
-          {/* Countdown */}
+      
           <div className="timer-boxes-row">
 
             <div className="timer-box">
@@ -121,7 +121,7 @@ export default function SaleCountdownSection() {
 
           </div>
 
-          {/* Button */}
+      
      
 
         </div>

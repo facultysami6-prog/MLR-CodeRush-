@@ -3,14 +3,13 @@ import React from 'react';
 export default function CircularProductFeature() {
   return (
     <section className="model-feature-wrapper">
-      {/* Centered Heading */}
+
       <div className="section-head-title">
         <h2 className="section-main-heading">Fresh Produce Feature</h2>
       </div>
 
       <div className="model-feature-grid">
-        {/* Left Side Content (Aligned Right) */}
-       {/* Left Side Content */}
+  
 <div className="feature-side-content feature-side-left">
 
 <div className="feature-text-block">
@@ -43,19 +42,19 @@ export default function CircularProductFeature() {
 
 </div>
 
-        {/* Center Circular Showcase (Matching Model Image 1 with Outer Green Ring & 4 Surrounding Mini Nodes) */}
+
         <div className="feature-hub-ring-container" title="100% Organic Fresh Produce Hub">
-          {/* Top-Left Mini Circular Node */}
+        
           <div className="mini-node node-top-left" title="Organic Veggies">
             <img src="/assets/mix vegies image.jpg" alt="Veggies" />
           </div>
 
-          {/* Bottom-Left Mini Circular Node */}
+       
           <div className="mini-node node-bottom-left" title="Fresh Tomatoes">
             <img src="/assets/tomato image.jpg" alt="Tomatoes" />
           </div>
 
-          {/* Center Main Circular Frame containing Image 3 (Fruit Basket) */}
+
           <div className="feature-hub-inner-circle">
             <img
               src="/assets/fruit-basket-hero.png"
@@ -64,19 +63,18 @@ export default function CircularProductFeature() {
             />
           </div>
 
-          {/* Top-Right Mini Circular Node */}
+   
           <div className="mini-node node-top-right" title="Fresh Strawberries">
             <img src="/assets/straberry image.jpg" alt="Strawberries" />
           </div>
 
-          {/* Bottom-Right Mini Circular Node */}
+          
           <div className="mini-node node-bottom-right" title="Fresh Potatoes">
             <img src="/assets/fresh potato.jpg" alt="Potatoes" />
           </div>
         </div>
 
-        {/* Right Side Content (Aligned Left) */}
-       {/* Right Side Content */}
+     
 <div className="feature-side-content feature-side-right">
 
 <div className="feature-text-block">

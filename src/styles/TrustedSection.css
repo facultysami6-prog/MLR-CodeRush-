@@ -1,10 +1,4 @@
-/* ==========================================================================
-   TRUSTED SECTION
-   Re-declares the shared design tokens locally (see ContactPage.css for
-   why: src/styles/theme.css is never imported globally) and scopes every
-   base class to .trusted-section so this component is self-contained and
-   safe to drop anywhere in the app.
-   ========================================================================== */
+
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Hanken+Grotesk:wght@400;500;600;700&display=swap');
 
 :root {
@@ -32,7 +26,7 @@
 .trusted-section .container { width: min(var(--container), 100% - 2.5rem); margin-inline: auto; }
 .trusted-section :focus-visible { outline: 3px solid var(--orange); outline-offset: 3px; border-radius: 6px; }
 
-/* Buttons */
+
 .trusted-section .btn { display: inline-flex; align-items: center; justify-content: center; gap: .55rem; font: 700 .95rem/1 var(--font-body); padding: .95rem 1.7rem; border-radius: 999px; border: none; cursor: pointer; transition: transform .25s cubic-bezier(.16,1,.3,1), background .25s, box-shadow .25s; }
 .trusted-section .btn-primary { background: var(--orange); color: #2a1600; box-shadow: 0 10px 20px -12px rgba(242,140,40,.7); }
 .trusted-section .btn-primary:hover { background: var(--orange-strong); transform: translateY(-2px); box-shadow: 0 14px 26px -12px rgba(220,118,22,.65); }
@@ -40,7 +34,7 @@
 .trusted-section .btn svg:last-child { transition: transform .3s cubic-bezier(.16,1,.3,1); }
 .trusted-section .btn:hover svg:last-child { transform: translateX(5px); }
 
-/* Scroll-reveal (Reveal/Counter helpers in components/Motion.jsx) */
+
 .trusted-section .reveal { opacity: 0; transform: translateY(28px); transition: opacity .9s cubic-bezier(.16,1,.3,1) var(--delay, 0ms), transform .9s cubic-bezier(.16,1,.3,1) var(--delay, 0ms); will-change: opacity, transform; }
 .trusted-section .reveal[data-v='left'] { transform: translateX(-34px); }
 .trusted-section .reveal[data-v='right'] { transform: translateX(34px); }
@@ -58,9 +52,7 @@
 }
 
 
-/* =========================================
-   SECTION SHELL
-========================================= */
+
 
 .trusted-section {
   position: relative;
@@ -69,11 +61,6 @@
   padding: clamp(72px, 9vw, 128px) 0 clamp(64px, 8vw, 100px);
 }
 
-
-/* =========================================
-   AMBIENT BACKGROUND (soft brand-toned depth,
-   replaces the old photographic decor)
-========================================= */
 
 .trusted-ambient { position: absolute; inset: 0; z-index: 0; pointer-events: none; }
 
@@ -101,9 +88,7 @@
 }
 
 
-/* =========================================
-   MAIN CONTAINER
-========================================= */
+
 
 .trusted-container {
   position: relative;
@@ -115,9 +100,7 @@
 }
 
 
-/* =========================================
-   LEFT CONTENT
-========================================= */
+
 
 .trusted-content { position: relative; }
 
@@ -154,9 +137,7 @@
 }
 
 
-/* =========================================
-   FEATURES
-========================================= */
+
 
 .features { list-style: none; margin: 34px 0 0; padding: 0; }
 
@@ -189,16 +170,10 @@
 }
 
 
-/* =========================================
-   CTA
-========================================= */
 
 .trusted-cta { margin-top: 32px; }
 
 
-/* =========================================
-   RIGHT VISUAL
-========================================= */
 
 .trusted-visual {
   position: relative;
@@ -206,9 +181,6 @@
 }
 
 
-/* =========================================
-   MEDIA IMAGE
-========================================= */
 
 .trusted-media {
   position: absolute;
@@ -252,9 +224,6 @@
 .media-badge svg { color: var(--leaf); }
 
 
-/* =========================================
-   FLOATING ALMONDS (vector, matches Art.jsx style)
-========================================= */
 
 .nut-cluster { position: absolute; top: -22px; right: -18px; z-index: 3; }
 
@@ -264,9 +233,6 @@
 .nut-3 { top: 96px; right: 46px; --r: -6deg; transform: scale(.8); opacity: .9; animation: tr-floaty 5s ease-in-out infinite 1.1s; }
 
 
-/* =========================================
-   TESTIMONIAL CARD
-========================================= */
 
 .testimonial-card {
   position: absolute;
@@ -324,9 +290,7 @@
 .testimonial-dots button.active { background: var(--orange); width: 22px; border-radius: 5px; }
 
 
-/* =========================================
-   BACK TO TOP
-========================================= */
+
 
 .back-top {
   position: fixed;
@@ -352,9 +316,7 @@
 .back-top:hover { background: var(--green); color: #fff; transform: translateY(-3px); }
 
 
-/* =========================================
-   RESPONSIVE
-========================================= */
+
 
 @media (max-width: 1180px) {
   .trusted-container { grid-template-columns: minmax(0, 420px) 1fr; }

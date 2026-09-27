@@ -5,8 +5,8 @@ import { Reveal, Counter, useParallax } from '../components/Motion';
 import '../pages/css/ContactPage.css';
 import FindMarketHero from '../components/FindMarketHero';
 
-// ---- Edit these to match the real project ----
-const QUOTE_PHOTO = '/quote-bg.jpg'; // e.g. '/images/veg-bag.jpg' to replace the illustrated testimonial background
+
+const QUOTE_PHOTO = '/quote-bg.jpg'; 
 const HUB = { lat: 51.5074, lng: -0.1278, name: 'FreshFind Community Hub', address: '12 Greenmarket Lane, Central District' };
 const INFO = [
   { icon: 'mail', title: 'Email us', value: 'hello@freshfind.app', href: 'mailto:hello@freshfind.app', note: 'Replies within one working day' },
@@ -14,7 +14,7 @@ const INFO = [
   { icon: 'pin', title: 'Visit us', value: HUB.address, href: `https://www.google.com/maps/search/?api=1&query=${HUB.lat},${HUB.lng}`, note: 'By appointment' },
 ];
 const TOPICS = ['General enquiry', 'Add or update a market', 'Feedback on the site', 'Partnership'];
-// fill = how much of the ring is drawn (decorative, not a data value)
+
 const STATS = [
   { label: 'Markets listed', to: 240, suffix: '+', icon: 'store', fill: 0.78 },
   { label: 'Growers featured', to: 1200, suffix: '+', icon: 'users', fill: 0.92 },
@@ -57,7 +57,7 @@ export default function ContactPage() {
   const [geo, setGeo] = useState('idle');
   const [form, setForm] = useState({ name: '', email: '', topic: TOPICS[0], message: '' });
   const [errors, setErrors] = useState({});
-  const [status, setStatus] = useState('idle'); // idle | sending | sent
+  const [status, setStatus] = useState('idle'); 
   const [back, setBack] = useState(false);
   const timer = useRef(0);
   useEffect(() => () => clearTimeout(timer.current), []);
@@ -69,7 +69,7 @@ export default function ContactPage() {
   const statsRef = useRef(null);
   useParallax(statsRef, 0.1, 70);
 
-  // Testimonials advance when the active progress bar finishes (see .quote__dots i), so hovering pauses both together.
+ 
   const goTo = (i) => { if (i === q) return; setPrev(q); setQ(i); };
   const nextQuote = () => goTo((q + 1) % QUOTES.length);
 
@@ -100,7 +100,7 @@ export default function ContactPage() {
     setForm({ ...form, [name]: value });
     if (errors[name]) setErrors({ ...errors, [name]: '' });
   };
-  // Validate a field when the person leaves it (only if they typed something).
+
   const onBlur = (e) => {
     const { name, value } = e.target;
     if (!value.trim() || name === 'topic') return;
@@ -116,7 +116,7 @@ export default function ContactPage() {
       requestAnimationFrame(() => formEl.querySelector('[aria-invalid="true"]')?.focus());
       return;
     }
-    // No backend (SRS constraint): nothing is stored or sent. Wire to EmailJS/Formspree later if needed.
+   
     setStatus('sending');
     timer.current = setTimeout(() => setStatus('sent'), 1300);
   };
@@ -160,7 +160,7 @@ export default function ContactPage() {
           </Reveal>
         </ul>
 
-        {/* FORM + MAP */}
+       
         <div className="split" id="message">
           <Reveal as="section" stagger className="panel form" aria-labelledby="form-title">
             {sent ? (
@@ -244,7 +244,7 @@ export default function ContactPage() {
         </div>
       </div>
 
-      {/* STATS */}
+
       <section className="stats" ref={statsRef} aria-label="FreshFind in numbers">
         <div className="container stats__grid">
           {STATS.map(({ label, to, suffix, icon, fill }, n) => (
@@ -269,7 +269,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* FAQ + TESTIMONIAL */}
+
       <section className="container duo block">
         <Reveal stagger className="faq" aria-labelledby="faq-title">
           <p className="kicker rs-item" style={{ '--i': 0 }}><Icon name="leaf" size={18} /> Quick answers</p>
@@ -307,7 +307,7 @@ export default function ContactPage() {
   );
 }
 
-// Floating-label field: the label sits inside the input and lifts when focused or filled.
+
 function Field({ name, label, icon, error, valid, multiline, count, max, children }) {
   return (
     <div className={`field ${multiline ? 'field--area' : ''} ${error ? 'field--error' : ''} ${valid ? 'field--valid' : ''}`}>

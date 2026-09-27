@@ -49,7 +49,7 @@ export default function QuickFindSearchBar({
         </div>
 
         <div className="quick-find-row">
-          {/* Search Input */}
+  
           <div className="input-with-icon">
             <Search size={18} />
             <input
@@ -61,7 +61,7 @@ export default function QuickFindSearchBar({
             />
           </div>
 
-          {/* Area Select */}
+
           <div>
             <select
               className="select-pill"
@@ -74,7 +74,7 @@ export default function QuickFindSearchBar({
             </select>
           </div>
 
-          {/* Day Select */}
+
           <div>
             <select
               className="select-pill"
@@ -87,7 +87,7 @@ export default function QuickFindSearchBar({
             </select>
           </div>
 
-          {/* Produce Type Select */}
+   
           <div>
             <select
               className="select-pill"
@@ -100,8 +100,7 @@ export default function QuickFindSearchBar({
             </select>
           </div>
 
-          {/* Filter Action Button */}
-          <div>
+    <div>
             <button
               className="btn-filter-find"
               onClick={() => {

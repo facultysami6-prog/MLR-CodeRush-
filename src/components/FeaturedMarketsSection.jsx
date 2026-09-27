@@ -24,7 +24,7 @@ export default function FeaturedMarketsSection({
         <h2 className="section-main-heading">Market Directory</h2>
       </div>
 
-      {/* Tab Filters */}
+
       <div className="tabs-row-center">
         {['All', 'Open Today', 'Top Rated', 'Weekend Markets'].map(tab => (
           <button

@@ -31,12 +31,11 @@ export default function PopularCategoriesCircular({ onSelectCategory }) {
       <div className="good-harvest-overlay"></div>
 
       <div className="good-harvest-content">
-        {/* Centered Heading */}
-        <div className="section-head-title">
+         <div className="section-head-title">
           <h2 className="section-main-heading">Good Large Harvest</h2>
         </div>
 
-        {/* Carousel Container with Arrow Buttons on Both Sides */}
+      
         <div className="carousel-wrapper-relative max-w-6xl mx-auto">
           <button
             className="carousel-nav-btn btn-arrow-left"

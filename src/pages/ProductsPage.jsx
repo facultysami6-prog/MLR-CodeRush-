@@ -6,7 +6,7 @@ import FindMarketHero from '../components/FindMarketHero';
 export default function ProductsPage() {
   return (
     <div className="products-page-container min-h-screen flex flex-col bg-white">
-      {/* Universal Hero from freshfind-main with 2-3 lines description */}
+
       <FindMarketHero
         eyebrow="FreshFind Produce"
         label="Fresh from local growers"
@@ -19,7 +19,6 @@ export default function ProductsPage() {
         trustSubtitle="Hand-picked seasonal harvests"
       />
 
-      {/* Main Products Catalogue Section */}
       <div id="products-catalogue" style={{ scrollMarginTop: '100px' }}>
         <Products />
       </div>

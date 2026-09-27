@@ -26,12 +26,12 @@ const DAY_INDEX = {
 };
 
 function daysUntilNextOccurrence(dayName) {
-  const today = new Date().getDay(); // 0 (Sun) - 6 (Sat)
+  const today = new Date().getDay(); 
   const target = DAY_INDEX[dayName];
-  if (target === undefined) return 99; // unknown day, push to end
+  if (target === undefined) return 99; 
   let diff = target - today;
   if (diff < 0) diff += 7;
-  return diff; // 0 = today, 1 = tomorrow, etc.
+  return diff; 
 }
 
 function getDistanceKm(lat1, lng1, lat2, lng2) {
@@ -151,7 +151,7 @@ export default function MarketDirectory({
   return (
   
     <div className="market-directory-page-shell bg-white">
-      {/* MARKET DIRECTORY HERO */}
+      
       <FindMarketHero
         eyebrow="FreshFind Market Directory"
         label="Verified local farmers markets"
@@ -164,12 +164,12 @@ export default function MarketDirectory({
         trustSubtitle="Search by area, day or produce"
         images={[marketList[0]?.image, marketList[1]?.image, marketList[2]?.image]}
       />
-      {/* 1. Farmer Catalog Slider Section (Powered by catalog.json) */}
+      
       <FarmerCatalogSlider
         onSelectCategory={(cat) => setSelectedCategoryFilter(cat)}
       />
 
-      {/* 2. Verified Farmers Markets Directory Section (Powered by markets.json) */}
+
       <section className="market-directory-section" id="market-directory">
 
         <div className="section-header">
@@ -292,7 +292,7 @@ export default function MarketDirectory({
             </p>
           )}
 
-          {/* Active Filter Chips */}
+         
 
           {(selectedCategoryFilter || selectedDay || selectedArea || searchQuery) && (
             <div className="active-filters-row">
@@ -420,7 +420,7 @@ export default function MarketDirectory({
         onClick={handleOpenMarket}
       >
 
-        {/* FULL CARD IMAGE */}
+
         <div className="mkt-card-img-area">
 
           <img
@@ -429,17 +429,17 @@ export default function MarketDirectory({
             className="mkt-card-img"
           />
 
-          {/* Dark normal / green hover overlay */}
+         
           <div className="mkt-img-overlay" />
 
-          {/* NEW */}
+      
           {isNew && (
             <span className="mkt-new-badge">
               NEW
             </span>
           )}
 
-          {/* BOOKMARK */}
+      
           <button
             className={`mkt-heart-btn ${
               isBookmarked ? 'hearted' : ''
@@ -458,12 +458,12 @@ export default function MarketDirectory({
             />
           </button>
 
-          {/* Normal state title */}
+        
           <div className="mkt-card-image-title">
             <h3>{m.name}</h3>
           </div>
 
-          {/* Hover information */}
+         
           <div className="mkt-card-hover-content">
 
             <p className="mkt-card-hover-area">
@@ -527,7 +527,6 @@ export default function MarketDirectory({
 
       </section>
 
-      {/* Market Detail Popup Modal */}
       <MarketDetailModal
         market={selectedMarketModal}
         onClose={() => setSelectedMarketModal(null)}

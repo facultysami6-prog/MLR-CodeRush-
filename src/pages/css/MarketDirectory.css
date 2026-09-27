@@ -1,6 +1,4 @@
-/* ======================================================== */
-/* 2. HERO SECTION                                          */
-/* ======================================================== */
+
 .hero-section {
   position: relative;
   background: linear-gradient(rgba(23, 104, 69, 0.88), rgba(15, 46, 33, 0.92)), url('https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
@@ -80,9 +78,7 @@
   background: rgba(255, 255, 255, 0.3);
 }
 
-/* ======================================================== */
-/* 4. BOUTIQUE MARKET DIRECTORY — Reference-image style     */
-/* ======================================================== */
+
 .market-directory-section {
   max-width: 1280px;
   margin: 0 auto;
@@ -94,7 +90,7 @@
   margin-bottom: 35px;
 }
 
-/* Sub-label above title */
+
 .md-sub-label {
   display: flex;
   align-items: center;
@@ -238,24 +234,24 @@
   text-decoration: underline;
 }
 
-/* --- Boutique Cards Grid --- */
+
 .mkt-cards-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   column-gap: 20px;
-  row-gap: 70px;   /* was gap: 20px — rows need more room than columns because of the popped-out circle */
+  row-gap: 70px;   
 }
 
-/* ---- Main Card Shell ---- */
+
 .mkt-card {
    margin-top: 30%;
   background: #ffffff;
   border-radius: 22px;
-  overflow: visible;   /* was: hidden — must be visible so the circle can poke out */
+  overflow: visible;   
   display: flex;
   flex-direction: column;
   cursor: pointer;
-  box-shadow: 0 8px 22px rgba(23, 104, 69, 0.1);   /* slightly stronger, see #4 */
+  box-shadow: 0 8px 22px rgba(23, 104, 69, 0.1);   
   border: 1.5px solid #e8f5e9;
   transition:
     transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
@@ -290,7 +286,7 @@
 
 .mkt-card:active { transform: scale(0.98); }
 
-/* ---- Large Image Area ---- */
+
 .mkt-card-img-area {
   position: relative;
   height: 210px;
@@ -321,7 +317,7 @@
   pointer-events: none;
 }
 
-/* ---- NEW badge — top center ---- */
+
 .mkt-new-badge {
   animation: newBadgeDrop 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) both;
   position: absolute;
@@ -339,11 +335,11 @@
 }
 
 @keyframes newBadgeDrop {
-  from { opacity: 0; transform: translateY(-12px); }   /* translateX(-50%) removed */
+  from { opacity: 0; transform: translateY(-12px); }   
   to   { opacity: 1; transform: translateY(0); }
 }
 
-/* ---- Heart button — top right (orange circle) ---- */
+
 .mkt-heart-btn {
   position: absolute;
   top: 14px;
@@ -369,7 +365,7 @@
   box-shadow: 0 3px 10px rgba(229, 62, 62, 0.45);
 }
 
-/* ---- Rating pill — bottom left ---- */
+
 .mkt-rating-pill {
   position: absolute;
   bottom: 12px;
@@ -388,7 +384,6 @@
   z-index: 3;
 }
 
-/* ---- Day tag — bottom right ---- */
 .mkt-day-tag {
   position: absolute;
   bottom: 12px;
@@ -414,7 +409,7 @@
   animation: dotPulse 1.6s infinite ease-in-out;
 }
 
-/* ---- Card Body ---- */
+
 .mkt-card-body {
   padding: 18px 18px 20px;
   display: flex;
@@ -435,7 +430,7 @@
 
 .mkt-card:hover .mkt-card-title { color: var(--primary-green); }
 
-/* Location dark pill (like $41.00 USD in reference) */
+
 .mkt-price-pill {
   display: inline-flex;
   align-items: center;
@@ -478,8 +473,6 @@
   margin-top: 2px;
 }
 
-/* ---- Circular thumbnail (reference-style layout) ---- */
-/* ---- Fixed 4-per-row grid (was auto-fill, looked too big/uneven) ---- */
 .mkt-cards-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -490,12 +483,11 @@
 @media (max-width: 800px)  { .mkt-cards-grid { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 500px)  { .mkt-cards-grid { grid-template-columns: 1fr; } }
 
-/* ---- Circular thumbnail — exact reference style ---- */
 .mkt-card-circle-wrap {
   width: 130px;
   height: 130px;
   border-radius: 50%;
-  margin: -55px auto 10px;   /* negative margin pulls it up above the card's top edge */
+  margin: -55px auto 10px;   
   border: 4px solid transparent;
   overflow: hidden;
   flex-shrink: 0;
@@ -516,7 +508,7 @@
 .ring-orange { border-color: var(--accent-orange); }
 .ring-green  { border-color: var(--primary-green); }
 
-/* ---- Compact centered body ---- */
+
 .mkt-card-body {
   padding: 4px 16px 20px;
   display: flex;
@@ -582,23 +574,17 @@
 
 .mkt-card-stat svg { color: var(--accent-orange); }
 
-/* ---- View Details button color rotates with the ring ---- */
-/* .mkt-view-btn.ring-orange { background: var(--accent-orange); box-shadow: 0 4px 12px rgba(242,140,40,0.3); }
-.mkt-view-btn.ring-green  { background: var(--primary-green); box-shadow: 0 4px 12px rgba(23,104,69,0.3); }
-
-.mkt-view-btn.ring-orange:hover,
-.mkt-view-btn.ring-green:hover { opacity: 0.9; } */
+ 
 
 .mkt-view-btn {
   margin-top: auto;
   width: 100%;
 
-  /* cursor: pointer; */
-  /* white-space: nowrap; */
+
   display: flex;
   align-items: center;
   justify-content: center;
-  /* transition: background 0.25s, transform 0.2s, box-shadow 0.25s; */
+
 }
 
 .mkt-view-btn {
@@ -646,7 +632,6 @@
   font-weight: 600;
 }
 
-/* View Details button */
 .mkt-view-btn {
   margin-top: auto;
   width: 100%;
@@ -782,9 +767,7 @@
 
 .icon-green { color: var(--primary-green); flex-shrink: 0; }
 .icon-orange { color: var(--accent-orange); flex-shrink: 0; }
-/* =========================================================
-   FULL IMAGE MARKET DIRECTORY CARDS
-   ========================================================= */
+
 
    .mkt-cards-grid {
     display: grid;
@@ -794,9 +777,7 @@
   }
   
   
-  /* =========================================================
-     CARD
-     ========================================================= */
+  
   
   .mkt-card {
     position: relative;
@@ -827,9 +808,7 @@
   }
   
   
-  /* =========================================================
-     IMAGE AREA
-     ========================================================= */
+
   
   .mkt-card-img-area {
     position: absolute;
@@ -865,10 +844,6 @@
   }
   
   
-  /* =========================================================
-     IMAGE OVERLAY
-     ========================================================= */
-  
   .mkt-img-overlay {
     position: absolute;
     inset: 0;
@@ -899,9 +874,7 @@
   }
   
   
-  /* =========================================================
-     NEW BADGE
-     ========================================================= */
+
   
   .mkt-new-badge {
     position: absolute;
@@ -938,9 +911,7 @@
   }
   
   
-  /* =========================================================
-     HEART
-     ========================================================= */
+  
   
   .mkt-heart-btn {
     position: absolute;
@@ -989,9 +960,7 @@
   }
   
   
-  /* =========================================================
-     NORMAL CARD TITLE
-     ========================================================= */
+
   
   .mkt-card-image-title {
     position: absolute;
@@ -1037,9 +1006,7 @@
   }
   
   
-  /* =========================================================
-     HOVER INFORMATION
-     ========================================================= */
+  
   
   .mkt-card-hover-content {
     position: absolute;
@@ -1080,9 +1047,6 @@
   }
   
   
-  /* =========================================================
-     HOVER AREA
-     ========================================================= */
   
   .mkt-card-hover-area {
     display: flex;
@@ -1104,10 +1068,7 @@
     text-transform: uppercase;
   }
   
-  
-  /* =========================================================
-     HOVER TITLE
-     ========================================================= */
+ 
   
   .mkt-card-hover-title {
     margin: 0;
@@ -1129,9 +1090,7 @@
   }
   
   
-  /* =========================================================
-     RATING
-     ========================================================= */
+
   
   .mkt-card-hover-rating {
     display: flex;
@@ -1150,9 +1109,7 @@
   }
   
   
-  /* =========================================================
-     DIVIDER
-     ========================================================= */
+
   
   .mkt-card-hover-divider {
     width: 100%;
@@ -1165,9 +1122,7 @@
   }
   
   
-  /* =========================================================
-     DESCRIPTION
-     ========================================================= */
+
   
   .mkt-card-hover-desc {
     margin: 0;
@@ -1188,9 +1143,7 @@
   }
   
   
-  /* =========================================================
-     DAY / HOURS
-     ========================================================= */
+
   
   .mkt-card-hover-info {
     display: flex;
@@ -1233,9 +1186,7 @@
   }
   
   
-  /* =========================================================
-     VIEW MARKET BUTTON
-     ========================================================= */
+  
   
   .mkt-card-hover-content .mkt-view-btn {
     width: 100%;
@@ -1286,9 +1237,7 @@
   }
   
   
-  /* =========================================================
-     RESPONSIVE
-     ========================================================= */
+  
   
   @media (max-width: 1100px) {
   

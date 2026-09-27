@@ -98,7 +98,7 @@ const Products = () => {
           </p>
         </div>
 
-        {/* SEARCH + CATEGORY FILTERS */}
+      
 
         <div className="search-filter-row">
           <div className="category-filters">

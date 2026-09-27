@@ -71,7 +71,7 @@ export default function BookmarksDrawer({
         </div>
 
         <div className="flex-grow overflow-y-auto py-4 space-y-6">
-          {/* Markets Section */}
+ 
           <div>
             <h4 className="text-xs font-extrabold text-emerald-800 uppercase tracking-wider mb-3">Saved Markets ({bookmarkedMarkets.length})</h4>
             {bookmarkedMarkets.length === 0 ? (
@@ -105,7 +105,7 @@ export default function BookmarksDrawer({
             )}
           </div>
 
-          {/* Produce Section */}
+  
           <div>
             <h4 className="text-xs font-extrabold text-emerald-800 uppercase tracking-wider mb-3">Saved Produce ({bookmarkedProduce.length})</h4>
             {bookmarkedProduce.length === 0 ? (
@@ -138,7 +138,7 @@ export default function BookmarksDrawer({
           </div>
         </div>
 
-        {/* Footer Actions */}
+
         <div className="pt-4 border-t border-slate-200 space-y-2">
           <button
             className="btn-primary-accent w-full justify-center"

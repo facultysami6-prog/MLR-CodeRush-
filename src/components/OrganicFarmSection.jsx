@@ -40,7 +40,6 @@ function OrganicFarmSection() {
 
   return (
     <section className="organic-section">
-      {/* LEFT DECORATIVE LEAVES */}
       <div className="leaf-cluster leaf-left">
         <span className="leaf leaf-1"></span>
         <span className="leaf leaf-2"></span>
@@ -49,7 +48,6 @@ function OrganicFarmSection() {
         <span className="stem"></span>
       </div>
 
-      {/* RIGHT DECORATIVE LEAVES */}
       <div className="leaf-cluster leaf-right">
         <span className="leaf leaf-1"></span>
         <span className="leaf leaf-2"></span>
@@ -59,7 +57,6 @@ function OrganicFarmSection() {
       </div>
 
       <div className="content">
-        {/* HEADING */}
         <div className="heading">
           <h1>
             <span>We Grow</span> <strong>Fresh From Nature</strong>
@@ -78,7 +75,7 @@ function OrganicFarmSection() {
           </p>
         </div>
 
-        {/* FEATURES */}
+
         <div className="features">
           {FEATURES.map((f, i) => (
             <div className="feature" key={i}>
@@ -96,7 +93,7 @@ function OrganicFarmSection() {
           ))}
         </div>
 
-        {/* FRUIT */}
+      
         <div className="fruit-area">
           <img
             src="https://pngimg.com/d/grapefruit_PNG15250.png"
@@ -106,7 +103,7 @@ function OrganicFarmSection() {
         </div>
       </div>
 
-      {/* SMALL SIDE BUTTON */}
+
       <button
         className="scroll-button"
         id="scrollButton"

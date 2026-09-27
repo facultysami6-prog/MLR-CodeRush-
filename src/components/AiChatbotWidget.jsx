@@ -21,12 +21,12 @@ export default function AiChatbotWidget() {
     const query = userText || inputValue;
     if (!query.trim()) return;
 
-    // Add User Message
+
     const updatedMsgs = [...messages, { sender: 'user', text: query }];
     setMessages(updatedMsgs);
     setInputValue('');
 
-    // Process Bot Response via Rule-Based keyword matching
+
     setTimeout(() => {
       const lowerQuery = query.toLowerCase();
       let match = chatbotData.faqDatabase.find(faq =>
@@ -43,7 +43,7 @@ export default function AiChatbotWidget() {
 
   return (
     <>
-      {/* Floating Widget Launcher */}
+
       <button
         id="chat-launcher-btn"
         className="chatbot-floating-launcher"
@@ -54,10 +54,9 @@ export default function AiChatbotWidget() {
         {!isOpen && <span className="bot-badge-dot"></span>}
       </button>
 
-      {/* Chat Window Panel */}
       {isOpen && (
         <div className="chatbot-window">
-          {/* Header */}
+   
           <div className="chat-header">
             <div className="chat-header-title">
               <Bot size={22} className="text-amber-400" />
@@ -70,7 +69,7 @@ export default function AiChatbotWidget() {
             </button>
           </div>
 
-          {/* Messages Area */}
+    
           <div className="chat-messages">
             {messages.map((msg, idx) => (
               <div
@@ -94,7 +93,7 @@ export default function AiChatbotWidget() {
             <div ref={chatBottomRef} />
           </div>
 
-          {/* Quick Reply Preset Chips */}
+  
           <div className="quick-prompts-container">
             {chatbotData.presetPrompts.map((prompt, idx) => (
               <button
@@ -107,7 +106,7 @@ export default function AiChatbotWidget() {
             ))}
           </div>
 
-          {/* Input Bar */}
+
           <form
             className="chat-input-bar"
             onSubmit={(e) => {

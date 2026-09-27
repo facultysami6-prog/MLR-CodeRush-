@@ -24,9 +24,6 @@ export default function LoginPage({
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [otpSent, setOtpSent] = useState(false);
 
-  // ==========================================
-  // LOGIN FIELD VALIDATION
-  // ==========================================
 
   const validateLoginField = (name, value) => {
     let error = '';
@@ -72,9 +69,7 @@ export default function LoginPage({
     return error;
   };
 
-  // ==========================================
-  // HANDLE INPUT CHANGE
-  // ==========================================
+
 
   const handleLoginChange = (e) => {
     const { id, type, value, checked } = e.target;
@@ -98,9 +93,7 @@ export default function LoginPage({
     }
   };
 
-  // ==========================================
-  // HANDLE INPUT BLUR
-  // ==========================================
+
 
   const handleLoginBlur = (e) => {
     const { id, type, value, checked } = e.target;
@@ -120,9 +113,7 @@ export default function LoginPage({
     }));
   };
 
-  // ==========================================
-  // LOGIN SUBMIT
-  // ==========================================
+
 
   const handleLoginSubmit = (e) => {
     e.preventDefault();
@@ -161,7 +152,7 @@ export default function LoginPage({
 
     if (Object.keys(newErrors).length === 0) {
 
-      // OTP SEND
+
       if (loginTab === 'otp' && !otpSent) {
         setOtpSent(true);
 
@@ -172,7 +163,7 @@ export default function LoginPage({
         return;
       }
 
-      // LOGIN SUCCESS
+   
       setIsLoggedIn(true);
 
       if (onLoginSuccess) {
@@ -181,9 +172,7 @@ export default function LoginPage({
     }
   };
 
-  // ==========================================
-  // RESET LOGIN
-  // ==========================================
+
 
   const handleReset = () => {
     setLoginForm({
@@ -208,9 +197,7 @@ export default function LoginPage({
       }`}
     >
 
-      {/* ==========================================
-          LEFT VISUAL SECTION
-      ========================================== */}
+   
 
       <section className="login-visual">
 
@@ -279,9 +266,7 @@ export default function LoginPage({
       </section>
 
 
-      {/* ==========================================
-          RIGHT FORM SECTION
-      ========================================== */}
+    
 
       <section className="form-side">
 
@@ -291,7 +276,7 @@ export default function LoginPage({
 
             <>
 
-              {/* TOP LINE */}
+            
 
               <div className="topline">
 
@@ -304,7 +289,7 @@ export default function LoginPage({
               </div>
 
 
-              {/* TITLE */}
+              
 
               <h2>Log in</h2>
 
@@ -312,10 +297,6 @@ export default function LoginPage({
                 Manage your orders and discover fresh deals.
               </p>
 
-
-              {/* ==========================================
-                  LOGIN TABS
-              ========================================== */}
 
               <div className="login-tabs">
 
@@ -355,9 +336,6 @@ export default function LoginPage({
               </div>
 
 
-              {/* ==========================================
-                  LOGIN FORM
-              ========================================== */}
 
               <form
                 onSubmit={handleLoginSubmit}
@@ -368,7 +346,7 @@ export default function LoginPage({
 
                   <>
 
-                    {/* EMAIL */}
+       
 
                     <div
                       className={`field ${
@@ -409,7 +387,7 @@ export default function LoginPage({
                     </div>
 
 
-                    {/* PASSWORD */}
+              
 
                     <div
                       className={`field ${
@@ -482,7 +460,7 @@ export default function LoginPage({
 
                   <>
 
-                    {/* PHONE */}
+                
 
                     <div
                       className={`field ${
@@ -577,7 +555,7 @@ export default function LoginPage({
                     </div>
 
 
-                    {/* OTP */}
+              
 
                     {otpSent && (
 
@@ -626,9 +604,7 @@ export default function LoginPage({
                 )}
 
 
-                {/* ==========================================
-                    OPTIONS
-                ========================================== */}
+               
 
                 <div className="options-row">
 
@@ -659,7 +635,7 @@ export default function LoginPage({
                 </div>
 
 
-                {/* LOGIN BUTTON */}
+           
 
                 <button
                   className="login-submit-btn"
@@ -671,14 +647,12 @@ export default function LoginPage({
               </form>
 
 
-              {/* ==========================================
-                  SOCIAL LOGIN
-              ========================================== */}
+              
 
          
 
 
-              {/* HELP */}
+     
 
             
 
@@ -686,9 +660,7 @@ export default function LoginPage({
 
           ) : (
 
-            /* ==========================================
-                SUCCESS CARD
-            ========================================== */
+         
 
             <div className="success-card">
 

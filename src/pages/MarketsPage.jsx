@@ -52,7 +52,7 @@ export default function MarketsPage() {
 
   return (
     <div className="markets-page-shell min-h-screen flex flex-col bg-white">
-      {/* Universal Hero from freshfind-main with 2-3 lines description */}
+     
       <HeroRealSection
         badge="📍 COMMUNITY FARMERS MARKETS"
         title={
@@ -67,7 +67,7 @@ Filter by neighborhood, days of the week, or specialty organic harvests to suppo
         sectionId="markets-hero"
       />
 
-      {/* Quick Search and Filter Bar */}
+
       <QuickFindSearchBar
         searchQuery={searchQuery}
         setSearchQuery={setSearchQuery}
@@ -81,7 +81,7 @@ Filter by neighborhood, days of the week, or specialty organic harvests to suppo
         onResetFilters={handleResetFilters}
       />
 
-      {/* Featured Markets Directory Cards Grid */}
+  
       <FeaturedMarketsSection
         markets={filteredMarkets}
         bookmarkedIds={bookmarkedMarketIds}
@@ -89,7 +89,7 @@ Filter by neighborhood, days of the week, or specialty organic harvests to suppo
         onOpenMarketModal={(market) => setSelectedMarketModal(market)}
       />
 
-      {/* Seasonal Produce Guide Section */}
+  
       <ProduceGuideSection
         produceItems={produceData}
         selectedCategory={selectedCategory}
@@ -98,7 +98,7 @@ Filter by neighborhood, days of the week, or specialty organic harvests to suppo
         onToggleProduceBookmark={handleToggleProduceBookmark}
       />
 
-      {/* Market Detail Popup Modal */}
+  
       <MarketDetailModal
         market={selectedMarketModal}
         onClose={() => setSelectedMarketModal(null)}

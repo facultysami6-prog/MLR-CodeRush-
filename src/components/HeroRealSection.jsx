@@ -12,7 +12,7 @@ const heroImages = [
 export default function HeroRealSection({ onExploreClick }) {
   const [activeSlide, setActiveSlide] = useState(0);
 
-  // Autoplay slider
+
   useEffect(() => {
     const slider = setInterval(() => {
       setActiveSlide((prev) => (prev + 1) % heroImages.length);
@@ -40,7 +40,7 @@ export default function HeroRealSection({ onExploreClick }) {
   return (
     <section className="hero-real-section" id="home">
 
-      {/* IMAGE SLIDER */}
+    
       <div className="hero-image-slider" aria-hidden="true">
         {heroImages.map((image, index) => (
           <div
@@ -58,13 +58,13 @@ export default function HeroRealSection({ onExploreClick }) {
         ))}
       </div>
 
-      {/* Overlay */}
+
       <div className="hero-video-overlay" aria-hidden="true" />
 
-      {/* Grain */}
+    
       <div className="hero-video-grain" aria-hidden="true" />
 
-      {/* Decorative Orbits */}
+   
       <div className="hero-orbit hero-orbit-one" aria-hidden="true" />
       <div className="hero-orbit hero-orbit-two" aria-hidden="true" />
 
@@ -127,7 +127,7 @@ export default function HeroRealSection({ onExploreClick }) {
           <span>Life from the soil</span>
         </div>
 
-        {/* Slider Indicators */}
+
         <div className="hero-slider-dots">
           {heroImages.map((_, index) => (
             <button

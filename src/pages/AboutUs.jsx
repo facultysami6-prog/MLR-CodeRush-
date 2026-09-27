@@ -4,15 +4,15 @@ import './css/OrganicFarmSection.css';
 
 import { Reveal, Counter, useParallax } from '../components/Motion';
 import OrganicFarmSection from "../components/OrganicFarmSection";
-// Team Photos
+
 import ayeshaImg from '../assets/images/Guide/Ayesha.jfif';
 import aasiaImg from '../assets/images/Guide/Aasia.jfif';
-import atqaImg from '../assets/images/Guide/Atqa.jfif'; // Anqa's photo
+import atqaImg from '../assets/images/Guide/Atqa.jfif'; 
 import asmaImg from '../assets/images/Guide/Asma.jfif';
 import kinzaImg from '../assets/images/Guide/Kinza.jfif';
 import huzaifaImg from '../assets/images/Guide/Huzaifa.jfif';
 
-// Hero & Food Showcase Images
+
 import pepperImg from '../assets/images/Guide/pepper.jpeg';
 
 import farming1 from '../assets/images/Guide/Farming-1.jfif';
@@ -23,7 +23,7 @@ import farming6 from '../assets/images/Guide/Farming-6.jfif';
 import farming7 from '../assets/images/Guide/Farming-7.jfif';
 import farming8 from '../assets/images/Guide/Farming-8.jfif';
 
-// 4 Farm Images for 2x2 Grid (Matching Screenshot 1)
+
 import gardeningImg from '../assets/images/Guide/Gardening is my habit.jfif';
 import growVegImg from '../assets/images/Guide/Grow Your Own Fruits and Vegetables at Home.jfif';
 import rusticBasketImg from '../assets/images/Guide/Rustic Garden Basket Overflowing with Fresh Organic Greens & Vegetables_.jfif';
@@ -54,18 +54,18 @@ const RING_C = 2 * Math.PI * RING_R;
 const AboutUs = () => {
 const statsRef = useRef(null);
   useParallax(statsRef, 0.1, 70);
-  // Real-Time Clock State
+
   const [clockDisplay, setClockDisplay] = useState(new Date().toLocaleTimeString());
 
-  // Dynamic Visitor Counter State
+
   const [visitorCount, setVisitorCount] = useState(3065);
 
-  // Active Tab State for 3-Tab Section
+
   const [activeTab, setActiveTab] = useState('natural');
 
 
 
-  // Clock Update Effect
+
   useEffect(() => {
     const timer = setInterval(() => {
       setClockDisplay(new Date().toLocaleTimeString());
@@ -85,11 +85,9 @@ useEffect(() => {
   { label: 'Markets Open Status', to: 1200, suffix: '+', icon: 'store', fill: 1 },
   { label: 'Live Visitors', to:visitorCount, suffix: '', icon: 'users', fill: 1 },
 ];
-  // Visitor Counter Increment Effect
   
-  // Fast GSAP & AOS Animations Setup
   useEffect(() => {
-    // 1. Fast AOS Initialization
+
     const linkAos = document.createElement('link');
     linkAos.rel = 'stylesheet';
     linkAos.href = 'https://unpkg.com/aos@next/dist/aos.css';
@@ -105,14 +103,14 @@ useEffect(() => {
     };
     document.body.appendChild(scriptAos);
 
-    // 2. Load AOS animations only
+
     return () => {
       if (document.head.contains(linkAos)) document.head.removeChild(linkAos);
       if (document.body.contains(scriptAos)) document.body.removeChild(scriptAos);
     };
   }, []);
 
-  // Dynamic Tab Data Configuration
+
   const tabData = {
     natural: {
       img: farming1,
@@ -147,7 +145,7 @@ useEffect(() => {
   return (
     <div style={{ width: '100%' }}>
 
-      {/* 2. HERO SECTION FROM FRESHFIND-MAIN WITH 2-3 LINES DESCRIPTION */}
+   
       <FindMarketHero
         eyebrow="About FreshFind"
         label="Local food, local people"
@@ -166,11 +164,10 @@ useEffect(() => {
 
     
 
-      {/* 4. TRUSTED ORGANIC FARM SECTION (With Pepper Image Showcase on Right Side) */}
    <section className="trusted-farm-section" id="trusted-farm" data-aos="fade-up">
         <div className="site-container">
           <div className="trusted-grid-wrapper">
-            {/* Left Column: 2x2 Grid of 4 Cards */}
+           
             <div className="trusted-cards-2x2">
               <div 
                 className="trusted-card-item" 
@@ -241,7 +238,7 @@ useEffect(() => {
               </div>
             </div>
 
-            {/* Right Column: Content + Categories List + Pepper Image Showcase on Right Side */}
+          
             <div data-aos="fade-up" data-aos-duration="700">
               
               <h2 className="trusted-heading">
@@ -270,7 +267,7 @@ useEffect(() => {
                 </li>
               </ul>
 
-              {/* Pepper Image Showcase on Right Side of Trusted Farm Section */}
+              
               <div className="pepper-farm-showcase">
   <img
     src={pepperImg}
@@ -298,7 +295,7 @@ useEffect(() => {
         </div>
       </section>
 
-      {/* 5. DYNAMIC 3-TAB SECTION */}
+
       <section className="amazing-section-tabs" id="tab-section" data-aos="fade-up" data-aos-duration="700">
         <div className="site-container">
           <div className="tabs-header-bar">
@@ -341,7 +338,7 @@ useEffect(() => {
         </div>
       </section>
 
-      {/* 5.5. REFERENCE 3-CIRCLES WIDGET BANNER SECTION ABOVE TEAM MEMBERS */}
+   
        <section className="stats" ref={statsRef} aria-label="FreshFind in numbers">
         <div className="container stats__grid">
           {STATS.map(({ label, to, suffix, icon, fill }, n) => (
@@ -366,7 +363,7 @@ useEffect(() => {
         </div>
       </section>
 
-      {/* 6. TEAM MEMBERS SECTION */}
+  
       <section id="team-section" className="team-section">
         <div className="site-container">
           <div className="text-center max-width-600 mx-auto mb-5" data-aos="fade-up" data-aos-duration="700">
@@ -375,7 +372,7 @@ useEffect(() => {
           </div>
 
           <div className="team-cards-grid-3col">
-            {/* Member 1: Ayesha */}
+       
             <div 
               className="team-card-interactive" 
               data-aos="flip-left" 
@@ -403,7 +400,7 @@ useEffect(() => {
               </div>
             </div>
 
-            {/* Member 2: Aasia */}
+        
             <div 
               className="team-card-interactive" 
               data-aos="flip-left" 
@@ -431,7 +428,7 @@ useEffect(() => {
               </div>
             </div>
 
-            {/* Member 3: Anqa */}
+         
             <div 
               className="team-card-interactive" 
               data-aos="flip-left" 
@@ -459,7 +456,7 @@ useEffect(() => {
               </div>
             </div>
 
-            {/* Member 4: Asma */}
+         
             <div 
               className="team-card-interactive" 
               data-aos="flip-left" 
@@ -487,7 +484,7 @@ useEffect(() => {
               </div>
             </div>
 
-            {/* Member 5: Kinza */}
+    
             <div 
               className="team-card-interactive" 
               data-aos="flip-left" 
@@ -515,7 +512,7 @@ useEffect(() => {
               </div>
             </div>
 
-            {/* Member 6: Huzaifa */}
+          
             <div 
               className="team-card-interactive" 
               data-aos="flip-left" 

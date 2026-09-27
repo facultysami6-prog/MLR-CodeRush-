@@ -74,7 +74,7 @@ export default function SeasonalRecommendationSection({
       id="produce"
       className="seasonal-recommendation-section"
     >
-      {/* HERO BANNER */}
+
       <div className="seasonal-hero-banner">
         <video
           autoPlay
@@ -109,34 +109,6 @@ export default function SeasonalRecommendationSection({
           <p className="seasonal-hero-subtitle">
             “Organic products directly from the farm.”
           </p>
-
-          {/* SEASON TABS */}
-          {/* <div className="seasonal-tabs-row">
-            {seasons.map((season) => {
-              const Icon = season.icon;
-
-              return (
-                <button
-                  key={season.id}
-                  type="button"
-                  className={`season-tab-btn ${
-                    selectedSeason === season.id
-                      ? "active"
-                      : ""
-                  }`}
-                  onClick={() =>
-                    setSelectedSeason(season.id)
-                  }
-                  aria-pressed={
-                    selectedSeason === season.id
-                  }
-                >
-                  <Icon size={17} />
-                  <span>{season.label}</span>
-                </button>
-              );
-            })}
-          </div> */}
         </div>
 
         <svg
@@ -149,7 +121,7 @@ export default function SeasonalRecommendationSection({
         </svg>
       </div>
 
-      {/* MAIN CONTENT */}
+    
       <div className="seasonal-main-content">
         <div className="seasonal-controls-box">
           <div className="category-filter-group">
@@ -198,7 +170,7 @@ export default function SeasonalRecommendationSection({
           </div>
         </div>
 
-        {/* SECTION HEADING */}
+   
         <div className="seasonal-section-heading">
           <h2>
             {selectedSeason === "All"
@@ -212,7 +184,7 @@ export default function SeasonalRecommendationSection({
           </p>
         </div>
 
-        {/* PRODUCE GRID */}
+
         {visibleProduce.length > 0 ? (
          <div className="seasonal-grid">
          {visibleProduce.map((item, index) => {
@@ -223,7 +195,7 @@ export default function SeasonalRecommendationSection({
                key={`${item.name}-${index}`}
                className="produce-card"
              >
-               {/* FULL CARD IMAGE */}
+      
                <img
                  src={getImage(item)}
                  alt={item.name}
@@ -235,7 +207,7 @@ export default function SeasonalRecommendationSection({
                  }}
                />
        
-               {/* GREEN HOVER OVERLAY */}
+             
                <div className="produce-card-overlay">
                  <span className="season-badge">
                    {item.season}
@@ -304,7 +276,7 @@ export default function SeasonalRecommendationSection({
         )}
       </div>
 
-      {/* QUICK DETAILS MODAL */}
+
       {activeItemModal && (
         <div
           className="seasonal-modal-overlay"

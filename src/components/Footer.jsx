@@ -21,7 +21,6 @@ const Footer = () => {
       </div>
       <div className="site-container footer-container">
         <div className="footer-grid-4col">
-          {/* Column 1: Brand Info & Socials */}
           <div className="footer-col-brand">
             <Link to="/" className="footer-brand-title">
               <span className="footer-brand-icon" role="img" aria-label="salad">
@@ -88,9 +87,9 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Links Section: Quick Links & Categories */}
+
           <div className="footer-links-group">
-            {/* Column 2: Quick Links */}
+      
             <div className="footer-nav-col">
               <h4 className="footer-col-heading">Explore</h4>
               <ul className="footer-nav-list">
@@ -128,7 +127,7 @@ const Footer = () => {
               </ul>
             </div>
 
-            {/* Column 3: Categories */}
+    
             <div className="footer-nav-col">
               <h4 className="footer-col-heading">Categories</h4>
               <ul className="footer-nav-list">
@@ -156,7 +155,6 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Column 4: Newsletter Subscription */}
           <div className="footer-col-newsletter">
             <h4 className="footer-col-heading">Stay Seasoned</h4>
             <div className="footer-newsletter-card">
@@ -187,7 +185,7 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Footer Bottom Bar */}
+
         <div className="footer-bottom-bar">
           <p className="footer-copyright">
             © {new Date().getFullYear()} FreshFind Platform. Created by Ayesha,

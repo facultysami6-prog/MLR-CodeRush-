@@ -23,9 +23,7 @@ export default function SignUpPage({
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  // =========================
-  // FIELD VALIDATION
-  // =========================
+
   const validateField = (name, value, allValues = formData) => {
     let error = "";
 
@@ -122,9 +120,7 @@ export default function SignUpPage({
     return error;
   };
 
-  // =========================
-  // VALIDATE ALL FIELDS
-  // =========================
+
   const validateAll = (data) => {
     const newErrors = {};
 
@@ -139,9 +135,7 @@ export default function SignUpPage({
     return newErrors;
   };
 
-  // =========================
-  // PASSWORD CRITERIA
-  // =========================
+
   const passwordCriteria = {
     length: formData.password.length >= 8,
 
@@ -154,9 +148,7 @@ export default function SignUpPage({
     special: /[^A-Za-z0-9]/.test(formData.password),
   };
 
-  // =========================
-  // PASSWORD STRENGTH
-  // =========================
+
   const getPasswordStrength = () => {
     if (!formData.password) {
       return {
@@ -192,9 +184,7 @@ export default function SignUpPage({
     };
   };
 
-  // =========================
-  // INPUT CHANGE
-  // =========================
+
   const handleChange = (e) => {
     const {
       id,
@@ -226,7 +216,7 @@ export default function SignUpPage({
       }));
     }
 
-    // Revalidate confirm password
+
     if (id === "password" && touched.confirmPassword) {
       const confirmErr = validateField(
         "confirmPassword",
@@ -241,9 +231,7 @@ export default function SignUpPage({
     }
   };
 
-  // =========================
-  // INPUT BLUR
-  // =========================
+
   const handleBlur = (e) => {
     const {
       id,
@@ -272,9 +260,7 @@ export default function SignUpPage({
     }));
   };
 
-  // =========================
-  // SUBMIT
-  // =========================
+ 
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -302,9 +288,7 @@ export default function SignUpPage({
     }
   };
 
-  // =========================
-  // RESET
-  // =========================
+ 
   const handleReset = () => {
     setFormData({
       firstName: "",
@@ -328,9 +312,7 @@ export default function SignUpPage({
         isModal ? "signup-page-modal" : ""
       }`}
     >
-      {/* =========================================
-          LEFT VISUAL SECTION
-      ========================================= */}
+  
       <section className="visual">
         <video
           src={logInVideo}
@@ -357,14 +339,12 @@ export default function SignUpPage({
         </div>
       </section>
 
-      {/* =========================================
-          RIGHT FORM SECTION
-      ========================================= */}
+   
       <section className="form-side">
         <div className="form-wrap">
           {!isSubmitted ? (
             <>
-              {/* TOP LINE */}
+              
               <div className="topline">
                 <span className="welcome">
                   WELCOME TO FRESHFIND
@@ -387,17 +367,15 @@ export default function SignUpPage({
                 Start your FreshFind journey today.
               </p>
 
-              {/* =========================================
-                  FORM
-              ========================================= */}
+          
               <form
                 onSubmit={handleSubmit}
                 noValidate
               >
-                {/* FIRST + LAST NAME */}
+   
                 <div className="row">
 
-                  {/* FIRST NAME */}
+              
                   <div
                     className={`field ${
                       touched.firstName &&
@@ -434,7 +412,7 @@ export default function SignUpPage({
                       )}
                   </div>
 
-                  {/* LAST NAME */}
+              
                   <div
                     className={`field ${
                       touched.lastName &&
@@ -472,7 +450,7 @@ export default function SignUpPage({
                   </div>
                 </div>
 
-                {/* EMAIL */}
+             
                 <div
                   className={`field ${
                     touched.email &&
@@ -509,7 +487,7 @@ export default function SignUpPage({
                     )}
                 </div>
 
-                {/* PASSWORD */}
+             
                 <div
                   className={`field ${
                     touched.password &&
@@ -562,7 +540,7 @@ export default function SignUpPage({
                     </button>
                   </div>
 
-                  {/* PASSWORD STRENGTH */}
+                  
                   {formData.password && (
                     <div className="strength-meter">
 
@@ -649,7 +627,7 @@ export default function SignUpPage({
                 </div>
 
             
-                {/* SUBMIT */}
+         
                 <button
                   className="login-submit-btn"
                   type="submit"
@@ -660,7 +638,7 @@ export default function SignUpPage({
 
         
 
-              {/* BOTTOM LOGIN */}
+        
               <p className="bottom">
                 Already have an account?{" "}
 
@@ -675,9 +653,7 @@ export default function SignUpPage({
               </p>
             </>
           ) : (
-            /* =========================================
-               SUCCESS CARD
-            ========================================= */
+           
             <div className="success-card">
 
               <div className="success-icon">

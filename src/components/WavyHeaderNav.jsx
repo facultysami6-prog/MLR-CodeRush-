@@ -46,7 +46,7 @@ export default function WavyHeaderNav({
   const closeSignUpModal = () => {
     setIsSignUpModalOpen(false);
   };
-  // Navbar background on scroll
+
   useEffect(() => {
     const SCROLL_THRESHOLD = 40;
 
@@ -65,7 +65,7 @@ export default function WavyHeaderNav({
     };
   }, []);
 
-  // Lock body scroll when sidebar OR login modal is open
+
   useEffect(() => {
     if (
       isSidebarOpen ||
@@ -118,7 +118,7 @@ export default function WavyHeaderNav({
     >
       <nav className="greennest-navbar">
 
-        {/* ================= LOGO ================= */}
+        
         <Link to="/" className="logo" onClick={closeSidebar}>
           <img
             src="/logo.png"
@@ -127,7 +127,7 @@ export default function WavyHeaderNav({
           />
         </Link>
 
-        {/* ================= DESKTOP NAV LINKS ================= */}
+    
         <div className="nav-links">
           {navItems.map((item) => (
             <NavLink
@@ -143,10 +143,10 @@ export default function WavyHeaderNav({
           ))}
         </div>
 
-        {/* ================= LOGIN / SIGNUP ================= */}
+  
         <div className="auth-buttons">
 
-          {/* LOGIN - OPENS MODAL */}
+    
           <button
             type="button"
             className="login-btn"
@@ -155,7 +155,7 @@ export default function WavyHeaderNav({
             Login
           </button>
 
-          {/* SIGNUP - NORMAL ROUTE */}
+       
           <button
   type="button"
   className="signup-btn"
@@ -166,11 +166,10 @@ export default function WavyHeaderNav({
 
         </div>
 
-        {/* ================= RIGHT GROUP ================= */}
+    
         <div className="nav-right-group">
 
-          {/* BOOKMARK BUTTON */}
-          {/* BOOKMARK BUTTON */}
+          
 <button
   type="button"
   onClick={onOpenBookmarks}
@@ -189,7 +188,7 @@ export default function WavyHeaderNav({
   </span>
 </button>
 
-          {/* HAMBURGER */}
+      
           <button
             type="button"
             className="sidebar-toggle-btn"
@@ -203,7 +202,7 @@ export default function WavyHeaderNav({
         </div>
       </nav>
 
-      {/* ================= SIDEBAR OVERLAY ================= */}
+
       <div
         className={`sidebar-overlay ${
           isSidebarOpen ? "is-open" : ""
@@ -212,7 +211,7 @@ export default function WavyHeaderNav({
         aria-hidden="true"
       />
 
-      {/* ================= MOBILE SIDEBAR ================= */}
+
       <aside
         className={`mobile-sidebar ${
           isSidebarOpen ? "is-open" : ""
@@ -220,7 +219,7 @@ export default function WavyHeaderNav({
         aria-hidden={!isSidebarOpen}
       >
 
-        {/* SIDEBAR HEADER */}
+
         <div className="mobile-sidebar-header">
 
           <Link
@@ -250,7 +249,7 @@ export default function WavyHeaderNav({
 
         </div>
 
-        {/* MOBILE LINKS */}
+   
         <div className="mobile-sidebar-links">
           {navItems.map((item) => (
             <NavLink
@@ -267,10 +266,10 @@ export default function WavyHeaderNav({
           ))}
         </div>
 
-        {/* MOBILE AUTH */}
+ 
         <div className="mobile-sidebar-auth">
 
-          {/* MOBILE LOGIN - OPENS MODAL */}
+         
           <button
             type="button"
             className="login-btn"
@@ -279,7 +278,7 @@ export default function WavyHeaderNav({
             Login
           </button>
 
-          {/* MOBILE SIGNUP */}
+     
           <button
   type="button"
   className="signup-btn"
@@ -290,7 +289,7 @@ export default function WavyHeaderNav({
 
         </div>
 
-        {/* MOBILE BOOKMARKS */}
+   
         <button
           type="button"
           onClick={() => {
@@ -314,9 +313,7 @@ export default function WavyHeaderNav({
         </button>
       </aside>
 
-      {/* =====================================================
-          LOGIN MODAL
-      ===================================================== */}
+    
       {isLoginModalOpen && (
         <div
           className="login-modal-overlay"
@@ -327,7 +324,7 @@ export default function WavyHeaderNav({
             onClick={(e) => e.stopPropagation()}
           >
 
-            {/* CLOSE BUTTON */}
+      
             <button
               type="button"
               className="login-modal-close"
@@ -338,7 +335,7 @@ export default function WavyHeaderNav({
               ×
             </button>
 
-            {/* LOGIN PAGE */}
+      
             <LoginPage
               isModal={true}
 
@@ -356,7 +353,7 @@ export default function WavyHeaderNav({
       )}
 
 
-      {/* ===================================================== SIGNUP MODAL ===================================================== */} {isSignUpModalOpen && ( <div className="login-modal-overlay" onClick={closeSignUpModal} > <div className="login-modal signup-modal" onClick={(e) => e.stopPropagation()} > {/* CLOSE BUTTON */} <button type="button" className="login-modal-close" onClick={closeSignUpModal} aria-label="Close signup" title="Close" > × </button> {/* SIGNUP PAGE */} <SignUpPage isModal={true} onSwitchToLogin={() => { closeSignUpModal(); openLoginModal(); }} onSignUpSuccess={() => { closeSignUpModal(); }} /> </div> </div> )}
+    {isSignUpModalOpen && ( <div className="login-modal-overlay" onClick={closeSignUpModal} > <div className="login-modal signup-modal" onClick={(e) => e.stopPropagation()} > {/* CLOSE BUTTON */} <button type="button" className="login-modal-close" onClick={closeSignUpModal} aria-label="Close signup" title="Close" > × </button> {/* SIGNUP PAGE */} <SignUpPage isModal={true} onSwitchToLogin={() => { closeSignUpModal(); openLoginModal(); }} onSignUpSuccess={() => { closeSignUpModal(); }} /> </div> </div> )}
     </div>
   );
 }

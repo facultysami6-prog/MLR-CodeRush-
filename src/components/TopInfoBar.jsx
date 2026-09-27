@@ -23,7 +23,7 @@ export default function TopInfoBar({ onOpenBookmarks, bookmarkCount }) {
     updateTime();
     const timer = setInterval(updateTime, 1000);
 
-    // Simulate visitor counter slight increment for live feel
+    
     const vTimer = setInterval(() => {
       setVisitorCount(prev => prev + Math.floor(Math.random() * 2));
     }, 15000);

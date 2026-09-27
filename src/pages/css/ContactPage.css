@@ -51,7 +51,6 @@
   margin-inline: auto;
 }
 
-/* Buttons */
 .contact-page-shell .btn {
   display: inline-flex;
   align-items: center;
@@ -113,7 +112,6 @@
   transform: translateX(4px);
 }
 
-/* Scroll-reveal (used by the Reveal/Counter helpers in components/Motion.jsx) */
 .contact-page-shell .reveal {
   opacity: 0;
   transform: translateY(28px);
@@ -162,13 +160,10 @@
   color: var(--leaf);
 }
 
-/* ---------- PAGE SHELL ---------- */
 .contact-page-shell {
   width: 100%;
 }
 
-/* ---------- BASE ---------- */
-/* No hero: the page starts with the contact cards, so it can be dropped under any page header. */
 .contact {
   padding: clamp(2.5rem, 5vw, 4rem) 0 5rem;
   overflow-x: clip;
@@ -197,11 +192,6 @@
     transform: rotate(360deg);
   }
 }
-/* ---------- INFO CARDS ---------- */
-
-/* ================================
-   INFO CARDS - UIVERSE STYLE
-================================ */
 
 .info {
   display: grid;
@@ -209,8 +199,6 @@
   gap: 1.5rem;
   align-items: center;
 }
-
-/* CARD */
 
 .info__card {
   --color-one: #4caf50;
@@ -263,8 +251,6 @@
   transition: transform .3s ease;
 }
 
-/* GLASS INNER CIRCLE */
-
 .info__card::before {
   content: "";
 
@@ -290,8 +276,6 @@
   animation: cardRotate 5s linear infinite;
 }
 
-/* GLOW RING */
-
 .info__card::after {
   content: "";
 
@@ -309,10 +293,6 @@
 
   animation: ringRotate 3s linear infinite;
 }
-
-/* ================================
-   ZOOM IN
-================================ */
 
 @keyframes cardZoomIn {
 
@@ -332,10 +312,6 @@
   }
 
 }
-
-/* ================================
-   ROTATING EFFECT
-================================ */
 
 @keyframes cardRotate {
 
@@ -360,10 +336,6 @@
   }
 
 }
-
-/* ================================
-   COLOR ANIMATION
-================================ */
 
 @keyframes cardColorize {
 
@@ -393,10 +365,6 @@
 
 }
 
-/* ================================
-   CARD DELAYS
-================================ */
-
 .info li:nth-child(1) .info__card {
   animation-delay: .1s, 0s;
 }
@@ -413,18 +381,10 @@
   animation-delay: .55s, -2.4s;
 }
 
-/* ================================
-   CONTENT ABOVE EFFECTS
-================================ */
-
 .info__card > * {
   position: relative;
   z-index: 5;
 }
-
-/* ================================
-   ICON
-================================ */
 
 .info__icon {
   display: grid;
@@ -462,10 +422,6 @@
   }
 
 }
-
-/* ================================
-   TEXT
-================================ */
 
 .info__title {
   width: 100%;
@@ -507,10 +463,6 @@
   line-height: 1.5;
 }
 
-/* ================================
-   REMOVE OLD HOVER EFFECT
-================================ */
-
 a.info__card:hover {
   transform: none;
 
@@ -525,10 +477,6 @@ a.info__card:hover .info__icon {
   transform: scale(1);
 }
 
-/* ================================
-   ARROW
-================================ */
-
 .info__go {
   position: absolute;
 
@@ -541,10 +489,6 @@ a.info__card:hover .info__icon {
 
   z-index: 10;
 }
-
-/* ================================
-   RESPONSIVE
-================================ */
 
 @media (max-width: 1040px) {
 
@@ -568,9 +512,6 @@ a.info__card:hover .info__icon {
   }
 
 }
-
-
-
 
 .status {
   display: inline-flex;
@@ -609,7 +550,6 @@ a.info__card:hover .info__icon {
   }
 }
 
-/* ---------- FORM + MAP ---------- */
 .split {
   display: grid;
   grid-template-columns: 1.08fr 1fr;
@@ -643,7 +583,6 @@ a.info__card:hover .info__icon {
   font-size: clamp(1.6rem, 2.6vw, 2.1rem);
 }
 
-/* ---- Form ---- */
 .form {
   overflow: hidden;
   padding: 2.6rem 2.6rem 2.4rem;
@@ -1017,7 +956,6 @@ a.info__card:hover .info__icon {
   animation: spin .8s linear infinite;
 }
 
-/* Success */
 .done {
   display: grid;
   justify-items: start;
@@ -1196,7 +1134,6 @@ a.info__card:hover .info__icon {
   font-size: .88rem;
 }
 
-/* ---------- STATS ---------- */
 .stats {
   position: relative;
   isolation: isolate;
@@ -1238,7 +1175,6 @@ a.info__card:hover .info__icon {
   align-items: center;
 }
 
-/* Dial: a glass disc inside a progress ring that draws itself when scrolled into view. */
 .stat__dial {
   position: relative;
   display: grid;
@@ -1397,7 +1333,6 @@ a.info__card:hover .info__icon {
   margin-top: 6rem;
 }
 
-/* ---------- FAQ + QUOTE ---------- */
 .duo {
   display: grid;
   grid-template-columns: 1.1fr .9fr;
@@ -1630,9 +1565,6 @@ a.info__card:hover .info__icon {
   }
 }
 
-/* ---------- MOTION ---------- */
-
-/* Info cards: an underline draws in and the value nudges on hover */
 .info__card::after {
   content: '';
   position: absolute;
@@ -1659,7 +1591,6 @@ a.info__card:hover .info__value {
   transform: translateX(3px);
 }
 
-/* Form keyframes */
 @keyframes fade-drop {
   from {
     opacity: 0;
@@ -1731,7 +1662,6 @@ a.info__card:hover .info__value {
   animation: draw .5s .45s ease forwards;
 }
 
-/* Map: frame is revealed with a wipe, with a soft shimmer until the embed loads */
 .map__frame {
   clip-path: inset(0 0 100% 0 round 16px);
   transition: clip-path 1.1s cubic-bezier(.7, 0, .2, 1) .35s;
@@ -1788,7 +1718,6 @@ a.info__card:hover .info__value {
   animation: spin 1.1s linear infinite;
 }
 
-/* FAQ: an underline sweeps under the open question, the answer eases in */
 .acc {
   position: relative;
 }
@@ -1917,12 +1846,6 @@ a.info__card:hover .info__value {
     margin-top: .9rem;
   }
 }
-/* =========================================================
-   CONTACT PAGE — FINAL UI POLISH
-   Square Info Cards + Modern Form + Page Animations
-========================================================= */
-
-/* ---------- PAGE ENTRY ---------- */
 
 .contact {
   animation: pageFadeIn .8s ease both;
@@ -1937,20 +1860,12 @@ a.info__card:hover .info__value {
   }
 }
 
-
-/* =========================================================
-   INFO CARDS — MODERN SQUARE DESIGN
-========================================================= */
-
 .info {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 1.25rem;
   align-items: stretch;
 }
-
-
-/* CARD */
 
 .info__card {
   position: relative;
@@ -2007,9 +1922,6 @@ a.info__card:hover .info__value {
     border-radius .45s ease;
 }
 
-
-/* CARD ENTRY */
-
 @keyframes infoCardIn {
 
   0% {
@@ -2035,9 +1947,6 @@ a.info__card:hover .info__value {
 
 }
 
-
-/* STAGGER */
-
 .info li:nth-child(1) .info__card {
   animation-delay: .05s;
 }
@@ -2057,9 +1966,6 @@ a.info__card:hover .info__value {
 .info li:nth-child(5) .info__card {
   animation-delay: .45s;
 }
-
-
-/* DECORATIVE SHAPE */
 
 .info__card::before {
 
@@ -2096,9 +2002,6 @@ a.info__card:hover .info__value {
     height .7s ease;
 }
 
-
-/* BOTTOM ACCENT */
-
 .info__card::after {
 
   content: "";
@@ -2129,9 +2032,6 @@ a.info__card:hover .info__value {
   transition:
     transform .55s cubic-bezier(.16, 1, .3, 1);
 }
-
-
-/* CARD HOVER */
 
 @media (hover: hover) {
 
@@ -2171,11 +2071,6 @@ a.info__card:hover .info__value {
   }
 
 }
-
-
-/* =========================================================
-   ICON
-========================================================= */
 
 .info__icon {
 
@@ -2218,7 +2113,6 @@ a.info__card:hover .info__value {
     box-shadow .35s ease;
 }
 
-
 @keyframes iconFloat {
 
   0%,
@@ -2232,7 +2126,6 @@ a.info__card:hover .info__value {
 
 }
 
-
 .info__card:hover .info__icon {
 
   transform:
@@ -2242,11 +2135,6 @@ a.info__card:hover .info__value {
   box-shadow:
     0 15px 28px -10px rgba(23,107,69,.75);
 }
-
-
-/* =========================================================
-   INFO TEXT
-========================================================= */
 
 .info__title {
 
@@ -2265,7 +2153,6 @@ a.info__card:hover .info__value {
 
   text-transform: uppercase;
 }
-
 
 .info__value {
 
@@ -2287,7 +2174,6 @@ a.info__card:hover .info__value {
     transform .4s cubic-bezier(.16, 1, .3, 1);
 }
 
-
 .info__note {
 
   width: 100%;
@@ -2301,7 +2187,6 @@ a.info__card:hover .info__value {
   line-height: 1.5;
 }
 
-
 a.info__card:hover .info__value {
 
   color: var(--green);
@@ -2309,11 +2194,6 @@ a.info__card:hover .info__value {
   transform:
     translateX(3px);
 }
-
-
-/* =========================================================
-   ARROW
-========================================================= */
 
 .info__go {
 
@@ -2341,7 +2221,6 @@ a.info__card:hover .info__value {
     color .3s;
 }
 
-
 a.info__card:hover .info__go {
 
   color: #fff;
@@ -2351,11 +2230,6 @@ a.info__card:hover .info__go {
   transform:
     translate(3px, -3px);
 }
-
-
-/* =========================================================
-   STATIC SUPPORT CARD
-========================================================= */
 
 .info__card--static {
 
@@ -2374,7 +2248,6 @@ a.info__card:hover .info__go {
     );
 }
 
-
 .info__card--static .info__icon {
 
   background:
@@ -2385,7 +2258,6 @@ a.info__card:hover .info__go {
     );
 }
 
-
 .info__card--static .status {
 
   margin-top: .25rem;
@@ -2393,16 +2265,10 @@ a.info__card:hover .info__go {
   color: var(--muted);
 }
 
-
 .info__card--static .status--open {
 
   color: var(--green);
 }
-
-
-/* =========================================================
-   PANELS — FORM + MAP
-========================================================= */
 
 .split {
 
@@ -2410,7 +2276,6 @@ a.info__card:hover .info__go {
 
   margin-top: 3.5rem;
 }
-
 
 .panel {
 
@@ -2443,7 +2308,6 @@ a.info__card:hover .info__go {
     border-radius .5s ease;
 }
 
-
 @media (hover: hover) {
 
   .panel:hover {
@@ -2467,11 +2331,6 @@ a.info__card:hover .info__go {
 
 }
 
-
-/* =========================================================
-   FORM UI
-========================================================= */
-
 .form {
 
   padding:
@@ -2479,7 +2338,6 @@ a.info__card:hover .info__go {
 
   overflow: hidden;
 }
-
 
 .form__head {
 
@@ -2490,7 +2348,6 @@ a.info__card:hover .info__go {
   border-bottom:
     1px solid rgba(23,107,69,.08);
 }
-
 
 .form__badge {
 
@@ -2518,7 +2375,6 @@ a.info__card:hover .info__go {
     box-shadow .35s;
 }
 
-
 .form__head:hover .form__badge {
 
   transform:
@@ -2528,9 +2384,6 @@ a.info__card:hover .info__go {
   box-shadow:
     0 18px 30px -12px rgba(23,107,69,.75);
 }
-
-
-/* FORM DESCRIPTION */
 
 .form__sub {
 
@@ -2542,11 +2395,6 @@ a.info__card:hover .info__go {
 
   line-height: 1.7;
 }
-
-
-/* =========================================================
-   INPUTS
-========================================================= */
 
 .field__box {
 
@@ -2572,7 +2420,6 @@ a.info__card:hover .info__go {
     transform .35s cubic-bezier(.16,1,.3,1);
 }
 
-
 .field__box:hover {
 
   transform:
@@ -2584,7 +2431,6 @@ a.info__card:hover .info__go {
   box-shadow:
     0 5px 14px rgba(13,61,40,.05);
 }
-
 
 .field__box:focus-within {
 
@@ -2601,9 +2447,6 @@ a.info__card:hover .info__go {
     0 12px 25px -15px rgba(23,107,69,.35);
 }
 
-
-/* INPUT ANIMATION */
-
 .field input,
 .field textarea {
 
@@ -2611,14 +2454,12 @@ a.info__card:hover .info__go {
     color .25s ease;
 }
 
-
 .field__icon {
 
   transition:
     color .3s ease,
     transform .4s cubic-bezier(.16,1,.3,1);
 }
-
 
 .field__box:focus-within .field__icon {
 
@@ -2630,16 +2471,10 @@ a.info__card:hover .info__go {
     var(--green);
 }
 
-
-/* =========================================================
-   CHIPS
-========================================================= */
-
 .chips {
 
   gap: .65rem;
 }
-
 
 .chip span {
 
@@ -2657,7 +2492,6 @@ a.info__card:hover .info__go {
     box-shadow .3s;
 }
 
-
 .chip:hover span {
 
   transform:
@@ -2667,7 +2501,6 @@ a.info__card:hover .info__go {
     0 6px 14px -8px rgba(23,107,69,.4);
 }
 
-
 .chip input:checked + span {
 
   transform:
@@ -2676,11 +2509,6 @@ a.info__card:hover .info__go {
   box-shadow:
     0 10px 18px -10px rgba(23,107,69,.7);
 }
-
-
-/* =========================================================
-   SUBMIT BUTTON
-========================================================= */
 
 .form .btn-primary {
 
@@ -2702,7 +2530,6 @@ a.info__card:hover .info__go {
     background .25s;
 }
 
-
 .form .btn-primary:hover {
 
   transform:
@@ -2712,7 +2539,6 @@ a.info__card:hover .info__go {
     0 14px 26px -10px rgba(242,140,40,.85);
 }
 
-
 .form .btn-primary:active {
 
   transform:
@@ -2720,16 +2546,10 @@ a.info__card:hover .info__go {
     scale(.97);
 }
 
-
-/* =========================================================
-   MAP
-========================================================= */
-
 .map {
 
   padding: 1.35rem;
 }
-
 
 .map__head {
 
@@ -2738,7 +2558,6 @@ a.info__card:hover .info__go {
     .4rem
     .8rem;
 }
-
 
 .map__frame {
 
@@ -2760,7 +2579,6 @@ a.info__card:hover .info__go {
     box-shadow .4s ease;
 }
 
-
 .map__frame:hover {
 
   transform:
@@ -2769,11 +2587,6 @@ a.info__card:hover .info__go {
   box-shadow:
     0 15px 30px -20px rgba(13,61,40,.45);
 }
-
-
-/* =========================================================
-   FORM SUCCESS
-========================================================= */
 
 .done__icon {
 
@@ -2784,7 +2597,6 @@ a.info__card:hover .info__go {
     transform .4s cubic-bezier(.16,1,.3,1);
 }
 
-
 .done__icon:hover {
 
   transform:
@@ -2792,24 +2604,17 @@ a.info__card:hover .info__go {
     rotate(-4deg);
 }
 
-
-/* =========================================================
-   FAQ ANIMATION
-========================================================= */
-
 .acc {
 
   transition:
     transform .3s ease;
 }
 
-
 .acc:hover {
 
   transform:
     translateX(3px);
 }
-
 
 .acc button {
 
@@ -2818,16 +2623,10 @@ a.info__card:hover .info__go {
     padding-left .35s cubic-bezier(.16,1,.3,1);
 }
 
-
 .acc.is-open {
 
   padding-left: .3rem;
 }
-
-
-/* =========================================================
-   QUOTE CARD
-========================================================= */
 
 .quote {
 
@@ -2845,7 +2644,6 @@ a.info__card:hover .info__go {
     box-shadow .5s ease;
 }
 
-
 .quote:hover {
 
   transform:
@@ -2855,17 +2653,11 @@ a.info__card:hover .info__go {
     0 30px 65px -28px rgba(13,61,40,.5);
 }
 
-
-/* =========================================================
-   STATS
-========================================================= */
-
 .stat__dial {
 
   animation:
     statFloat 4s ease-in-out infinite;
 }
-
 
 .stat:nth-child(2) .stat__dial {
   animation-delay: -.8s;
@@ -2879,7 +2671,6 @@ a.info__card:hover .info__go {
   animation-delay: -2.4s;
 }
 
-
 @keyframes statFloat {
 
   0%,
@@ -2892,11 +2683,6 @@ a.info__card:hover .info__go {
   }
 
 }
-
-
-/* =========================================================
-   REDUCED MOTION
-========================================================= */
 
 @media (prefers-reduced-motion: reduce) {
 
@@ -2913,11 +2699,6 @@ a.info__card:hover .info__go {
 
 }
 
-
-/* =========================================================
-   RESPONSIVE
-========================================================= */
-
 @media (max-width: 1040px) {
 
   .info {
@@ -2927,7 +2708,6 @@ a.info__card:hover .info__go {
   }
 
 }
-
 
 @media (max-width: 560px) {
 
@@ -2994,11 +2774,7 @@ a.info__card:hover .info__go {
   }
 
 }
-/* =========================================================
-   PREMIUM CONTACT FORM UI
-========================================================= */
 
-/* FORM CONTAINER */
 .contact-page-shell .form {
   position: relative;
   border: 1px solid rgba(23, 107, 69, 0.14);
@@ -3017,8 +2793,6 @@ a.info__card:hover .info__go {
   border-radius: 28px 28px 28px 10px;
 }
 
-
-/* TOP GLOW LINE */
 .contact-page-shell .form::before {
   height: 4px;
 
@@ -3035,15 +2809,11 @@ a.info__card:hover .info__go {
     0 2px 12px rgba(76, 175, 80, 0.25);
 }
 
-
-/* FORM TITLE */
 .contact-page-shell .form h2 {
   color: var(--green-900);
   letter-spacing: -0.025em;
 }
 
-
-/* KICKER */
 .contact-page-shell .form .kicker {
   position: relative;
   display: inline-flex;
@@ -3054,8 +2824,6 @@ a.info__card:hover .info__go {
   font-weight: 600;
 }
 
-
-/* SMALL DOT BEFORE KICKER */
 .contact-page-shell .form .kicker::before {
   content: "";
 
@@ -3086,17 +2854,10 @@ a.info__card:hover .info__go {
 
 }
 
-
-/* =========================================================
-   FIELD OUTLINES
-========================================================= */
-
 .contact-page-shell .field {
   position: relative;
 }
 
-
-/* LABEL */
 .contact-page-shell .field__label {
   z-index: 2;
 
@@ -3111,8 +2872,6 @@ a.info__card:hover .info__go {
     padding .25s ease;
 }
 
-
-/* FIELD BOX */
 .contact-page-shell .field__box {
 
   position: relative;
@@ -3141,8 +2900,6 @@ a.info__card:hover .info__go {
     transform .35s cubic-bezier(.16,1,.3,1);
 }
 
-
-/* OUTLINE HOVER */
 .contact-page-shell .field__box:hover {
 
   border-color:
@@ -3157,8 +2914,6 @@ a.info__card:hover .info__go {
     0 7px 18px rgba(13,61,40,.06);
 }
 
-
-/* FOCUS */
 .contact-page-shell .field__box:focus-within {
 
   border-color:
@@ -3173,11 +2928,6 @@ a.info__card:hover .info__go {
     0 0 0 4px rgba(23,107,69,.08),
     0 10px 25px -15px rgba(23,107,69,.45);
 }
-
-
-/* =========================================================
-   FLOATING LABEL
-========================================================= */
 
 .contact-page-shell .field input:focus ~ .field__label,
 .contact-page-shell .field input:not(:placeholder-shown) ~ .field__label,
@@ -3200,11 +2950,6 @@ a.info__card:hover .info__go {
   border-radius: 5px;
 }
 
-
-/* =========================================================
-   INPUT ICON
-========================================================= */
-
 .contact-page-shell .field__icon {
 
   left: 1rem;
@@ -3216,13 +2961,11 @@ a.info__card:hover .info__go {
     transform .4s cubic-bezier(.16,1,.3,1);
 }
 
-
 .contact-page-shell .field__box:hover .field__icon {
 
   color:
     var(--green);
 }
-
 
 .contact-page-shell .field__box:focus-within .field__icon {
 
@@ -3233,11 +2976,6 @@ a.info__card:hover .info__go {
     scale(1.12)
     translateY(-1px);
 }
-
-
-/* =========================================================
-   INPUT TEXT
-========================================================= */
 
 .contact-page-shell .field input,
 .contact-page-shell .field textarea {
@@ -3250,17 +2988,11 @@ a.info__card:hover .info__go {
     color .25s ease;
 }
 
-
 .contact-page-shell .field input::placeholder,
 .contact-page-shell .field textarea::placeholder {
 
   color: transparent;
 }
-
-
-/* =========================================================
-   BOTTOM ACTIVE LINE
-========================================================= */
 
 .contact-page-shell .field__box::after {
 
@@ -3291,17 +3023,11 @@ a.info__card:hover .info__go {
     transform .55s cubic-bezier(.16,1,.3,1);
 }
 
-
 .contact-page-shell .field__box:focus-within::after {
 
   transform:
     scaleX(1);
 }
-
-
-/* =========================================================
-   VALID FIELD
-========================================================= */
 
 .contact-page-shell .field--valid .field__box {
 
@@ -3312,7 +3038,6 @@ a.info__card:hover .info__go {
     0 0 0 3px rgba(76,175,80,.06);
 }
 
-
 .contact-page-shell .field__ok {
 
   background:
@@ -3322,11 +3047,6 @@ a.info__card:hover .info__go {
     0 4px 10px rgba(76,175,80,.35);
 }
 
-
-/* =========================================================
-   ERROR FIELD
-========================================================= */
-
 .contact-page-shell .field--error .field__box {
 
   border-color:
@@ -3335,11 +3055,6 @@ a.info__card:hover .info__go {
   box-shadow:
     0 0 0 4px rgba(217,83,79,.07);
 }
-
-
-/* =========================================================
-   TOPIC / CHIPS SECTION
-========================================================= */
 
 .contact-page-shell .topics {
 
@@ -3361,7 +3076,6 @@ a.info__card:hover .info__go {
     box-shadow .3s ease;
 }
 
-
 .contact-page-shell .topics:focus-within {
 
   border-color:
@@ -3373,7 +3087,6 @@ a.info__card:hover .info__go {
   box-shadow:
     0 8px 20px rgba(13,61,40,.05);
 }
-
 
 .contact-page-shell .topics legend {
 
@@ -3396,8 +3109,6 @@ a.info__card:hover .info__go {
     var(--green);
 }
 
-
-/* CHIPS */
 .contact-page-shell .chip span {
 
   border:
@@ -3419,7 +3130,6 @@ a.info__card:hover .info__go {
     all .3s cubic-bezier(.16,1,.3,1);
 }
 
-
 .contact-page-shell .chip:hover span {
 
   border-color:
@@ -3434,7 +3144,6 @@ a.info__card:hover .info__go {
   box-shadow:
     0 7px 15px -10px rgba(23,107,69,.5);
 }
-
 
 .contact-page-shell .chip input:checked + span {
 
@@ -3458,11 +3167,6 @@ a.info__card:hover .info__go {
     0 9px 18px -9px rgba(23,107,69,.7);
 }
 
-
-/* =========================================================
-   FORM FOOTER
-========================================================= */
-
 .contact-page-shell .form__foot {
 
   margin-top:
@@ -3475,8 +3179,6 @@ a.info__card:hover .info__go {
     1px solid rgba(23,107,69,.08);
 }
 
-
-/* SECURITY NOTE */
 .contact-page-shell .form__note {
 
   padding:
@@ -3491,11 +3193,6 @@ a.info__card:hover .info__go {
   color:
     #627268;
 }
-
-
-/* =========================================================
-   SUBMIT BUTTON
-========================================================= */
 
 .contact-page-shell .form .btn-primary {
 
@@ -3523,7 +3220,6 @@ a.info__card:hover .info__go {
     0 8px 20px -9px rgba(242,140,40,.8);
 }
 
-
 .contact-page-shell .form .btn-primary::before {
 
   content: "";
@@ -3541,7 +3237,6 @@ a.info__card:hover .info__go {
   pointer-events: none;
 }
 
-
 .contact-page-shell .form .btn-primary:hover {
 
   background:
@@ -3557,11 +3252,6 @@ a.info__card:hover .info__go {
   box-shadow:
     0 15px 28px -10px rgba(242,140,40,.85);
 }
-
-
-/* =========================================================
-   FORM CARD INNER DECORATION
-========================================================= */
 
 .contact-page-shell .form::after {
 
@@ -3588,7 +3278,6 @@ a.info__card:hover .info__go {
     formGlow 5s ease-in-out infinite;
 }
 
-
 @keyframes formGlow {
 
   0%,
@@ -3605,11 +3294,6 @@ a.info__card:hover .info__go {
   }
 
 }
-
-
-/* =========================================================
-   MOBILE
-========================================================= */
 
 @media (max-width: 560px) {
 

@@ -15,9 +15,7 @@ function useInView(threshold = 0.2) {
   return [ref, seen];
 }
 
-// Fades and moves children into view as the page scrolls.
-//  variant: 'up' | 'left' | 'right' | 'zoom' sets the direction the block arrives from.
-//  stagger: keeps the wrapper still and lets children marked .rs-item arrive one after another.
+
 export function Reveal({ as: Tag = 'div', delay = 0, variant = 'up', stagger = false, className = '', style, children, ...rest }) {
   const [ref, seen] = useInView(0.15);
   return (
@@ -53,7 +51,7 @@ export function Counter({ to, suffix = '', duration = 2000, delay = 0 }) {
   return <span ref={ref}>{n.toLocaleString()}{suffix && <span className="counter__suf">{suffix}</span>}</span>;
 }
 
-// Writes --py (px) on the element as it moves through the viewport, for a gentle background parallax.
+
 export function useParallax(ref, factor = 0.1, limit = 70) {
   useEffect(() => {
     const el = ref.current;
@@ -74,9 +72,7 @@ export function useParallax(ref, factor = 0.1, limit = 70) {
   }, [ref, factor, limit]);
 }
 
-// Pointer-follow highlight. Spread on a card that contains <span className="card__glow" />:
-//   <Reveal className="card" {...spot}>
-// It writes --mx / --my (px) so the CSS can place a soft light under the cursor.
+
 export const spot = {
   onPointerMove(e) {
     const el = e.currentTarget;

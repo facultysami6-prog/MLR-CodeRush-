@@ -1,7 +1,5 @@
 
-/* =========================================
-   SEASONAL RECOMMENDATION SECTION
-========================================= */
+
 
 .seasonal-recommendation-section {
   --seasonal-green: #176b45;
@@ -27,9 +25,6 @@
   font: inherit;
 }
 
-/* =========================================
-   HERO VIDEO BANNER
-========================================= */
 
 .seasonal-hero-banner {
   position: relative;
@@ -131,9 +126,7 @@
   line-height: 1.5;
 }
 
-/* =========================================
-   SEASON FILTER TABS
-========================================= */
+
 
 .seasonal-tabs-row {
   display: flex;
@@ -190,9 +183,7 @@
   outline-offset: 3px;
 }
 
-/* =========================================
-   BOTTOM WAVE
-========================================= */
+
 
 .seasonal-wave-mask {
   position: absolute;
@@ -206,9 +197,6 @@
   pointer-events: none;
 }
 
-/* =========================================
-   MAIN CONTENT
-========================================= */
 
 .seasonal-main-content {
   width: 100%;
@@ -217,9 +205,6 @@
   padding: 32px 24px 0;
 }
 
-/* =========================================
-   FILTER TOOLBAR
-========================================= */
 
 .seasonal-controls-box {
   display: flex;
@@ -273,9 +258,7 @@
   box-shadow: 0 5px 12px rgba(23, 107, 69, 0.2);
 }
 
-/* =========================================
-   SEARCH
-========================================= */
+
 
 .seasonal-search-input-wrapper {
   position: relative;
@@ -319,9 +302,6 @@
   box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.15);
 }
 
-/* =========================================
-   SECTION HEADING
-========================================= */
 
 .seasonal-section-heading {
   display: flex;
@@ -347,9 +327,7 @@
   font-weight: 600;
 }
 
-/* =========================================
-   PRODUCE GRID
-========================================= */
+
 
 .seasonal-grid {
   display: grid;
@@ -377,9 +355,7 @@
   box-shadow: 0 16px 32px rgba(23, 107, 69, 0.12);
 }
 
-/* =========================================
-   CARD IMAGE
-========================================= */
+
 
 .produce-card-img-box {
   position: relative;
@@ -400,10 +376,6 @@
 .produce-card:hover .produce-card-img {
   transform: scale(1.08);
 }
-
-/* =========================================
-   BADGES
-========================================= */
 
 .season-badge {
   position: absolute;
@@ -451,9 +423,6 @@
   backdrop-filter: blur(5px);
 }
 
-/* =========================================
-   CARD CONTENT
-========================================= */
 
 .produce-card-body {
   display: flex;
@@ -489,9 +458,7 @@
   line-clamp: 2;
 }
 
-/* =========================================
-   CARD FOOTER
-========================================= */
+
 
 .produce-card-footer {
   display: flex;
@@ -550,9 +517,6 @@
   color: #ef4444;
 }
 
-/* =========================================
-   EMPTY SEARCH RESULTS
-========================================= */
 
 .seasonal-empty-state {
   padding: 64px 24px;
@@ -608,9 +572,6 @@
   background: var(--seasonal-green-dark);
 }
 
-/* =========================================
-   QUICK DETAILS MODAL
-========================================= */
 
 .seasonal-modal-overlay {
   position: fixed;
@@ -671,7 +632,7 @@
   background: rgba(0, 0, 0, 0.7);
 }
 
-/* MODAL IMAGE */
+
 
 .seasonal-modal-image-box {
   position: relative;
@@ -724,7 +685,7 @@
   font-weight: 900;
 }
 
-/* MODAL BODY */
+
 
 .seasonal-modal-body {
   display: flex;
@@ -749,7 +710,7 @@
   line-height: 1.7;
 }
 
-/* MODAL INFORMATION BOXES */
+
 
 .seasonal-modal-info-grid {
   display: grid;
@@ -803,7 +764,7 @@
   color: #78350f;
 }
 
-/* MODAL CLOSE BUTTON */
+
 
 .seasonal-modal-done {
   width: 100%;
@@ -823,9 +784,7 @@
   background: #1e293b;
 }
 
-/* =========================================
-   RESPONSIVE: TABLET
-========================================= */
+
 
 @media (max-width: 1100px) {
   .seasonal-grid {
@@ -847,9 +806,7 @@
   }
 }
 
-/* =========================================
-   RESPONSIVE: MOBILE
-========================================= */
+
 
 @media (max-width: 600px) {
   .seasonal-recommendation-section {
@@ -949,9 +906,6 @@
   }
 }
 
-/* =========================================
-   REDUCED MOTION
-========================================= */
 
 @media (prefers-reduced-motion: reduce) {
   .seasonal-recommendation-section *,
@@ -965,9 +919,7 @@
 
 
 
-/* =========================================
-   FULL IMAGE PRODUCE CARDS
-========================================= */
+
 
 .produce-card {
   position: relative;
@@ -989,7 +941,7 @@
   box-shadow: 0 20px 40px rgba(23, 107, 69, 0.25);
 }
 
-/* FULL IMAGE */
+
 
 .produce-card-full-img {
   position: absolute;
@@ -1007,9 +959,7 @@
   transform: scale(1.08);
 }
 
-/* =========================================
-   GREEN OVERLAY
-========================================= */
+
 
 .produce-card-overlay {
   position: absolute;
@@ -1045,9 +995,7 @@
     );
 }
 
-/* =========================================
-   BADGES
-========================================= */
+
 
 .produce-card-overlay .season-badge {
   position: absolute;
@@ -1087,9 +1035,6 @@
   backdrop-filter: blur(5px);
 }
 
-/* =========================================
-   HOVER DETAILS
-========================================= */
 
 .produce-hover-content {
   margin-top: auto;
@@ -1135,9 +1080,6 @@
   overflow: hidden;
 }
 
-/* =========================================
-   DETAILS BUTTON
-========================================= */
 
 .produce-hover-content .details-link-btn {
   display: inline-flex;
@@ -1171,9 +1113,6 @@
   transform: translateY(-2px);
 }
 
-/* =========================================
-   BOOKMARK
-========================================= */
 
 .produce-hover-content .bookmark-btn {
   position: absolute;

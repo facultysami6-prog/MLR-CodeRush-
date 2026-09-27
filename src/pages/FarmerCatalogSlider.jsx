@@ -22,9 +22,7 @@ export default function FarmerCatalogSlider({
 
   const total = cardsList.length;
 
-  /* ================================
-     AUTO SLIDER
-  ================================= */
+
 
   useEffect(() => {
     if (total === 0 || isHovered) return;
@@ -38,9 +36,6 @@ export default function FarmerCatalogSlider({
     return () => clearInterval(interval);
   }, [total, isHovered]);
 
-  /* ================================
-     INDEX POSITION
-  ================================= */
 
   const getCardPosition = useCallback(
     (index) => {
@@ -85,9 +80,7 @@ export default function FarmerCatalogSlider({
     [currentIndex, total]
   );
 
-  /* ================================
-     NAVIGATION
-  ================================= */
+  
 
   const goPrev = useCallback(() => {
     if (total === 0) return;
@@ -114,9 +107,7 @@ export default function FarmerCatalogSlider({
     setCurrentIndex(index);
   };
 
-  /* ================================
-     TOUCH / SWIPE
-  ================================= */
+
 
   const handleTouchStart = (e) => {
     touchStartX.current = e.targetTouches[0].clientX;
@@ -140,9 +131,6 @@ export default function FarmerCatalogSlider({
     }
   };
 
-  /* ================================
-     STAR RATING
-  ================================= */
 
   const renderStars = (rating) => {
     const numericRating = Number(rating) || 4.5;
@@ -176,9 +164,7 @@ export default function FarmerCatalogSlider({
     });
   };
 
-  /* ================================
-     EMPTY STATE
-  ================================= */
+
 
   if (total === 0) {
     return (
@@ -195,7 +181,7 @@ export default function FarmerCatalogSlider({
       onMouseLeave={() => setIsHovered(false)}
     >
 
-      {/* Decorative background */}
+
       <div
         className="catalog-bg-orb catalog-bg-orb-one"
         aria-hidden="true"
@@ -216,9 +202,6 @@ export default function FarmerCatalogSlider({
         aria-hidden="true"
       />
 
-      {/* ================================
-          HEADER
-      ================================= */}
 
       <div className="catalog-slider-header">
 
@@ -243,9 +226,7 @@ export default function FarmerCatalogSlider({
 
       </div>
 
-      {/* ================================
-          COVERFLOW VIEWPORT
-      ================================= */}
+      
 
       <div
         className={`catalog-coverflow-viewport direction-${direction}`}
@@ -254,7 +235,7 @@ export default function FarmerCatalogSlider({
         onTouchEnd={handleTouchEnd}
       >
 
-        {/* PREV */}
+
         <button
           type="button"
           className="catalog-arrow catalog-arrow-left"
@@ -264,7 +245,7 @@ export default function FarmerCatalogSlider({
           <ChevronLeft size={21} />
         </button>
 
-        {/* CARDS */}
+  
         <div className="catalog-card-stage">
 
           {cardsList.map((item, index) => {
@@ -294,9 +275,7 @@ export default function FarmerCatalogSlider({
                 }}
               >
 
-                {/* ================================
-                    IMAGE
-                ================================= */}
+               
 
                 <div className="catalog-card-media">
 
@@ -310,40 +289,36 @@ export default function FarmerCatalogSlider({
 
                   <div className="catalog-card-top-glow" />
 
-                  {/* CATEGORY */}
+                
                   {item.badgeLabel && (
                     <span className="catalog-category-badge">
                       {item.badgeLabel}
                     </span>
                   )}
 
-                  {/* DISCOUNT */}
+               
                   {item.discount && (
                     <span className="catalog-discount-badge">
                       {item.discount}
                     </span>
                   )}
 
-                  {/* NUMBER */}
+             
                   <span className="catalog-card-number">
                     {String(index + 1).padStart(2, '0')}
                   </span>
 
                 </div>
 
-                {/* ================================
-                    GLASS SHEEN
-                ================================= */}
+                
 
                 <div className="catalog-card-sheen" />
 
-                {/* ================================
-                    CONTENT
-                ================================= */}
+            
 
                 <div className="catalog-card-content">
 
-                  {/* Rating */}
+          
                   <div className="catalog-rating-row">
 
                     <div className="catalog-stars">
@@ -356,12 +331,12 @@ export default function FarmerCatalogSlider({
 
                   </div>
 
-                  {/* Title */}
+        
                   <h3 className="catalog-product-title">
                     {item.title}
                   </h3>
 
-                  {/* Farmer */}
+             
                   <div className="catalog-farmer-row">
 
                     <span className="catalog-farm-name">
@@ -378,7 +353,7 @@ export default function FarmerCatalogSlider({
 
                   </div>
 
-                  {/* Price */}
+                
                   <div className="catalog-price-row">
 
                     <div className="catalog-price">
@@ -435,7 +410,7 @@ export default function FarmerCatalogSlider({
 
         </div>
 
-        {/* NEXT */}
+  
         <button
           type="button"
           className="catalog-arrow catalog-arrow-right"
@@ -447,9 +422,7 @@ export default function FarmerCatalogSlider({
 
       </div>
 
-      {/* ================================
-          DOT NAVIGATION
-      ================================= */}
+    
 
       <div className="catalog-navigation">
 

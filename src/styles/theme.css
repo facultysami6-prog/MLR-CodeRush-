@@ -1,14 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Hanken+Grotesk:wght@400;500;600;700&display=swap');
 
 :root {
-  /* Brand palette */
+
   --green-900: #0d3d28;
-  --green: #176b45;          /* Primary Green */
-  --leaf: #4caf50;           /* Secondary Green */
-  --orange: #f28c28;         /* Accent Orange */
+  --green: #176b45;          
+  --leaf: #4caf50;           
+  --orange: #f28c28;       
   --orange-strong: #dc7616;
 
-  /* Neutrals */
+
   --ink: #12261c;
   --muted: #56675d;
   --bg: #f6f9f4;
@@ -40,7 +40,7 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 600; line-height: 1.
 .container { width: min(var(--container), 100% - 2.5rem); margin-inline: auto; }
 .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 
-/* Buttons (shared by Navbar, Footer, pages) */
+
 .btn {
   display: inline-flex; align-items: center; justify-content: center; gap: .5rem;
   font: 600 .95rem/1 var(--font-body);
@@ -59,13 +59,13 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 600; line-height: 1.
   * { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
 }
 
-/* Shared motion + type helpers */
+
 .reveal { opacity: 0; transform: translateY(28px); transition: opacity .9s cubic-bezier(.16,1,.3,1) var(--delay, 0ms), transform .9s cubic-bezier(.16,1,.3,1) var(--delay, 0ms); will-change: opacity, transform; }
 .reveal[data-v='left'] { transform: translateX(-36px); }
 .reveal[data-v='right'] { transform: translateX(36px); }
 .reveal[data-v='zoom'] { transform: translateY(18px) scale(.92); }
 .reveal.in { opacity: 1; transform: none; }
-/* Staggered children: wrapper stays put, .rs-item children arrive in sequence (index set with --i). */
+
 .rs-item { opacity: 0; transform: translateY(18px); transition: opacity .7s cubic-bezier(.16,1,.3,1) calc(var(--delay, 0ms) + var(--i, 0) * 80ms), transform .7s cubic-bezier(.16,1,.3,1) calc(var(--delay, 0ms) + var(--i, 0) * 80ms); }
 .rs.in .rs-item { opacity: 1; transform: none; }
 .kicker { display: inline-flex; align-items: center; gap: .45rem; margin: 0 0 .75rem; font: italic 500 1.05rem var(--font-display); color: var(--orange-strong); }

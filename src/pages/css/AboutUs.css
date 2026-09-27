@@ -1,4 +1,4 @@
-/* FreshFind About Us CSS - Exact Match to Model Image 1 (media_1790236202311.png) */
+
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600&family=Outfit:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap');
 
 :root {
@@ -8,7 +8,7 @@
   --accent-orange: #F28C28;
   --accent-orange-hover: #E07B18;
 
-  /* Stats section variables */
+
   --green-900: #0D3D28;
   --orange: #F28C28;
   --font-body: 'Plus Jakarta Sans', sans-serif;
@@ -32,7 +32,7 @@
 *, *::before, *::after {
   box-sizing: border-box;
 }
-/* ==================== REFERENCE 3-CIRCLES WIDGET BANNER ==================== */
+
 
 .stats {
   position: relative;
@@ -232,7 +232,7 @@
     opacity .3s;
 }
 
-/* Hover */
+
 
 @media (hover: hover) {
 
@@ -268,7 +268,7 @@
   }
 }
 
-/* Stats Responsive */
+
 
 @media (max-width: 1024px) {
   .stats {
@@ -335,7 +335,7 @@ h1, h2, h3, h4 {
   padding-right: 24px;
 }
 
-/* ==================== UNIVERSAL CARD HOVER EFFECTS ==================== */
+
 .trusted-card-item,
 .team-card-interactive,
 .farm-card,
@@ -355,7 +355,7 @@ h1, h2, h3, h4 {
   border-color: var(--secondary-green);
 }
 
-/* ==================== TOP WIDGET BAR ==================== */
+
 .top-widget-bar {
   background: #ffffff;
   border-bottom: 1px solid rgba(23, 107, 69, 0.12);
@@ -476,7 +476,6 @@ h1, h2, h3, h4 {
   transform: translateY(-2px);
 }
 
-/* ==================== HERO SECTION (SHORTENED ABOUT US BANNER) ==================== */
 .reference-hero-container {
   position: relative;
   padding: 42px 0;
@@ -508,7 +507,7 @@ h1, h2, h3, h4 {
   visibility: visible !important;
 }
 
-/* Green Painted Brush Badge */
+
 .brush-stroke-badge {
   display: inline-block;
   background: var(--lime-highlight);
@@ -536,7 +535,7 @@ h1, h2, h3, h4 {
   border-bottom: 5px solid transparent;
 }
 
-/* Hero Headline */
+
 .hero-ref-title {
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 2.85rem;
@@ -563,7 +562,7 @@ h1, h2, h3, h4 {
   opacity: 1 !important;
 }
 
-/* Subscribe / Explore Button */
+
 .btn-organic-subscribe {
   display: inline-flex;
   align-items: center;
@@ -589,7 +588,7 @@ h1, h2, h3, h4 {
   box-shadow: 0 10px 25px rgba(23, 107, 69, 0.4);
 }
 
-/* Hero Right Banner Stage - Full Bleed Right Stage */
+
 .hero-banner-stage {
   position: absolute;
   top: 0;
@@ -612,7 +611,7 @@ h1, h2, h3, h4 {
   filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.03));
 }
 
-/* ==================== TRUSTED ORGANIC FARM SECTION ==================== */
+
 .trusted-farm-section {
   padding: 90px 0;
   background: #ffffff;
@@ -737,7 +736,7 @@ h1, h2, h3, h4 {
   font-size: 0.95rem;
 }
 
-/* PEPPER IMAGE DISPLAY ON RIGHT SIDE OF TRUSTED FARM SECTION */
+
 .pepper-farm-showcase {
   margin-top: 24px;
   margin-bottom: 24px;
@@ -779,11 +778,11 @@ h1, h2, h3, h4 {
   margin: 0;
 }
 
-/* ==================== BRAND LOGOS BAR ==================== */
+
 .brand-bar { background: #ffffff; padding: 26px 0; border-bottom: 1px solid rgba(23, 107, 69, 0.08); width: 100%; }
 .brand-item { font-weight: 800; color: var(--text-muted); font-size: 1.1rem; }
 
-/* ==================== DYNAMIC 3-TAB SECTION ==================== */
+
 .amazing-section-tabs { padding: 90px 0; width: 100%; }
 .tabs-header-bar { display: flex; justify-content: center; gap: 16px; margin-bottom: 34px; background: #EAEFEA; padding: 8px; border-radius: var(--radius-full); max-width: 650px; margin: 0 auto 34px auto; }
 .tab-btn { flex: 1; padding: 13px 24px; border-radius: var(--radius-full); border: none; background: transparent; color: var(--text-muted); font-weight: 700; font-size: 0.95rem; cursor: pointer; transition: var(--transition); }
@@ -792,7 +791,7 @@ h1, h2, h3, h4 {
 .tab-content-card { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; padding: 40px; align-items: center; background: #fff; border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); border: 1px solid #eef4f0; }
 .tab-hero-img { width: 100%; height: 380px; object-fit: cover; border-radius: var(--radius-md); }
 
-/* ==================== TEAM MEMBERS SECTION ==================== */
+
 .team-section { padding: 70px 0; width: 100%; }
 
 .team-cards-grid-3col {
@@ -809,7 +808,7 @@ h1, h2, h3, h4 {
   padding: 18px 14px;
   text-align: center;
   position: relative;
-  /* PROMINENT VIBRANT GREEN BOX-SHADOW VISIBLE WITHOUT HOVER */
+
   box-shadow: 0 10px 30px rgba(23, 107, 69, 0.28), 0 4px 14px rgba(76, 175, 80, 0.22);
   border: 2px solid rgba(23, 107, 69, 0.3);
   height: 100%;
@@ -826,7 +825,7 @@ h1, h2, h3, h4 {
   width: 100%;
   height: 4px;
   background: linear-gradient(90deg, var(--primary-green), var(--secondary-green));
-  opacity: 1; /* Always visible gradient border top */
+  opacity: 1; 
   border-top-left-radius: 14px;
   border-top-right-radius: 14px;
 }
@@ -935,7 +934,7 @@ h1, h2, h3, h4 {
   border-top: 1px solid #edf4ef;
 }
 
-/* SIGNIFICANTLY LARGER LINKEDIN, GITHUB & FIVERR ICONS WITH PROMINENT STYLING */
+
 .social-btn-small {
   width: 48px;
   height: 48px;
@@ -975,7 +974,7 @@ h1, h2, h3, h4 {
   color: #ffffff;
 }
 
-/* ==================== VALUE & STATS COUNTERS SECTION ==================== */
+
 .amazing-section-value { background: #EEF5F1; padding: 95px 0; width: 100%; }
 .value-img-main { width: 100%; height: 440px; object-fit: cover; border-radius: var(--radius-lg); box-shadow: var(--shadow-md); }
 
@@ -1047,7 +1046,7 @@ h1, h2, h3, h4 {
 
 @media (max-width: 1040px) {
   .info { grid-template-columns: repeat(2, 1fr); } .split, .duo { grid-template-columns: 1fr; } .stats__grid { grid-template-columns: repeat(2, 1fr); }}
-/* ==================== SUPER FAST RECIPE SEARCH SECTION ==================== */
+
 .amazing-section-fast { padding: 95px 0; width: 100%; }
 
 .fast-grid-container {
@@ -1073,7 +1072,7 @@ h1, h2, h3, h4 {
 
 .check-list-icon { color: var(--secondary-green); font-size: 1.2rem; }
 
-/* ==================== UNIQUE SLEEK FOOTER ==================== */
+
 .unique-organic-footer {
   background: linear-gradient(180deg, #0A291B 0%, #05160E 100%);
   color: #E2EFE7;
@@ -1248,7 +1247,7 @@ h1, h2, h3, h4 {
   gap: 12px;
 }
 
-/* Responsive queries */
+
 @media (max-width: 1024px) {
   .hero-ref-title { font-size: 3rem; }
   .hero-grid-split { grid-template-columns: 1fr; }
@@ -1269,14 +1268,14 @@ h1, h2, h3, h4 {
   .footer-grid-4col { grid-template-columns: 1fr; }
 }
 
-/* ==================== REFERENCE 3-CIRCLES WIDGET BANNER (ABOVE TEAM MEMBERS) ==================== */
+
 .stats { position: relative; isolation: isolate; overflow: hidden; margin-top: 6rem; padding: 4.5rem 0 4rem; color: #fff; background: var(--green-900); }
 .stats::before { content: ''; position: absolute; inset: -22% 0; z-index: -2; background: url('/stats-bg.jpg') center / cover no-repeat; transform: translate3d(0, var(--py, 0px), 0); will-change: transform; }
 .stats::after { content: ''; position: absolute; inset: 0; z-index: -1; background: radial-gradient(circle at 20% 20%, rgba(255,255,255,.07) 1.5px, transparent 1.6px) 0 0 / 26px 26px, linear-gradient(120deg, rgba(13,61,40,.86), rgba(23,107,69,.62)); }
 .stats__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.4rem 1.5rem; margin-left: 20% ; text-align: center; }
 .stat { display: flex; flex-direction: column; align-items: center; }
 
-/* Dial: a glass disc inside a progress ring that draws itself when scrolled into view. */
+
 .stat__dial { position: relative; display: grid; place-items: center; width: 140px; height: 140px; border-radius: 50%; transition: transform .5s cubic-bezier(.16,1,.3,1); }
 .stat__dial::before { content: ''; position: absolute; inset: 11px; border-radius: 50%; background: radial-gradient(circle at 32% 24%, rgba(255,255,255,.2), rgba(13,61,40,.55) 70%); -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); box-shadow: inset 0 0 0 1px rgba(255,255,255,.14), inset 0 -10px 18px -10px rgba(0,0,0,.35), 0 18px 30px -16px rgba(0,0,0,.65); transition: transform .5s cubic-bezier(.16,1,.3,1), box-shadow .5s; }
 .stat__svg { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }

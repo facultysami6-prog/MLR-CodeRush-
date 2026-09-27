@@ -1,4 +1,4 @@
-/* Shared photo-background layer. Any element given bgProps() gets: photo -> colour overlay -> content. */
+
 [data-bg] { position: relative; isolation: isolate; overflow: hidden; }
 [data-bg]::before,
 [data-bg]::after { content: ''; position: absolute; pointer-events: none; }

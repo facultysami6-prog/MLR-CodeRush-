@@ -11,9 +11,6 @@
   transition: all 0.3s ease;
 }
 
-/* =========================================
-   LEFT VISUAL SECTION (FULL VIDEO)
-   ========================================= */
 .visual,
 .login-visual {
   position: relative;
@@ -38,7 +35,7 @@
   z-index: 1;
 }
 
-/* LIGHT OVERLAY OVER VIDEO */
+
 .video-overlay-light {
   position: absolute;
   top: 0;
@@ -75,7 +72,7 @@
   opacity: .2;
 }
 
-/* PROMINENT LOGO */
+
 .logo {
   position: relative;
   z-index: 3;
@@ -91,7 +88,7 @@
   filter: drop-shadow(0 6px 16px rgba(0, 0, 0, 0.45));
 }
 
-/* CENTERED CONTENT OVERLAY ON LOGIN LEFT CARD */
+
 .login-visual-centered {
   position: relative;
   z-index: 3;
@@ -167,9 +164,7 @@
   color: #FFFFFF;
 }
 
-/* =========================================
-   RIGHT FORM SECTION
-   ========================================= */
+
 .form-side {
   padding: 44px 56px;
   display: flex;
@@ -198,7 +193,7 @@
   letter-spacing: 0.8px;
 }
 
-/* LOGIN / SIGNUP TOGGLE BUTTONS */
+
 .login-btn {
   display: inline-flex;
   align-items: center;
@@ -256,7 +251,7 @@ h2 {
   margin-bottom: 22px;
 }
 
-/* LOGIN METHOD TABS (With OTP / With E-mail) */
+
 .login-tabs {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -285,7 +280,7 @@ h2 {
   box-shadow: 0 2px 8px rgba(23, 107, 69, 0.2);
 }
 
-/* FORM FIELDS */
+
 .row {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -330,7 +325,7 @@ input[type="tel"]:focus {
   background: white;
 }
 
-/* ERROR STATES */
+
 .field.has-error input {
   border-color: var(--error) !important;
   background-color: var(--error-bg) !important;
@@ -380,7 +375,6 @@ input[type="tel"]:focus {
   color: var(--text);
 }
 
-/* OPTIONS ROW (Remember me / Forgot password) */
 .options-row {
   display: flex;
   align-items: center;
@@ -417,7 +411,7 @@ input[type="tel"]:focus {
   text-decoration: underline;
 }
 
-/* PASSWORD STRENGTH STYLES */
+
 .strength-meter {
   margin-top: 8px;
   margin-bottom: 4px;
@@ -472,7 +466,7 @@ input[type="tel"]:focus {
   font-weight: 600;
 }
 
-/* TERMS CHECKBOX */
+
 .terms {
   display: flex;
   gap: 9px;
@@ -503,7 +497,7 @@ input[type="tel"]:focus {
   text-decoration: underline;
 }
 
-/* SIGN UP SUBMIT BUTTON */
+
 .submit {
   width: 100%;
   height: 49px;
@@ -527,7 +521,7 @@ input[type="tel"]:focus {
   box-shadow: 0 6px 18px rgba(23, 107, 69, 0.35);
 }
 
-/* LOGIN SUBMIT BUTTON: ORANGE DEFAULT (#F28C28), DUAL GREEN HOVER (#4CAF60 -> #176B45) */
+
 .login-submit-btn {
   width: 50%;
   height: 49px;
@@ -594,7 +588,7 @@ input[type="tel"]:focus {
   background: #E5ECE7;
 }
 
-/* SOCIAL LOGIN BUTTONS */
+
 .social-login-group {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -645,7 +639,7 @@ input[type="tel"]:focus {
   text-decoration: underline;
 }
 
-/* SUCCESS MODAL / CARD */
+
 .success-card {
   text-align: center;
   padding: 20px 10px;
@@ -718,7 +712,7 @@ input[type="tel"]:focus {
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* RESPONSIVE */
+
 @media (max-width: 850px) {
   .page { grid-template-columns: 1fr; }
   .visual, .login-visual { min-height: 350px; }

@@ -21,7 +21,7 @@ export default function Home() {
 
   return (
     <div className="home-page-shell min-h-screen flex flex-col bg-white">
-      {/* Hero Section */}
+
       <HeroRealSection
         onExploreClick={() => {
           const el = document.getElementById('trending');
@@ -29,29 +29,29 @@ export default function Home() {
         }}
       />
 
-      {/* Best Trending Promo Cards */}
+    
       <div id="trending">
         <BestTrendingCards />
       </div>
 
-      {/* Good Large Harvest - Circular Categories Row */}
+    
       <PopularCategoriesCircular
         onSelectCategory={(catType) => setSelectedCategory(catType)}
       />
 
-      {/* Fresh Produce Feature - Circular Product Hub */}
+    
       <CircularProductFeature />
 
-      {/* Seasonal Recommendations */}
+
       <SeasonalRecommendationSection
         bookmarkedIds={bookmarkedProduceIds}
         onToggleBookmark={handleToggleProduceBookmark}
       />
 
-      {/* Sale 68% Off Countdown Section */}
+   
       <SaleCountdownSection />
 
-      {/* Market Detail Popup Modal */}
+  
       <MarketDetailModal
         market={selectedMarketModal}
         onClose={() => setSelectedMarketModal(null)}

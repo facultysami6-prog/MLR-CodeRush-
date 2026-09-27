@@ -1,6 +1,4 @@
-/* =========================================================
-   ORGANIC FARM SECTION
-   ========================================================= */
+
 
 .organic-section * {
     margin: 0;
@@ -17,9 +15,7 @@
     font-family: 'Times New Roman', Times, serif;
 }
 
-/* =========================================================
-   COLORS
-   ========================================================= */
+
 
 .organic-section {
     --green: #8fbd55;
@@ -37,9 +33,6 @@
     --text: #62675e;
 }
 
-/* =========================================================
-   MAIN CONTENT
-   ========================================================= */
 
 .organic-section .content {
     position: relative;
@@ -49,9 +42,7 @@
     margin: 0 auto;
 }
 
-/* =========================================================
-   HEADING
-   ========================================================= */
+
 
 .organic-section .heading {
     position: relative;
@@ -80,7 +71,7 @@
     font-weight: 700;
 }
 
-/* HEADING UNDERLINE */
+
 
 .organic-section .heading-line {
     display: flex;
@@ -103,7 +94,7 @@
     white-space: nowrap;
 }
 
-/* INTRO TEXT */
+
 
 .organic-section .heading p {
     width: 510px;
@@ -115,9 +106,7 @@
     opacity: 1;
 }
 
-/* =========================================================
-   FEATURE AREA
-   ========================================================= */
+
 
 .organic-section .features {
     position: relative;
@@ -139,35 +128,35 @@
     visibility: visible;
 }
 
-/* Outer left */
+
 .organic-section .features > .feature:nth-child(1) {
     left: 0;
     top: 72px;
     animation: outerLeftFloat 5s ease-in-out infinite;
 }
 
-/* Inner left */
+
 .organic-section .features > .feature:nth-child(2) {
     left: 203px;
     top: 0;
     animation: innerLeftFloat 4.6s ease-in-out infinite;
 }
 
-/* Inner right */
+
 .organic-section .features > .feature:nth-child(3) {
     left: 407px;
     top: 0;
     animation: innerRightFloat 4.8s ease-in-out infinite;
 }
 
-/* Outer right */
+
 .organic-section .features > .feature:nth-child(4) {
     left: 610px;
     top: 72px;
     animation: outerRightFloat 5s ease-in-out infinite;
 }
 
-/* FLOATING ANIMATIONS */
+
 
 @keyframes outerLeftFloat {
     0%, 100% { transform: translateY(0); }
@@ -189,9 +178,7 @@
     50% { transform: translateY(-7px); }
 }
 
-/* =========================================================
-   CIRCLES
-   ========================================================= */
+
 
 .organic-section .icon-circle {
     position: relative;
@@ -232,14 +219,14 @@
     transition: transform .35s ease;
 }
 
-/* CIRCLE COLORS */
+
 
 .organic-section .green { background: var(--green); }
 .organic-section .yellow { background: var(--orange); }
 .organic-section .peach { background: var(--coral); }
 .organic-section .beige { background: var(--earth); }
 
-/* Orange circle extra glow */
+
 .organic-section .features > .feature:nth-child(2) .icon-circle {
     box-shadow:
         0 0 0 2px rgba(255,255,255,.75),
@@ -247,7 +234,7 @@
         inset 0 0 0 1px rgba(255,255,255,.55);
 }
 
-/* HOVER */
+
 
 .organic-section .feature:hover .icon-circle {
     transform: translateY(-5px) scale(1.08);
@@ -260,9 +247,7 @@
     transform: scale(1.12) rotate(-5deg);
 }
 
-/* =========================================================
-   FEATURE TEXT
-   ========================================================= */
+
 
 .organic-section .feature h3 {
     margin: 0 0 9px;
@@ -277,7 +262,7 @@
     font-weight: 700;
 }
 
-/* Orange feature title */
+
 .organic-section .features > .feature:nth-child(2) h3 strong {
     color: var(--orange-dark);
 }
@@ -291,9 +276,7 @@
     font-weight: 400;
 }
 
-/* =========================================================
-   FRUIT
-   ========================================================= */
+
 
 .organic-section .fruit-area {
     position: absolute;
@@ -326,9 +309,7 @@
     50% { transform: translateX(-50%) translateY(-7px); }
 }
 
-/* =========================================================
-   DECORATIVE LEAVES
-   ========================================================= */
+
 
 .organic-section .leaf-cluster {
     position: absolute;
@@ -384,9 +365,7 @@
 .organic-section .leaf-3 { left: 3px; top: 48px; transform: rotate(-43deg) scale(.75); }
 .organic-section .leaf-4 { left: 38px; top: 48px; transform: rotate(25deg) scale(.65); }
 
-/* =========================================================
-   SCROLL BUTTON
-   ========================================================= */
+
 
 .organic-section .scroll-button {
     position: fixed;
@@ -411,9 +390,6 @@
     border-color: #aaa;
 }
 
-/* =========================================================
-   RESPONSIVE
-   ========================================================= */
 
 @media (max-width: 850px) {
     .organic-section .features { width: 700px; }

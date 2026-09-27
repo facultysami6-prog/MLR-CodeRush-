@@ -50,7 +50,7 @@ export default function FindMarketHero({
 
   return (
     <section className="ffm-hero">
-      {/* Background effects */}
+
       <div className="ffm-hero__grain" aria-hidden="true" />
 
       <div
@@ -77,9 +77,7 @@ export default function FindMarketHero({
 
       <div className="ffm-container ffm-hero__inner">
 
-        {/* =====================================================
-            LEFT CONTENT
-        ===================================================== */}
+      
 
         <div className="ffm-hero__copy">
 
@@ -127,9 +125,7 @@ export default function FindMarketHero({
         </div>
 
 
-        {/* =====================================================
-            RIGHT VISUAL
-        ===================================================== */}
+
 
         <div className="ffm-hero__visual" aria-hidden="true">
 
@@ -140,7 +136,7 @@ export default function FindMarketHero({
           <div className="ffm-hero__visual-orbit ffm-hero__visual-orbit--two" />
 
 
-          {/* Main image */}
+
           <div className="ffm-hero-photo ffm-hero-photo--main">
 
             <img
@@ -156,7 +152,7 @@ export default function FindMarketHero({
           </div>
 
 
-          {/* Side image */}
+
           <div className="ffm-hero-photo ffm-hero-photo--side">
 
             <img
@@ -172,7 +168,7 @@ export default function FindMarketHero({
           </div>
 
 
-          {/* Small circular image */}
+
           <div className="ffm-hero-photo ffm-hero-photo--mini">
 
             <img
@@ -183,7 +179,7 @@ export default function FindMarketHero({
           </div>
 
 
-          {/* Floating tags */}
+
           <div className="ffm-hero__floating-tag ffm-hero__floating-tag--top">
             <span className="ffm-float-dot" />
             Today's fresh picks
@@ -195,7 +191,7 @@ export default function FindMarketHero({
           </div>
 
 
-          {/* Stats */}
+
           <div className="ffm-hero__meta">
 
             <div className="ffm-hero-stat">
@@ -217,7 +213,7 @@ export default function FindMarketHero({
       </div>
 
 
-      {/* Bottom decorative rule */}
+
       <div
         className="ffm-hero__bottom-rule"
         aria-hidden="true"

@@ -31,7 +31,7 @@ const TESTIMONIALS = [
   },
 ];
 
-// Small hand-drawn almond, styled to match the site's existing vector artwork (Art.jsx)
+
 function Almond({ className, gradId }) {
   return (
     <svg
@@ -107,7 +107,7 @@ export default function TrustedSection() {
 
   return (
     <section className="trusted-section" aria-labelledby="trusted-heading">
-      {/* Ambient background texture -- soft, brand-toned, not photographic */}
+    
       <div className="trusted-ambient" aria-hidden="true">
         <span className="ambient-blob ambient-blob--a" />
         <span className="ambient-blob ambient-blob--b" />
@@ -115,7 +115,7 @@ export default function TrustedSection() {
       </div>
 
       <div className="container trusted-container">
-        {/* LEFT CONTENT */}
+        
         <Reveal as="div" className="trusted-content" variant="left">
           <div className="trusted-kicker">
            
@@ -154,7 +154,7 @@ export default function TrustedSection() {
           </button>
         </Reveal>
 
-        {/* RIGHT VISUAL */}
+  
         <Reveal as="div" className="trusted-visual" variant="right" delay={120}>
           <div className="trusted-media">
             <img
@@ -174,7 +174,7 @@ export default function TrustedSection() {
             </div>
           </div>
 
-          {/* Testimonial */}
+    
           <div
             className="testimonial-card"
             onMouseEnter={pause}

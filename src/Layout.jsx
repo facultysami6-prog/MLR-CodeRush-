@@ -11,7 +11,6 @@ export default function MainLayout() {
   const location = useLocation();
   const [isBookmarksOpen, setIsBookmarksOpen] = useState(false);
 
-  // Bookmarks state with localStorage persistence
   const [bookmarkedMarketIds, setBookmarkedMarketIds] = useState(() => {
     try {
       const saved = localStorage.getItem("freshfind_market_bookmarks");
@@ -38,7 +37,7 @@ export default function MainLayout() {
     localStorage.setItem("freshfind_produce_bookmarks", JSON.stringify(bookmarkedProduceIds));
   }, [bookmarkedProduceIds]);
 
-  // Scroll to top on route change
+
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, [location.pathname]);
@@ -66,13 +65,13 @@ export default function MainLayout() {
 
   return (
     <div className="flex min-h-screen flex-col bg-white">
-      {/* 1. Universal Navbar that came with freshfind-main */}
+      
       <WavyHeaderNav
         bookmarkCount={totalBookmarks}
         onOpenBookmarks={() => setIsBookmarksOpen(true)}
       />
 
-      {/* 2. Main Page Content with Outlet */}
+     
       <main className="flex-1 site-main">
         <Outlet
           context={{
@@ -85,13 +84,13 @@ export default function MainLayout() {
         />
       </main>
 
-      {/* 3. Universal Footer that came with freshfind-main */}
+
       <Footer />
 
-      {/* 4. Global Floating AI Chatbot Widget */}
+
       <AiChatbotWidget />
 
-      {/* 5. Global Bookmarks Drawer */}
+
       <BookmarksDrawer
         isOpen={isBookmarksOpen}
         onClose={() => setIsBookmarksOpen(false)}
