@@ -1877,7 +1877,7 @@ html {
 
 /* ---------- LAPTOP: 1050px ---------- */
 
-@media (max-width: 1050px) and (min-width: 901px) {
+@media (max-width: 1200px) and (min-width: 901px) {
   .greennest-navbar-container {
     top: 12px;
     padding: 0 20px;
@@ -1903,7 +1903,7 @@ html {
   }
 
   .nav-links a {
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 600;
   }
 
