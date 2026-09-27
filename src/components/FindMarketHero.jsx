@@ -12,6 +12,9 @@ export default function FindMarketHero({
   description = 'Explore neighbourhood markets, seasonal produce and opening times in one calm, simple view — then head out with a plan.',
   buttonText = 'Start exploring',
   scrollTarget = 'ffm-finder',
+  trustTitle = 'Made for your neighbourhood',
+  trustSubtitle = 'Find fresh within reach',
+  images = null,
 }) {
   const produceOptions = useMemo(
     () => [
@@ -103,8 +106,8 @@ export default function FindMarketHero({
               </span>
 
               <span>
-                <strong>Made for your neighbourhood</strong>
-                <small>Find fresh within reach</small>
+                <strong>{trustTitle}</strong>
+                <small>{trustSubtitle}</small>
               </span>
             </div>
 
@@ -129,7 +132,7 @@ export default function FindMarketHero({
           <div className="ffm-hero-photo ffm-hero-photo--main">
 
             <img
-              src={marketData[0]?.image}
+              src={images?.[0] || marketData[0]?.image}
               alt=""
             />
 
@@ -145,7 +148,7 @@ export default function FindMarketHero({
           <div className="ffm-hero-photo ffm-hero-photo--side">
 
             <img
-              src={marketData[1]?.image}
+              src={images?.[1] || marketData[1]?.image || marketData[0]?.image}
               alt=""
             />
 
@@ -161,7 +164,7 @@ export default function FindMarketHero({
           <div className="ffm-hero-photo ffm-hero-photo--mini">
 
             <img
-              src={marketData[2]?.image}
+              src={images?.[2] || marketData[2]?.image || marketData[0]?.image}
               alt=""
             />
 

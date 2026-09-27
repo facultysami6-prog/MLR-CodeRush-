@@ -18,6 +18,7 @@ import './css/MarketDirectory.css';
 import marketData from '../data/markets.json';
 import FarmerCatalogSlider from './FarmerCatalogSlider';
 import MarketDetailModal from '../components/MarketDetailModal';
+import FindMarketHero from '../components/FindMarketHero';
 
 const DAY_INDEX = {
   Sunday: 0, Monday: 1, Tuesday: 2, Wednesday: 3,
@@ -151,162 +152,18 @@ export default function MarketDirectory({
   
     <div className="market-directory-page-shell bg-white">
       {/* MARKET DIRECTORY HERO */}
-<section className="ffm-hero md-market-hero">
-  <div className="ffm-hero__grain" aria-hidden="true" />
-  <div className="ffm-hero__glow ffm-hero__glow--one" aria-hidden="true" />
-  <div className="ffm-hero__glow ffm-hero__glow--two" aria-hidden="true" />
-  <div className="ffm-hero__leaf ffm-hero__leaf--one" aria-hidden="true" />
-  <div className="ffm-hero__leaf ffm-hero__leaf--two" aria-hidden="true" />
-  <div className="ffm-hero__grid" aria-hidden="true" />
-
-  <div className="ffm-container ffm-hero__inner">
-
-    {/* LEFT CONTENT */}
-    <div className="ffm-hero__copy">
-
-      <span className="ffm-eyebrow">
-        <Sparkles size={14} />
-        FreshFind Market Directory
-      </span>
-
-      <span className="ffm-hero__label">
-        <span className="ffm-hero__label-dot" />
-        Verified local farmers markets
-      </span>
-
-      <h1>
-        Discover your local <em>market.</em>
-      </h1>
-
-      <p>
-        Find verified farmers markets, discover fresh seasonal produce,
-        check weekly schedules and explore local growers near you.
-      </p>
-
-      <div className="ffm-hero__actions">
-
-        <button
-          type="button"
-          className="ffm-hero__cta"
-          onClick={() =>
-            document
-              .getElementById('market-directory')
-              ?.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-              })
-          }
-        >
-          <span>Explore markets</span>
-          <ArrowRight size={18} />
-        </button>
-
-        <div className="ffm-hero__trust">
-          <span className="ffm-hero__trust-icon">
-            <MapPin size={15} />
-          </span>
-
-          <span>
-            <strong>Fresh markets near you</strong>
-            <small>Search by area, day or produce</small>
-          </span>
-        </div>
-
-      </div>
-    </div>
-
-
-    {/* RIGHT VISUAL */}
-    <div className="ffm-hero__visual" aria-hidden="true">
-
-      <div className="ffm-hero__visual-halo" />
-      <div className="ffm-hero__visual-orbit ffm-hero__visual-orbit--one" />
-      <div className="ffm-hero__visual-orbit ffm-hero__visual-orbit--two" />
-
-      {/* Main image */}
-      <div className="ffm-hero-photo ffm-hero-photo--main">
-        <img
-          src={marketList[0]?.image}
-          alt=""
-        />
-
-        <div className="ffm-hero-photo__caption">
-          <span>01</span>
-          Local farmers
-        </div>
-      </div>
-
-      {/* Side image */}
-      <div className="ffm-hero-photo ffm-hero-photo--side">
-        <img
-          src={marketList[1]?.image || marketList[0]?.image}
-          alt=""
-        />
-
-        <div className="ffm-hero-photo__caption">
-          <span>02</span>
-          Fresh produce
-        </div>
-      </div>
-
-      {/* Small image */}
-      <div className="ffm-hero-photo ffm-hero-photo--mini">
-        <img
-          src={marketList[2]?.image || marketList[0]?.image}
-          alt=""
-        />
-      </div>
-
-      {/* Floating tags */}
-      <div className="ffm-hero__floating-tag ffm-hero__floating-tag--top">
-        <span className="ffm-float-dot" />
-        Fresh picks nearby
-      </div>
-
-      <div className="ffm-hero__floating-tag ffm-hero__floating-tag--bottom">
-        <MapPin size={13} />
-        Local first
-      </div>
-
-      {/* Stats */}
-      <div className="ffm-hero__meta">
-
-        <div className="ffm-hero-stat">
-          <strong>{marketList.length}</strong>
-          <span>markets</span>
-        </div>
-
-        <div className="ffm-hero-divider" />
-
-        <div className="ffm-hero-stat">
-          <strong>
-            {[
-              ...new Set(
-                marketList.flatMap(
-                  (market) => market.produceTypes || []
-                )
-              )
-            ].length}
-            +
-          </strong>
-
-          <span>fresh picks</span>
-        </div>
-
-      </div>
-
-    </div>
-  </div>
-
-  <div
-    className="ffm-hero__bottom-rule"
-    aria-hidden="true"
-  >
-    <span />
-    <span />
-    <span />
-  </div>
-</section>
+      <FindMarketHero
+        eyebrow="FreshFind Market Directory"
+        label="Verified local farmers markets"
+        title="Discover your local"
+        highlight="market."
+        description="Find verified farmers markets, discover fresh seasonal produce, check weekly schedules and explore local growers near you."
+        buttonText="Explore markets"
+        scrollTarget="market-directory"
+        trustTitle="Fresh markets near you"
+        trustSubtitle="Search by area, day or produce"
+        images={[marketList[0]?.image, marketList[1]?.image, marketList[2]?.image]}
+      />
       {/* 1. Farmer Catalog Slider Section (Powered by catalog.json) */}
       <FarmerCatalogSlider
         onSelectCategory={(cat) => setSelectedCategoryFilter(cat)}
