@@ -249,7 +249,7 @@ useEffect(() => {
               </h2>
 
               <p className="trusted-description">
-                Morbi eget congue lectus. Donec eleifend ultricies urna et euismod. Sed consectetur tellus eget odio aliquet, vel vestibulum tellus sollicitudin. Morbi maximus metus eu eros tincidunt, vitae mollis ante imperdiet. Nulla imperdiet at mauris ut posuere.
+                “We are connected by a shared community. Our services are designed to provide reliable and modern solutions. We focus on creating a smooth and enjoyable experience while meeting the needs of our customers. Our goal is to make every interaction simple, effective, and convenient.”
               </p>
 
               <ul className="trusted-categories-list">
