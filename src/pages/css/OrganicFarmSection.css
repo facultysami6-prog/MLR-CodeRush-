@@ -1,4 +1,9 @@
-
+.icon-circle .icon-img {
+  width: 80%;
+  height: 80%;
+  object-fit: contain;
+  display: block;
+}
 
 .organic-section * {
     margin: 0;
@@ -12,7 +17,7 @@
     min-height: 700px;
     background: var(--cream);
     overflow: hidden;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'poppins', sans-serif;
 }
 
 
@@ -100,9 +105,9 @@
     width: 510px;
     margin: 17px auto 0;
     color: #0a0a0a;
-    font-size: 10px;
+    font-size: 13px;
     line-height: 1.75;
-    font-weight: 400;
+    font-weight: 600;
     opacity: 1;
 }
 
@@ -271,9 +276,9 @@
     width: 145px;
     margin: 0 auto 11px;
     color: #4c742b;
-    font-size: 10px;
+    font-size: 11px;
     line-height: 1.7;
-    font-weight: 400;
+    font-weight: 600;
 }
 
 

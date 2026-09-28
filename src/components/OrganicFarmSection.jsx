@@ -1,28 +1,27 @@
-
 const FEATURES = [
   {
-    icon: "fa-solid fa-wheat-awn",
+    image: "/icons/wheat.png",
     circleClass: "green",
     titlePlain: "fresh from",
     titleStrong: "our farm",
     text: "Freshly harvested produce, carefully grown and delivered straight from local farms.",
   },
   {
-    icon: "fa-solid fa-seedling",
+    image: "/icons/herb.png",
     circleClass: "yellow",
     titlePlain: "100%",
     titleStrong: "organic produce",
     text: "Naturally grown fruits, vegetables and herbs with responsible farming practices.",
   },
   {
-    icon: "fa-solid fa-carrot",
+    image: "/icons/carrot.png",
     circleClass: "peach",
     titlePlain: "",
     titleStrong: "premium harvest",
     text: "Carefully selected seasonal produce chosen for freshness, quality and natural flavor.",
   },
   {
-    icon: "fa-solid fa-apple-whole",
+    image: "/icons/apple.png",
     circleClass: "beige",
     titlePlain: "naturally",
     titleStrong: "grown",
@@ -70,17 +69,21 @@ function OrganicFarmSection() {
 
           <p>
             We connect you with fresh, seasonal produce grown with care by local
-            farmers. From naturally cultivated fruits and vegetables to wholesome
-            farm products, we bring the goodness of the harvest closer to you.
+            farmers. From naturally cultivated fruits and vegetables to
+            wholesome farm products, we bring the goodness of the harvest closer
+            to you.
           </p>
         </div>
-
 
         <div className="features">
           {FEATURES.map((f, i) => (
             <div className="feature" key={i}>
               <div className={`icon-circle ${f.circleClass}`}>
-                <i className={f.icon}></i>
+                <img
+                  src={f.image}
+                  alt={`${f.titlePlain} ${f.titleStrong}`.trim()}
+                  className="icon-img"
+                />
               </div>
 
               <h3>
@@ -93,7 +96,6 @@ function OrganicFarmSection() {
           ))}
         </div>
 
-      
         <div className="fruit-area">
           <img
             src="https://pngimg.com/d/grapefruit_PNG15250.png"
@@ -102,7 +104,6 @@ function OrganicFarmSection() {
           />
         </div>
       </div>
-
 
       <button
         className="scroll-button"
