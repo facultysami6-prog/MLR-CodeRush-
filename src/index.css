@@ -1866,7 +1866,7 @@ html {
   }
 
   .logo-brand-img {
-    height: 52px;
+    height: 80px;
     margin-top: 0;
   }
 
@@ -2465,5 +2465,23 @@ html {
     width: 37px;
     height: 37px;
     min-width: 37px;
+  }
+}
+@media (min-width: 1201px) {
+  .logo {
+    min-width: 180px;
+  }
+
+  .logo-brand-img {
+    height: 90px;          /* was 56px, navbar is 78px tall so it still fits */
+  }
+
+  .nav-links {
+    gap: 26px;             /* was 32px */
+  }
+
+  .nav-links a {
+    font-size: 15px;       /* was 17px */
+    font-weight: 600;
   }
 }
