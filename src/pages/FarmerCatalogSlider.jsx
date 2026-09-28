@@ -377,31 +377,6 @@ export default function FarmerCatalogSlider({
                     )}
 
                   </div>
-
-                  {/* CTA */}
-                  <button
-                    type="button"
-                    className="catalog-view-button"
-                    onClick={(e) => {
-
-                      e.stopPropagation();
-
-                      if (onSelectItem) {
-                        onSelectItem(item);
-                      }
-
-                      if (onSelectCategory) {
-                        onSelectCategory(item.badgeLabel);
-                      }
-
-                    }}
-                  >
-                    <span>View Details</span>
-
-                    <ChevronRight size={15} />
-
-                  </button>
-
                 </div>
 
               </article>

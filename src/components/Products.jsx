@@ -224,8 +224,6 @@ const Products = () => {
                         />
                       ))}
                     </div>
-
-                    <span className="details-text">Product Details</span>
                   </div>
                 </div>
               </div>
