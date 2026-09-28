@@ -290,27 +290,7 @@ export default function WavyHeaderNav({
         </div>
 
    
-        <button
-          type="button"
-          onClick={() => {
-            onOpenBookmarks();
-            closeSidebar();
-          }}
-          className="nav-button mobile-sidebar-cta cursor-pointer"
-          title="Open Bookmarks Drawer"
-        >
-          <Icon name="bookmark" size={18} />
-
-          <span>Bookmarks</span>
-
-          {bookmarkCount > 0 && (
-            <span className="bookmark-count-badge">
-              {bookmarkCount}
-            </span>
-          )}
-
-          <span className="arrow">→</span>
-        </button>
+       
       </aside>
 
     

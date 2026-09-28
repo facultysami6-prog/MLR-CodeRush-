@@ -688,9 +688,6 @@ html {
   .logo-text {
     font-size: 16px;
   }
-  .nav-button span:first-child {
-    display: none;
-  }
   .nav-button {
     min-width: auto;
     height: 39px;
@@ -2220,9 +2217,9 @@ html {
 
  
 
-  .nav-button > span:first-child {
-    display: none;
-  }
+ .nav-button:not(.nav-button-icon-only) > span:first-child {
+  display: none;
+}
 
   .nav-button {
     min-width: 42px;
@@ -2446,4 +2443,27 @@ html {
   align-items: center;
   justify-content: center;
   line-height: 0;
+}
+@media (max-width: 1000px) {
+  .nav-button.nav-button-icon-only {
+    min-width: 0;
+    width: 42px;
+    height: 42px;
+    padding: 0;
+    color: var(--accent-orange);
+  }
+
+  .nav-button-icon-only svg,
+  .nav-button-icon-only svg path {
+    fill: currentColor;
+    stroke: currentColor;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-button.nav-button-icon-only {
+    width: 37px;
+    height: 37px;
+    min-width: 37px;
+  }
 }

@@ -34,8 +34,8 @@
 }
 .footer-grid-4col {
   display: grid;
-  grid-template-columns: 1.8fr 2fr 1.6fr;
-  gap: clamp(28px, 4vw, 50px);
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr) minmax(0, 1fr);
+  gap: clamp(60px, 5.5vw, 72px);
   align-items: start;
 }
 
@@ -116,7 +116,8 @@
 .footer-links-group {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: clamp(20px, 3vw, 40px);
+  column-gap: clamp(32px, 5.5vw, 64px);
+  row-gap: 24px;
 }
 
 .footer-nav-col {
