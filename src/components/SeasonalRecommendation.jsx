@@ -98,7 +98,7 @@ export default function SeasonalRecommendationSection({
 
         <div className="seasonal-hero-content">
           <div className="seasonal-hero-badge">
-            <Sparkles size={14} />
+            
             <span>100% Farm Fresh Harvest</span>
           </div>
 

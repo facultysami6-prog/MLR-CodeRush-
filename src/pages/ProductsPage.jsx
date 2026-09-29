@@ -3,25 +3,34 @@ import React from 'react';
 import Products from '../components/Products';
 import FindMarketHero from '../components/FindMarketHero';
 
+
 export default function ProductsPage() {
   return (
-    <div className="products-page-container min-h-screen flex flex-col bg-white">
+    <div className="products-page-container">
 
-      <FindMarketHero
-        eyebrow="FreshFind Produce"
-        label="Fresh from local growers"
-        title="Discover fresh"
-        highlight="seasonal produce."
-        description="Explore fresh fruits, vegetables and seasonal produce from local growers and farmers markets."
-        buttonText="Explore produce"
-        scrollTarget="products-catalogue"
-        trustTitle="Direct from local farmers"
-        trustSubtitle="Hand-picked seasonal harvests"
-      />
+      {/* Hero Animation */}
+      <section className="products-reveal products-hero">
+        <FindMarketHero
+          eyebrow="FreshFind Produce"
+          label="Fresh from local growers"
+          title="Discover fresh"
+          highlight="seasonal produce."
+          description="Explore fresh fruits, vegetables and seasonal produce from local growers and farmers markets."
+          buttonText="Explore produce"
+          scrollTarget="products-catalogue"
+          trustTitle="Direct from local farmers"
+          trustSubtitle="Hand-picked seasonal harvests"
+        />
+      </section>
 
-      <div id="products-catalogue" style={{ scrollMarginTop: '100px' }}>
+      {/* Products Animation */}
+      <section
+        id="products-catalogue"
+        className="products-reveal products-catalogue"
+      >
         <Products />
-      </div>
+      </section>
+
     </div>
   );
 }

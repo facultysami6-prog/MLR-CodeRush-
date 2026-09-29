@@ -37,13 +37,223 @@
 
     --text: #62675e;
 }
+.organic-section .heading {
+    animation: organicHeadingReveal 1s ease-out both;
+}
 
+.organic-section .heading h1 {
+    animation: organicTitleReveal 1s ease-out .15s both;
+}
+
+.organic-section .heading-line {
+    animation: organicLineReveal .8s ease-out .3s both;
+}
+
+.organic-section .heading p {
+    animation: organicTextReveal 1s ease-out .4s both;
+}
+
+.organic-section .features > .feature {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+.organic-section .features > .feature:nth-child(1) {
+    animation-name: featureRevealLeft;
+    animation-delay: .45s;
+}
+
+.organic-section .features > .feature:nth-child(2) {
+    animation-name: featureRevealUp;
+    animation-delay: .6s;
+}
+
+.organic-section .features > .feature:nth-child(3) {
+    animation-name: featureRevealUp;
+    animation-delay: .75s;
+}
+
+.organic-section .features > .feature:nth-child(4) {
+    animation-name: featureRevealRight;
+    animation-delay: .9s;
+}
+
+.organic-section .feature .icon-circle {
+    animation: iconPop .8s ease-out 1s both;
+}
+
+.organic-section .fruit-area {
+    animation: fruitReveal 1.2s ease-out 1s both;
+}
+
+.organic-section .fruit-image {
+    animation: fruitFloat 5s ease-in-out 2.2s infinite;
+}
+
+.organic-section .leaf-left {
+    animation: leafLeftReveal 1s ease-out .3s both;
+}
+
+.organic-section .leaf-right {
+    animation: leafRightReveal 1s ease-out .5s both;
+}
+
+@keyframes organicHeadingReveal {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes organicTitleReveal {
+    from {
+        opacity: 0;
+        transform: scale(.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes organicLineReveal {
+    from {
+        opacity: 0;
+        transform: scaleX(0);
+    }
+    to {
+        opacity: 1;
+        transform: scaleX(1);
+    }
+}
+
+@keyframes organicTextReveal {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes featureRevealLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-60px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes featureRevealUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes featureRevealRight {
+    from {
+        opacity: 0;
+        transform: translateX(60px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes iconPop {
+    from {
+        opacity: 0;
+        transform: scale(.5);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes fruitReveal {
+    from {
+        opacity: 0;
+        transform: translateX(-50%) translateY(80px) scale(.8);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0) scale(1);
+    }
+}
+
+@keyframes leafLeftReveal {
+    from {
+        opacity: 0;
+        transform: translateX(-50px) rotate(-20deg);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0) rotate(-5deg);
+    }
+}
+
+@keyframes leafRightReveal {
+    from {
+        opacity: 0;
+        transform: translateX(50px) rotate(160deg);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0) rotate(180deg);
+    }
+}
+
+@media (max-width: 700px) {
+    .organic-section .heading,
+    .organic-section .heading h1,
+    .organic-section .heading-line,
+    .organic-section .heading p {
+        animation-duration: .7s;
+    }
+
+    .organic-section .features > .feature:nth-child(1),
+    .organic-section .features > .feature:nth-child(2),
+    .organic-section .features > .feature:nth-child(3),
+    .organic-section .features > .feature:nth-child(4) {
+        animation-name: featureRevealUp;
+        animation-duration: .8s;
+    }
+
+    .organic-section .fruit-area {
+        animation-duration: 1s;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .organic-section *,
+    .organic-section *::before,
+    .organic-section *::after {
+        animation: none !important;
+        transition: none !important;
+    }
+}
 
 .organic-section .content {
     position: relative;
     width: 100%;
     max-width: 1000px;
-    min-height: 700px;
+    min-height: 800px;
     margin: 0 auto;
 }
 
@@ -285,6 +495,7 @@
 
 .organic-section .fruit-area {
     position: absolute;
+    margin-top: 10%;
     z-index: 8;
     left: 50%;
     top: 330px;

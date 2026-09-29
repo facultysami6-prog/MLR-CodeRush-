@@ -233,9 +233,7 @@ export default function WavyHeaderNav({
               className="logo-brand-img"
             />
 
-            <span className="logo-text">
-              Fresh<span>Find</span>
-            </span>
+            
           </Link>
 
           <button

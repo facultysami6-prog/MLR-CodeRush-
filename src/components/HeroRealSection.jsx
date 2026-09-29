@@ -4,10 +4,9 @@ import './css/HeroRealSection.css';
 
 const heroImages = [
   '/banner6.png',
-  '/banner2.png',
+  '/banner2.jpg',
   '/bgimages2.jpg',
-  '/banner3.jpg',
-];
+ ];
 
 export default function HeroRealSection({ onExploreClick }) {
   const [activeSlide, setActiveSlide] = useState(0);

@@ -20,38 +20,48 @@ export default function Home() {
   const [selectedMarketModal, setSelectedMarketModal] = useState(null);
 
   return (
-    <div className="home-page-shell min-h-screen flex flex-col bg-white">
+    <div className="home-page-shell">
 
-      <HeroRealSection
-        onExploreClick={() => {
-          const el = document.getElementById('trending');
-          if (el) el.scrollIntoView({ behavior: 'smooth' });
-        }}
-      />
+      <section className="home-reveal home-hero">
+        <HeroRealSection
+          onExploreClick={() => {
+            const el = document.getElementById('trending');
 
-    
-      <div id="trending">
+            if (el) {
+              el.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start',
+              });
+            }
+          }}
+        />
+      </section>
+
+      <section id="trending" className="home-reveal home-section-delay-1">
         <BestTrendingCards />
-      </div>
+      </section>
 
-    
-      <PopularCategoriesCircular
-        onSelectCategory={(catType) => setSelectedCategory(catType)}
-      />
+      <section className="home-reveal home-section-delay-2">
+        <PopularCategoriesCircular
+          onSelectCategory={(catType) => setSelectedCategory(catType)}
+        />
+      </section>
 
-    
-      <CircularProductFeature />
+      <section className="home-reveal home-section-delay-3">
+        <CircularProductFeature />
+      </section>
 
+      <section className="home-reveal home-section-delay-4">
+        <SeasonalRecommendationSection
+          bookmarkedIds={bookmarkedProduceIds}
+          onToggleBookmark={handleToggleProduceBookmark}
+        />
+      </section>
 
-      <SeasonalRecommendationSection
-        bookmarkedIds={bookmarkedProduceIds}
-        onToggleBookmark={handleToggleProduceBookmark}
-      />
+      <section className="home-reveal home-section-delay-5">
+        <SaleCountdownSection />
+      </section>
 
-   
-      <SaleCountdownSection />
-
-  
       <MarketDetailModal
         market={selectedMarketModal}
         onClose={() => setSelectedMarketModal(null)}
@@ -62,6 +72,7 @@ export default function Home() {
         }
         onToggleBookmark={handleToggleMarketBookmark}
       />
+
     </div>
   );
 }

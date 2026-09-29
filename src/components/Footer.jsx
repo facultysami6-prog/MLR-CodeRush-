@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./css/Footer.css";
@@ -7,10 +8,13 @@ const Footer = () => {
 
   const handleSubscribe = (e) => {
     e.preventDefault();
+
     if (!emailInput.trim()) return;
+
     alert(
-      `Thank you for subscribing with ${emailInput}! Welcome to FreshFind.`,
+      `Thank you for subscribing with ${emailInput}! Welcome to FreshFind.`
     );
+
     setEmailInput("");
   };
 
@@ -19,20 +23,27 @@ const Footer = () => {
       <div className="footer-decor-leaf" aria-hidden="true">
         🌿
       </div>
-      <div className="site-container footer-container">
-        <div className="footer-grid-4col">
-          <div className="footer-col-brand">
+
+      <div className="footer-container">
+        <div className="footer-grid">
+          <div className="footer-brand">
             <Link to="/" className="footer-brand-title">
-              <span className="footer-brand-icon" role="img" aria-label="salad">
+              <span
+                className="footer-brand-icon"
+                role="img"
+                aria-label="salad"
+              >
                 🥗
               </span>
               <span>FreshFind</span>
             </Link>
+
             <p className="footer-brand-desc">
-              Connecting home cooks with fresh organic produce, zero-waste meal
-              planners, and smart culinary AI tools to make healthy living
-              effortless.
+              Connecting home cooks with fresh organic produce, zero-waste
+              meal planners, and smart culinary AI tools to make healthy
+              living effortless.
             </p>
+
             <div className="footer-social-row" aria-label="Social links">
               <a
                 href="https://www.facebook.com/"
@@ -44,6 +55,7 @@ const Footer = () => {
               >
                 <i className="fa-brands fa-facebook-f"></i>
               </a>
+
               <a
                 href="https://www.instagram.com/"
                 target="_blank"
@@ -54,6 +66,7 @@ const Footer = () => {
               >
                 <i className="fa-brands fa-instagram"></i>
               </a>
+
               <a
                 href="https://www.fiverr.com/"
                 target="_blank"
@@ -64,6 +77,7 @@ const Footer = () => {
               >
                 <span className="footer-fiverr-icon">fi</span>
               </a>
+
               <a
                 href="https://www.linkedin.com/in/ayesha-khan-467b10413"
                 target="_blank"
@@ -74,6 +88,7 @@ const Footer = () => {
               >
                 <i className="fa-brands fa-linkedin-in"></i>
               </a>
+
               <a
                 href="https://github.com/AyeshaArif739"
                 target="_blank"
@@ -87,81 +102,99 @@ const Footer = () => {
             </div>
           </div>
 
-
-          <div className="footer-links-group">
-      
+          <div className="footer-links">
             <div className="footer-nav-col">
               <h4 className="footer-col-heading">Explore</h4>
+
               <ul className="footer-nav-list">
                 <li>
                   <Link to="/">
-                    <i className="fa-solid fa-angle-right"></i> Home
+                    <i className="fa-solid fa-angle-right"></i>
+                    <span>Home</span>
                   </Link>
                 </li>
+
                 <li>
                   <Link to="/markets">
-                    <i className="fa-solid fa-angle-right"></i> Market Directory
+                    <i className="fa-solid fa-angle-right"></i>
+                    <span>Market Directory</span>
                   </Link>
                 </li>
+
                 <li>
                   <Link to="/find-market">
-                    <i className="fa-solid fa-angle-right"></i> Find Market
+                    <i className="fa-solid fa-angle-right"></i>
+                    <span>Find Market</span>
                   </Link>
                 </li>
+
                 <li>
                   <Link to="/products">
-                    <i className="fa-solid fa-angle-right"></i> Products
-                    Catalogue
+                    <i className="fa-solid fa-angle-right"></i>
+                    <span>Products Catalogue</span>
                   </Link>
                 </li>
+
                 <li>
                   <Link to="/about">
-                    <i className="fa-solid fa-angle-right"></i> About Us
+                    <i className="fa-solid fa-angle-right"></i>
+                    <span>About Us</span>
                   </Link>
                 </li>
+
                 <li>
                   <Link to="/contact">
-                    <i className="fa-solid fa-angle-right"></i> Contact Us
+                    <i className="fa-solid fa-angle-right"></i>
+                    <span>Contact Us</span>
                   </Link>
                 </li>
               </ul>
             </div>
 
-    
             <div className="footer-nav-col">
               <h4 className="footer-col-heading">Categories</h4>
+
               <ul className="footer-nav-list">
                 <li>
                   <Link to="/products?category=Fruits#products-catalogue">
-                    <i className="fa-solid fa-leaf"></i> Fresh Fruits
+                    <i className="fa-solid fa-leaf"></i>
+                    <span>Fresh Fruits</span>
                   </Link>
                 </li>
+
                 <li>
                   <Link to="/products?category=Vegetables#products-catalogue">
-                    <i className="fa-solid fa-leaf"></i> Organic Veggies
+                    <i className="fa-solid fa-leaf"></i>
+                    <span>Organic Veggies</span>
                   </Link>
                 </li>
+
                 <li>
                   <Link to="/products?category=Dairy#products-catalogue">
-                    <i className="fa-solid fa-leaf"></i> Natural Dairy
+                    <i className="fa-solid fa-leaf"></i>
+                    <span>Natural Dairy</span>
                   </Link>
                 </li>
+
                 <li>
                   <Link to="/products?category=Herbs#products-catalogue">
-                    <i className="fa-solid fa-leaf"></i> Farm Herbs
+                    <i className="fa-solid fa-leaf"></i>
+                    <span>Farm Herbs</span>
                   </Link>
                 </li>
               </ul>
             </div>
           </div>
 
-          <div className="footer-col-newsletter">
+          <div className="footer-newsletter">
             <h4 className="footer-col-heading">Stay Seasoned</h4>
+
             <div className="footer-newsletter-card">
               <p>
-                Subscribe to receive weekly organic recipe guides, farm updates,
-                and exclusive deals.
+                Subscribe to receive weekly organic recipe guides, farm
+                updates, and exclusive deals.
               </p>
+
               <form
                 onSubmit={handleSubscribe}
                 className="footer-newsletter-form"
@@ -176,7 +209,11 @@ const Footer = () => {
                     required
                     aria-label="Your email address"
                   />
-                  <button type="submit" className="footer-subscribe-btn">
+
+                  <button
+                    type="submit"
+                    className="footer-subscribe-btn"
+                  >
                     Join
                   </button>
                 </div>
@@ -185,11 +222,11 @@ const Footer = () => {
           </div>
         </div>
 
-
         <div className="footer-bottom-bar">
           <p className="footer-copyright">
-            © {new Date().getFullYear()} FreshFind Platform. Created by Ayesha,
-            Aasia, Anqa, Asma, Kinza &amp; Huzaifa. All rights reserved.
+            © {new Date().getFullYear()} FreshFind Platform. Created by
+            Ayesha, Aasia, Anqa, Asma, Kinza &amp; Huzaifa. All rights
+            reserved.
           </p>
         </div>
       </div>
@@ -198,3 +235,4 @@ const Footer = () => {
 };
 
 export default Footer;
+
