@@ -521,13 +521,13 @@
     bottom: 30px;
   }
 }
-  .hero-actions {
+ .hero-actions {
     align-items: flex-start;
-flex-wrap: nowrap !important;
+    flex-direction: row;
     gap: 18px;
-
     margin-top: 27px;
   }
+
 @media (max-width: 560px) {
 
   .hero-content-container {
@@ -553,7 +553,7 @@ flex-wrap: nowrap !important;
 
   .hero-actions {
     align-items: flex-start;
-flex-wrap: nowrap !important;
+
     gap: 18px;
 
     margin-top: 27px;
