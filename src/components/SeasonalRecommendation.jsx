@@ -1,8 +1,14 @@
-
 import React, { useState, useMemo } from "react";
 import {
-  Search, Heart, Sparkles, Sun,
-  Leaf, Snowflake, Wind, Info, X
+  Search,
+  Heart,
+  Sparkles,
+  Sun,
+  Leaf,
+  Snowflake,
+  Wind,
+  Info,
+  X,
 } from "lucide-react";
 import seasonalData from "../data/seasonalProduce.json";
 import "./css/SeasonalRecommendation.css";
@@ -22,10 +28,7 @@ const fallbackImage = "/assets/mix vegies image.jpg";
 function getImage(item) {
   if (!item?.image) return fallbackImage;
 
-  if (
-    item.image.startsWith("/") ||
-    item.image.startsWith("http")
-  ) {
+  if (item.image.startsWith("/") || item.image.startsWith("http")) {
     return item.image;
   }
 
@@ -46,12 +49,10 @@ export default function SeasonalRecommendationSection({
 
     return seasonalData.filter((item) => {
       const matchSeason =
-        selectedSeason === "All" ||
-        item.season === selectedSeason;
+        selectedSeason === "All" || item.season === selectedSeason;
 
       const matchCategory =
-        selectedCategory === "All" ||
-        item.category === selectedCategory;
+        selectedCategory === "All" || item.category === selectedCategory;
 
       const matchSearch =
         item.name.toLowerCase().includes(query) ||
@@ -70,11 +71,7 @@ export default function SeasonalRecommendationSection({
   };
 
   return (
-    <section
-      id="produce"
-      className="seasonal-recommendation-section"
-    >
-
+    <section id="produce" className="seasonal-recommendation-section">
       <div className="seasonal-hero-banner">
         <video
           autoPlay
@@ -84,27 +81,18 @@ export default function SeasonalRecommendationSection({
           className="seasonal-hero-video"
           poster="/seasonal-hero-bg.jpg"
         >
-          <source
-            src="/seasonal-bg-video.mp4"
-            type="video/mp4"
-          />
-          <source
-            src="/farm-produce-video.mp4"
-            type="video/mp4"
-          />
+          <source src="/seasonal-bg-video.mp4" type="video/mp4" />
+          <source src="/farm-produce-video.mp4" type="video/mp4" />
         </video>
 
         <div className="seasonal-hero-overlay" />
 
         <div className="seasonal-hero-content">
           <div className="seasonal-hero-badge">
-            
             <span>100% Farm Fresh Harvest</span>
           </div>
 
-          <h1 className="seasonal-hero-title">
-            Seasonal Recommendations
-          </h1>
+          <h1 className="seasonal-hero-title">Seasonal Recommendations</h1>
 
           <p className="seasonal-hero-subtitle">
             “Organic products directly from the farm.”
@@ -121,56 +109,39 @@ export default function SeasonalRecommendationSection({
         </svg>
       </div>
 
-    
       <div className="seasonal-main-content">
         <div className="seasonal-controls-box">
           <div className="category-filter-group">
-            <span className="category-filter-label">
-              Category:
-            </span>
+            <span className="category-filter-label">Category:</span>
 
             {categories.map((cat) => (
               <button
                 key={cat}
                 type="button"
                 className={`category-filter-btn ${
-                  selectedCategory === cat
-                    ? "active"
-                    : ""
+                  selectedCategory === cat ? "active" : ""
                 }`}
-                onClick={() =>
-                  setSelectedCategory(cat)
-                }
-                aria-pressed={
-                  selectedCategory === cat
-                }
+                onClick={() => setSelectedCategory(cat)}
+                aria-pressed={selectedCategory === cat}
               >
-                {cat === "All"
-                  ? "All Produce"
-                  : `${cat}s`}
+                {cat === "All" ? "All Produce" : `${cat}s`}
               </button>
             ))}
           </div>
 
           <div className="seasonal-search-input-wrapper">
-            <Search
-              className="seasonal-search-icon"
-              size={18}
-            />
+            <Search className="seasonal-search-icon" size={18} />
 
             <input
               type="search"
               placeholder="Search produce, herbs..."
               value={searchQuery}
-              onChange={(e) =>
-                setSearchQuery(e.target.value)
-              }
+              onChange={(e) => setSearchQuery(e.target.value)}
               className="seasonal-search-input"
             />
           </div>
         </div>
 
-   
         <div className="seasonal-section-heading">
           <h2>
             {selectedSeason === "All"
@@ -178,80 +149,69 @@ export default function SeasonalRecommendationSection({
               : `${selectedSeason} Produce Selection`}
           </h2>
 
-          <p>
-            Showing {visibleProduce.length} featured
-            fresh recommendations
-          </p>
+          <p>Showing {visibleProduce.length} featured fresh recommendations</p>
         </div>
 
-
         {visibleProduce.length > 0 ? (
-         <div className="seasonal-grid">
-         {visibleProduce.map((item, index) => {
-           const isBookmarked = bookmarkedIds.includes(item.name);
-       
-           return (
-             <article
-               key={`${item.name}-${index}`}
-               className="produce-card"
-             >
-      
-               <img
-                 src={getImage(item)}
-                 alt={item.name}
-                 className="produce-card-full-img"
-                 onError={(e) => {
-                   if (!e.currentTarget.src.endsWith(fallbackImage)) {
-                     e.currentTarget.src = fallbackImage;
-                   }
-                 }}
-               />
-       
-             
-               <div className="produce-card-overlay">
-                 <span className="season-badge">
-                   {item.season}
-                 </span>
-       
-                 <span className="category-badge">
-                   {item.category}
-                 </span>
-       
-                 <div className="produce-hover-content">
-                   <h3>{item.name}</h3>
-       
-                   <p>{item.description}</p>
-       
-                  <br /><br />
-                   {onToggleBookmark && (
-                     <button
-                       type="button"
-                       className={`bookmark-btn ${
-                         isBookmarked ? "bookmarked" : ""
-                       }`}
-                       onClick={(e) => {
-                         e.stopPropagation();
-                         onToggleBookmark(item.name);
-                       }}
-                       aria-label={
-                         isBookmarked
-                           ? `Remove ${item.name} bookmark`
-                           : `Bookmark ${item.name}`
-                       }
-                       aria-pressed={isBookmarked}
-                     >
-                       <Heart
-                         size={17}
-                         fill={isBookmarked ? "currentColor" : "none"}
-                       />
-                     </button>
-                   )}
-                 </div>
-               </div>
-             </article>
-           );
-         })}
-       </div>
+          <div className="seasonal-grid">
+            {visibleProduce.map((item, index) => {
+              const bookmarkId = `seasonal:${item.name}`;
+              const isBookmarked = bookmarkedIds.includes(bookmarkId);
+
+              return (
+                <article key={`${item.name}-${index}`} className="produce-card">
+                  <img
+                    src={getImage(item)}
+                    alt={item.name}
+                    className="produce-card-full-img"
+                    onError={(e) => {
+                      if (!e.currentTarget.src.endsWith(fallbackImage)) {
+                        e.currentTarget.src = fallbackImage;
+                      }
+                    }}
+                  />
+
+                  <div className="produce-card-overlay">
+                    <span className="season-badge">{item.season}</span>
+
+                    <span className="category-badge">{item.category}</span>
+
+                    <div className="produce-hover-content">
+                      <h3>{item.name}</h3>
+
+                      <p>{item.description}</p>
+
+                      <br />
+                      <br />
+                      {onToggleBookmark && (
+                        <button
+                          type="button"
+                          className={`bookmark-btn ${
+                            isBookmarked ? "bookmarked" : ""
+                          }`}
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            onToggleBookmark(bookmarkId);
+                          }}
+                          aria-label={
+                            isBookmarked
+                              ? `Remove ${item.name} bookmark`
+                              : `Bookmark ${item.name}`
+                          }
+                          aria-pressed={isBookmarked}
+                        >
+                          <Heart
+                            size={17}
+                            fill={isBookmarked ? "currentColor" : "none"}
+                          />
+                        </button>
+                      )}
+                    </div>
+                  </div>
+                </article>
+              );
+            })}
+          </div>
         ) : (
           <div className="seasonal-empty-state">
             <div className="empty-search-icon">
@@ -261,8 +221,8 @@ export default function SeasonalRecommendationSection({
             <h3>No Produce Found</h3>
 
             <p>
-              Try adjusting your search query or season
-              filter to find what you're looking for.
+              Try adjusting your search query or season filter to find what
+              you're looking for.
             </p>
 
             <button
@@ -275,7 +235,6 @@ export default function SeasonalRecommendationSection({
           </div>
         )}
       </div>
-
 
       {activeItemModal && (
         <div
@@ -292,9 +251,7 @@ export default function SeasonalRecommendationSection({
             <button
               type="button"
               className="seasonal-modal-close"
-              onClick={() =>
-                setActiveItemModal(null)
-              }
+              onClick={() => setActiveItemModal(null)}
               aria-label="Close details"
             >
               <X size={19} />
@@ -305,13 +262,8 @@ export default function SeasonalRecommendationSection({
                 src={getImage(activeItemModal)}
                 alt={activeItemModal.name}
                 onError={(e) => {
-                  if (
-                    !e.currentTarget.src.endsWith(
-                      fallbackImage
-                    )
-                  ) {
-                    e.currentTarget.src =
-                      fallbackImage;
+                  if (!e.currentTarget.src.endsWith(fallbackImage)) {
+                    e.currentTarget.src = fallbackImage;
                   }
                 }}
               />
@@ -319,46 +271,34 @@ export default function SeasonalRecommendationSection({
               <div className="seasonal-modal-image-overlay" />
 
               <div className="seasonal-modal-image-text">
-                <span>
-                  {activeItemModal.season} Season
-                </span>
+                <span>{activeItemModal.season} Season</span>
 
-                <h3 id="seasonal-modal-title">
-                  {activeItemModal.name}
-                </h3>
+                <h3 id="seasonal-modal-title">{activeItemModal.name}</h3>
               </div>
             </div>
 
             <div className="seasonal-modal-body">
               <div className="seasonal-modal-description">
                 <h4>Description</h4>
-                <p>
-                  {activeItemModal.description}
-                </p>
+                <p>{activeItemModal.description}</p>
               </div>
 
               <div className="seasonal-modal-info-grid">
                 <div className="seasonal-info-box category">
                   <span>Category</span>
-                  <strong>
-                    {activeItemModal.category}
-                  </strong>
+                  <strong>{activeItemModal.category}</strong>
                 </div>
 
                 <div className="seasonal-info-box harvest">
                   <span>Best Harvest</span>
-                  <strong>
-                    Peak {activeItemModal.season}
-                  </strong>
+                  <strong>Peak {activeItemModal.season}</strong>
                 </div>
               </div>
 
               <button
                 type="button"
                 className="seasonal-modal-done"
-                onClick={() =>
-                  setActiveItemModal(null)
-                }
+                onClick={() => setActiveItemModal(null)}
               >
                 Close Details
               </button>

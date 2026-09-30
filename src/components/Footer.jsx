@@ -33,9 +33,8 @@ const Footer = () => {
                 role="img"
                 aria-label="salad"
               >
-                🥗
+                <img src="/logo.png" alt="FreshFind Logo" style={{ width: "40%", height: "auto", margin: "0 auto" }} />
               </span>
-              <span>FreshFind</span>
             </Link>
 
             <p className="footer-brand-desc">
